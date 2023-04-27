@@ -13,7 +13,7 @@ namespace Lynaar_GUI.Classes
     internal static class FunctionsLibs
     {
 
-
+        #region add_UControls Methods
 
         /// <summary>
         //! Ajout d'un UserControl 'uc' dans un Panel 'panelObject' et le met au premier plan (BringToFront) 
@@ -27,6 +27,19 @@ namespace Lynaar_GUI.Classes
             panelObject.Controls.Add(uc);
             uc.BringToFront();
         }
+
+
+        //! Fonction alternative utilisant un Control à la place d'un Panel
+        public static void add_UControls(UserControl uc, Control control)
+        {
+           
+            uc.Dock = DockStyle.Fill;       //! Permet de remplir le panel avec l'UC
+            control.Controls.Clear();
+            control.Controls.Add(uc);
+            uc.BringToFront();
+        }
+
+        #endregion
 
         //! Ajout de la police Alkhemikal dans le projet
         private static PrivateFontCollection initFont()

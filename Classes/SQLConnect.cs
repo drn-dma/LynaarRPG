@@ -39,7 +39,7 @@ namespace Lynaar_GUI
          * 
          * foreach(var row in sqlResult)
          * {
-         *  stringResult += row["isWeapon"].GetType() + "\n";
+         *  stringResult += row["isWeapon"].toString() + "\n";
          * }
          * MessageBox.Show(stringResult);
         */

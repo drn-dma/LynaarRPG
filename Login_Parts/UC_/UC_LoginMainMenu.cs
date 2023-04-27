@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lynaar_GUI.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,6 +39,11 @@ namespace Lynaar_GUI.Login_Parts.UC_
             btn.FlatStyle = FlatStyle.Flat;                     //! FlatStyle.Flat permet de supprimer le style par défaut du bouton
             btn.ForeColor = Color.White;
             btn.FlatAppearance.MouseOverBackColor = Color.Black;
+        }
+
+        private void btn_NewGame_Click(object sender, EventArgs e)
+        {
+            FunctionsLibs.add_UControls(new UC_LoginNewGame(), this.Parent);
         }
     }
 }

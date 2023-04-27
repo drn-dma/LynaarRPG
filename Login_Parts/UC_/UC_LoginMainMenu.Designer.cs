@@ -44,6 +44,7 @@
             this.btn_NewGame.TabIndex = 0;
             this.btn_NewGame.Text = "New Game";
             this.btn_NewGame.UseVisualStyleBackColor = true;
+            this.btn_NewGame.Click += new System.EventHandler(this.btn_NewGame_Click);
             this.btn_NewGame.MouseLeave += new System.EventHandler(this.exitHoverBtn);
             this.btn_NewGame.MouseHover += new System.EventHandler(this.hoverBtn);
             // 

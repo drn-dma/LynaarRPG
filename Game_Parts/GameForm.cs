@@ -23,7 +23,6 @@ namespace Lynaar_GUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
 
             pic_ClasseIcon.BackgroundImage = Properties.Resources.Warrior_Ico;
             

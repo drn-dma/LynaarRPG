@@ -23,11 +23,7 @@ namespace Lynaar_GUI
         {
             //! Ajout de l'UC (UserControl) UC_LoginMainMenu dans le panel 'pnl_LoginMain' au chargement du Formulaire
             FunctionsLibs.add_UControls(new UC_LoginMainMenu(), pnl_LoginMain);
-        }
-
-        
-
-      
-        
+            
+        }                 
     }
 }

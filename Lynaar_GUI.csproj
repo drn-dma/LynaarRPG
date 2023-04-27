@@ -113,11 +113,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GameForm.resx</DependentUpon>
     </Compile>
-    <Compile Include="Game_Parts\UC_\UC_GameInventory1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UC_GameInventory.resx</DependentUpon>
-    </Compile>
     <Compile Include="Login_Parts\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,10 +130,11 @@
     <Compile Include="Login_Parts\UC_\UC_LoginMainMenu.Designer.cs">
       <DependentUpon>UC_LoginMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login_Parts\UC_\UC_LoginMainMenu1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UC_LoginMainMenu.resx</DependentUpon>
+    <Compile Include="Login_Parts\UC_\UC_LoginNewGame.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Login_Parts\UC_\UC_LoginNewGame.Designer.cs">
+      <DependentUpon>UC_LoginNewGame.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -161,8 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Parts\UC_\UC_LoginMainMenu.resx">
       <DependentUpon>UC_LoginMainMenu.cs</DependentUpon>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>UC_LoginMainMenu1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Parts\UC_\UC_LoginNewGame.resx">
+      <DependentUpon>UC_LoginNewGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -176,8 +173,6 @@
     </Compile>
     <EmbeddedResource Include="Game_Parts\UC_\UC_GameInventory.resx">
       <DependentUpon>UC_GameInventory.cs</DependentUpon>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>UC_GameInventory1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Lynaar_GUI_TemporaryKey.pfx" />
     <None Include="packages.config" />
