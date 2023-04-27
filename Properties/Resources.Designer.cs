@@ -793,6 +793,116 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Parcho_Gris_A {
+            get {
+                object obj = ResourceManager.GetObject("Parcho_Gris_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Parcho_Gris_B {
+            get {
+                object obj = ResourceManager.GetObject("Parcho_Gris_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Parcho_Jaune_A {
+            get {
+                object obj = ResourceManager.GetObject("Parcho_Jaune_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Parcho_Normal_A {
+            get {
+                object obj = ResourceManager.GetObject("Parcho_Normal_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Parcho_Normal_B {
+            get {
+                object obj = ResourceManager.GetObject("Parcho_Normal_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Parcho_normal_Grand {
+            get {
+                object obj = ResourceManager.GetObject("Parcho_normal_Grand", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Parcho_PasBo_B {
+            get {
+                object obj = ResourceManager.GetObject("Parcho_PasBo_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Parcho_Rouge_A {
+            get {
+                object obj = ResourceManager.GetObject("Parcho_Rouge_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Parcho_Sombre_Grand {
+            get {
+                object obj = ResourceManager.GetObject("Parcho_Sombre_Grand", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Parcho_WorldMap_B {
+            get {
+                object obj = ResourceManager.GetObject("Parcho_WorldMap_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Parcho_WorldMap_Grand {
+            get {
+                object obj = ResourceManager.GetObject("Parcho_WorldMap_Grand", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Rogue_Ico {
             get {
                 object obj = ResourceManager.GetObject("Rogue_Ico", resourceCulture);
