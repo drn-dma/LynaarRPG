@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Lynaar_GUI.Classes;
+using Lynaar_GUI.Login_Parts.UC_;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,13 +21,12 @@ namespace Lynaar_GUI
 
         private void LoggingForm_Load(object sender, EventArgs e)
         {
-
+            FunctionsLibs.add_UControls(new UC_LoginMainMenu(), pnl_LoginMain);
         }
 
-        private void hoverBtn(object sender, EventArgs e)
-        {
-            Button btn = (Button)sender;
-            btn.FlatStyle  = FlatStyle.Flat;
-        }
+        
+
+      
+        
     }
 }

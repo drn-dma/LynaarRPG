@@ -5,17 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using Lynaar_GUI.Classes;
 
 namespace Lynaar_GUI
 {
     internal class SQLConnect
     {
+        
+        #region Properties
+
         private static string _dataSource = "lynaarrpg-srv.database.windows.net";
         private static string _initialCatalog = "Lynaar";
         private static string _userID = "lynaar";
         private static string _password = "1596357Dd";
 
-        public static string ExecuteSql(string queryToRead, int numColumnToReturn)
+        #endregion
+
+
+        //! Execute une requête SQL dans une colonne spécifié et retourne le résultat dans un string
+        public static List<Dictionary<string, object>> readDataFromSQL(string queryToRead)
         {
             var builder = new SqlConnectionStringBuilder();
 
@@ -24,12 +32,14 @@ namespace Lynaar_GUI
             builder.UserID = _userID;
             builder.Password = _password;
             
-            var result = "";
+            //Dictionary<string, object> result = new Dictionary<string, dynamic>();
+            List<Dictionary<string,object>> resultList = new List<Dictionary<string, object>>();
 
             using (var conn = new SqlConnection(builder.ConnectionString))
             {
                 conn.Open();
-                using (var command =new SqlCommand(queryToRead, conn))
+
+                 /*using (var command = new SqlCommand(queryToRead, conn))
                 {
                     command.CommandText = queryToRead;
 
@@ -58,14 +68,56 @@ namespace Lynaar_GUI
                             }
                         }
                     }
-                }
+                    
+                }*/
+                 
+                using(var command = new SqlCommand(queryToRead, conn))
+                {
+                    command.CommandText = queryToRead;
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        int fieldCount = reader.FieldCount;
+                        int rowCount = 0;
+
+                        while (reader.Read())
+                        {                                
+                            resultList.Add(new Dictionary<string, object>());
+
+                            for(int i = 0; i < fieldCount; i++)
+                            {
+                                try
+                                {
+                                    resultList[rowCount].Add(reader.GetName(i),reader.GetString(i));
+
+                                }
+                                catch (Exception ex)
+                                {
+                                    if (ex is InvalidCastException)
+                                    {
+                                        try
+                                        {
+                                            resultList[rowCount].Add(reader.GetName(i),reader.GetInt32(i));
+                                        }
+                                        catch
+                                        {
+                                            resultList[rowCount].Add(reader.GetName(i),reader.GetBoolean(i));
+                                        }
+                                    }
+                                }
+                            }
+                            rowCount++;
+                        }
+                    }
+                }   
+                conn.Close();
             }
             
-            return result;
+            return resultList;
         }
 
 
-        public static bool ExecuteSql(string queryToWrite)
+        public static bool ExecuteSQL(string queryToWrite)
         {
             var builder = new SqlConnectionStringBuilder();
 
@@ -88,6 +140,7 @@ namespace Lynaar_GUI
                         sucess = true;
                     }
                 }
+                conn.Close();
             }
             return sucess;
         }

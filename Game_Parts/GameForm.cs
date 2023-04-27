@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lynaar_GUI.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,32 +32,32 @@ namespace Lynaar_GUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //MessageBox.Show(SQLConnect.ExecuteSql("SELECT * FROM HI",2).ToString());
+            var enemy = SQLConnect.readDataFromSQL("SELECT * FROM Enemy");
+            string result = "";
+            foreach(var row in enemy)
+            {
+                result += row["name"].ToString() + "\n";
+            }
+            MessageBox.Show(result);
 
             pic_ClasseIcon.BackgroundImage = Properties.Resources.Warrior_Ico;
             
         }
 
-        private void add_UControls(UserControl uc)
-        {
-            uc.Dock = DockStyle.Fill;
-            pnl_Main.Controls.Clear();
-            pnl_Main.Controls.Add(uc);
-            uc.BringToFront();
-        }
+        
         
         private void BtnMenu_Click(object sender, EventArgs e)
         {
             foreach(var pnl in table_MenuButton.Controls.OfType<Panel>())
             {
-                pnl.BackColor = Color.FromArgb(51, 51, 76);
+                pnl.BackColor = Color.Beige;
             }
 
             PictureBox btn = (PictureBox)sender;
             switch(btn.Name)
             {
                 case "picBox_Inventory":
-                    add_UControls(new UC_Inventory());
+                    FunctionsLibs.add_UControls(new UC_GameInventory(),pnl_Main);
                     break;
             }
 

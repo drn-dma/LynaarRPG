@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Lynaar_GUI
 {
-    public partial class UC_Inventory : UserControl
+    public partial class UC_GameInventory : UserControl
     {
-        public UC_Inventory()
+        public UC_GameInventory()
         {
             InitializeComponent();
             
