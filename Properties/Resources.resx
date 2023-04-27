@@ -349,4 +349,37 @@
   <data name="d277" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\d277.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Parcho_Gris_A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Parcho_Gris_A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Parcho_Gris_B" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Parcho_Gris_B.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Parcho_Jaune_A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Parcho_Jaune_A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Parcho_Normal_A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Parcho_Normal_A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Parcho_Normal_B" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Parcho_Normal_B.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Parcho_normal_Grand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Parcho_normal_Grand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Parcho_PasBo_B" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Parcho_PasBo_B.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Parcho_Rouge_A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Parcho_Rouge_A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Parcho_Sombre_Grand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Parcho_Sombre_Grand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Parcho_WorldMap_B" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Parcho_WorldMap_B.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Parcho_WorldMap_Grand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Parcho_WorldMap_Grand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -427,6 +427,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Lynaar_Icon-round.ico" />
+    <None Include="Resources\Parcho_WorldMap_B.png" />
+    <None Include="Resources\Parcho_PasBo_B.png" />
+    <None Include="Resources\Parcho_Normal_B.png" />
+    <None Include="Resources\Parcho_Gris_B.png" />
+    <None Include="Resources\Parcho_WorldMap_Grand.png" />
+    <None Include="Resources\Parcho_Sombre_Grand.png" />
+    <None Include="Resources\Parcho_normal_Grand.png" />
+    <None Include="Resources\Parcho_Rouge_A.png" />
+    <None Include="Resources\Parcho_Normal_A.png" />
+    <None Include="Resources\Parcho_Jaune_A.png" />
+    <None Include="Resources\Parcho_Gris_A.png" />
     <None Include="Resources\d277.png" />
     <None Include="Resources\d257.png" />
     <None Include="Resources\d162.png" />
