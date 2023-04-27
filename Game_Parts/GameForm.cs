@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lynaar_GUI.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,45 +19,27 @@ namespace Lynaar_GUI
         public GameForm()
         {
             InitializeComponent();
-
-            //!Font
-            PrivateFontCollection pfc = new PrivateFontCollection();
-            int fontLength = Properties.Resources.Font_Alkhemikal.Length;
-            byte[] fontdata = Properties.Resources.Font_Alkhemikal;
-
-            System.IntPtr data = Marshal.AllocCoTaskMem(fontLength);
-            Marshal.Copy(fontdata, 0, data, fontLength);
-            pfc.AddMemoryFont(data, fontLength);   
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //MessageBox.Show(SQLConnect.ExecuteSql("SELECT * FROM HI",2).ToString());
 
             pic_ClasseIcon.BackgroundImage = Properties.Resources.Warrior_Ico;
             
         }
 
-        private void add_UControls(UserControl uc)
-        {
-            uc.Dock = DockStyle.Fill;
-            pnl_Main.Controls.Clear();
-            pnl_Main.Controls.Add(uc);
-            uc.BringToFront();
-        }
         
+        //! Fonction affichage des UC (UserControl) dans le panel principal 'pnl_Main' en fonction du bouton cliqué
         private void BtnMenu_Click(object sender, EventArgs e)
         {
-            foreach(var pnl in table_MenuButton.Controls.OfType<Panel>())
-            {
-                pnl.BackColor = Color.FromArgb(51, 51, 76);
-            }
-
+            //! Récupération de l'objet cliqué (sender) et conversion en PictureBox
             PictureBox btn = (PictureBox)sender;
+
+            //! Switch en fonction du nom du bouton cliqué
             switch(btn.Name)
             {
                 case "picBox_Inventory":
-                    add_UControls(new UC_Inventory());
+                    FunctionsLibs.add_UControls(new UC_GameInventory(),pnl_Main);
                     break;
             }
 

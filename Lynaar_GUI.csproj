@@ -100,6 +100,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\FunctionsLibs.cs" />
     <Compile Include="Classes\Player.cs" />
     <Compile Include="Game_Parts\GameForm.cs">
       <SubType>Form</SubType>
@@ -107,26 +108,58 @@
     <Compile Include="Game_Parts\GameForm.Designer.cs">
       <DependentUpon>GameForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Game_Parts\GameForm1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GameForm.resx</DependentUpon>
+    </Compile>
     <Compile Include="Login_Parts\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login_Parts\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login_Parts\LoginForm1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginForm.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Parts\UC_\UC_LoginMainMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Login_Parts\UC_\UC_LoginMainMenu.Designer.cs">
+      <DependentUpon>UC_LoginMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Parts\UC_\UC_LoginNewGame.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Login_Parts\UC_\UC_LoginNewGame.Designer.cs">
+      <DependentUpon>UC_LoginNewGame.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\SQLConnect.cs" />
-    <Compile Include="Game_Parts\UC_\UC_Inventory.cs">
+    <Compile Include="Game_Parts\UC_\UC_GameInventory.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Game_Parts\UC_\UC_Inventory.Designer.cs">
-      <DependentUpon>UC_Inventory.cs</DependentUpon>
+    <Compile Include="Game_Parts\UC_\UC_GameInventory.Designer.cs">
+      <DependentUpon>UC_GameInventory.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Game_Parts\GameForm.resx">
       <DependentUpon>GameForm.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GameForm1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Parts\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LoginForm1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Parts\UC_\UC_LoginMainMenu.resx">
+      <DependentUpon>UC_LoginMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Parts\UC_\UC_LoginNewGame.resx">
+      <DependentUpon>UC_LoginNewGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -138,8 +171,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Game_Parts\UC_\UC_Inventory.resx">
-      <DependentUpon>UC_Inventory.cs</DependentUpon>
+    <EmbeddedResource Include="Game_Parts\UC_\UC_GameInventory.resx">
+      <DependentUpon>UC_GameInventory.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Lynaar_GUI_TemporaryKey.pfx" />
     <None Include="packages.config" />
@@ -387,10 +420,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Lynaar_Icon-round.ico" />
+    <None Include="Resources\d277.png" />
+    <None Include="Resources\d257.png" />
+    <None Include="Resources\d162.png" />
     <None Include="Resources\Lynaar_MainMenu.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Login_Parts\UC_\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

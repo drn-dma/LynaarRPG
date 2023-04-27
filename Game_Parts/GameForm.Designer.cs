@@ -134,7 +134,7 @@
             this.pnl_Main.Size = new System.Drawing.Size(1082, 548);
             this.pnl_Main.TabIndex = 3;
             // 
-            // Form1
+            // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -144,7 +144,7 @@
             this.Controls.Add(this.pnl_PlayerInfo);
             this.Controls.Add(this.pnl_Top);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "GameForm";
             this.Text = "Lynaar";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnl_PlayerInfo.ResumeLayout(false);

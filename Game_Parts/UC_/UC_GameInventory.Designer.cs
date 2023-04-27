@@ -1,6 +1,6 @@
 ﻿namespace Lynaar_GUI
 {
-    partial class UC_Inventory
+    partial class UC_GameInventory
     {
         /// <summary> 
         /// Variable nécessaire au concepteur.
