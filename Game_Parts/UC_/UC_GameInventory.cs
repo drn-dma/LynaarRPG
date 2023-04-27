@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lynaar_GUI.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,17 +24,8 @@ namespace Lynaar_GUI
 
         private void UC_Inventory_Load(object sender, EventArgs e)
         {
-            PrivateFontCollection pfc = new PrivateFontCollection();
-            int fontLength = Properties.Resources.Font_Alkhemikal.Length;
-            byte[] fontdata = Properties.Resources.Font_Alkhemikal;
-
-            System.IntPtr data = Marshal.AllocCoTaskMem(fontLength);
-            Marshal.Copy(fontdata, 0, data, fontLength);
-            pfc.AddMemoryFont(data, fontLength);
-
-
-            //Set label font
-            lbl_Inventaire.Font = new Font(pfc.Families[0],40, FontStyle.Regular);
+            //! Modification de la police de caractère du label 'lbl_Inventaire' au chargement de l'UC
+            FunctionsLibs.setFont(lbl_Inventaire, 40);
         }
 
         private void lbl_Inventaire_Click(object sender, EventArgs e)

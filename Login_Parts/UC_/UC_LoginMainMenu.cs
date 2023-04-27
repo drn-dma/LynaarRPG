@@ -21,18 +21,21 @@ namespace Lynaar_GUI.Login_Parts.UC_
         {
 
         }
+
+        //! Fonction modifiant le style des boutons au survol de la souris
         private void hoverBtn(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            btn.FlatStyle = FlatStyle.Flat;
+            btn.FlatStyle = FlatStyle.Flat;                    //! FlatStyle.Flat permet de supprimer le style par défaut du bouton
             btn.ForeColor = Color.Black;
             btn.FlatAppearance.MouseOverBackColor = Color.White;
         }
 
+        //! Fonction modifiant le style des boutons à la sortie de la souris
         private void exitHoverBtn(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            btn.FlatStyle = FlatStyle.Flat;
+            btn.FlatStyle = FlatStyle.Flat;                     //! FlatStyle.Flat permet de supprimer le style par défaut du bouton
             btn.ForeColor = Color.White;
             btn.FlatAppearance.MouseOverBackColor = Color.Black;
         }

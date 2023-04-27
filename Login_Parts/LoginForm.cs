@@ -21,6 +21,7 @@ namespace Lynaar_GUI
 
         private void LoggingForm_Load(object sender, EventArgs e)
         {
+            //! Ajout de l'UC (UserControl) UC_LoginMainMenu dans le panel 'pnl_LoginMain' au chargement du Formulaire
             FunctionsLibs.add_UControls(new UC_LoginMainMenu(), pnl_LoginMain);
         }
 
