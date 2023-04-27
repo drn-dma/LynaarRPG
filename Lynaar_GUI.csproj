@@ -100,8 +100,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Boss.cs" />
+    <Compile Include="Classes\Consumables.cs" />
+    <Compile Include="Classes\Enemy.cs" />
+    <Compile Include="Classes\Equipement.cs" />
     <Compile Include="Classes\FunctionsLibs.cs" />
+    <Compile Include="Classes\Inventory.cs" />
+    <Compile Include="Classes\Monstre.cs" />
     <Compile Include="Classes\Player.cs" />
+    <Compile Include="Classes\Story.cs" />
     <Compile Include="Game_Parts\GameForm.cs">
       <SubType>Form</SubType>
     </Compile>
