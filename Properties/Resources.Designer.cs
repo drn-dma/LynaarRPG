@@ -693,36 +693,6 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap d162 {
-            get {
-                object obj = ResourceManager.GetObject("d162", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap d257 {
-            get {
-                object obj = ResourceManager.GetObject("d257", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap d277 {
-            get {
-                object obj = ResourceManager.GetObject("d277", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Exit_Ico {
             get {
                 object obj = ResourceManager.GetObject("Exit_Ico", resourceCulture);
@@ -986,6 +956,44 @@ namespace Lynaar_GUI.Properties {
         internal static System.Drawing.Bitmap Settings_Ico {
             get {
                 object obj = ResourceManager.GetObject("Settings_Ico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.IO.UnmanagedMemoryStream semblable à System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream SOUND_mainMenu {
+            get {
+                return ResourceManager.GetStream("SOUND_mainMenu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.IO.UnmanagedMemoryStream semblable à System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream SOUND_mainMenuButtonClick {
+            get {
+                return ResourceManager.GetStream("SOUND_mainMenuButtonClick", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Volume_Off {
+            get {
+                object obj = ResourceManager.GetObject("Volume_Off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Volume_On {
+            get {
+                object obj = ResourceManager.GetObject("Volume_On", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

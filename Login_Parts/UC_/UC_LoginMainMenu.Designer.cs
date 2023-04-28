@@ -41,7 +41,6 @@
             // 
             this.picBox_ExitGame.BackgroundImage = global::Lynaar_GUI.Properties.Resources.ExitGame_Parcho_Gris_A;
             this.picBox_ExitGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBox_ExitGame.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBox_ExitGame.Location = new System.Drawing.Point(253, 163);
             this.picBox_ExitGame.MaximumSize = new System.Drawing.Size(275, 58);
             this.picBox_ExitGame.Name = "picBox_ExitGame";
@@ -56,7 +55,6 @@
             // 
             this.picBox_LoadGame.BackgroundImage = global::Lynaar_GUI.Properties.Resources.LoadGame_Parcho_Gris_A;
             this.picBox_LoadGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBox_LoadGame.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBox_LoadGame.Location = new System.Drawing.Point(253, 97);
             this.picBox_LoadGame.MaximumSize = new System.Drawing.Size(275, 58);
             this.picBox_LoadGame.Name = "picBox_LoadGame";
@@ -70,7 +68,6 @@
             // 
             this.picBox_NewGame.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBox_NewGame.BackgroundImage")));
             this.picBox_NewGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBox_NewGame.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBox_NewGame.Location = new System.Drawing.Point(253, 27);
             this.picBox_NewGame.MaximumSize = new System.Drawing.Size(275, 58);
             this.picBox_NewGame.Name = "picBox_NewGame";
@@ -85,7 +82,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.picBox_ExitGame);
             this.Controls.Add(this.picBox_LoadGame);
             this.Controls.Add(this.picBox_NewGame);
