@@ -32,6 +32,7 @@
             this.rdbClasseWarrior = new System.Windows.Forms.RadioButton();
             this.rbClasseHunter = new System.Windows.Forms.RadioButton();
             this.btnStartNewGame = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtBoxPseudo
@@ -83,11 +84,22 @@
             this.btnStartNewGame.UseVisualStyleBackColor = true;
             this.btnStartNewGame.Click += new System.EventHandler(this.btnStartNewGame_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(645, 185);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "retour";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // UC_LoginNewGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnStartNewGame);
             this.Controls.Add(this.rbClasseHunter);
             this.Controls.Add(this.rdbClasseWarrior);
@@ -106,5 +118,6 @@
         private System.Windows.Forms.RadioButton rdbClasseWarrior;
         private System.Windows.Forms.RadioButton rbClasseHunter;
         private System.Windows.Forms.Button btnStartNewGame;
+        private System.Windows.Forms.Button button1;
     }
 }

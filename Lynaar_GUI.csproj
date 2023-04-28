@@ -427,6 +427,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Lynaar_Icon-round.ico" />
+    <None Include="Resources\ExitGame-Parcho_Gris_A.png" />
+    <None Include="Resources\ExitGame2-Parcho_Gris_A.png" />
+    <None Include="Resources\LoadGame-Parcho_Gris_A.png" />
+    <None Include="Resources\LoadGame2-Parcho_Gris_A.png" />
+    <None Include="Resources\NewGame-Parcho_Gris_A.png" />
+    <None Include="Resources\NewGame2-Parcho_Gris_A.png" />
     <None Include="Resources\Parcho_WorldMap_B.png" />
     <None Include="Resources\Parcho_PasBo_B.png" />
     <None Include="Resources\Parcho_Normal_B.png" />

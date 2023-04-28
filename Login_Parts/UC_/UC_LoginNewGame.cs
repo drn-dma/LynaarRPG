@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lynaar_GUI.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,6 +35,12 @@ namespace Lynaar_GUI.Login_Parts.UC_
         private void openGameForm()
         {
             Application.Run(new GameForm());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FunctionsLibs.add_UControls(new UC_LoginMainMenu(), this.Parent);
+
         }
     }
 }
