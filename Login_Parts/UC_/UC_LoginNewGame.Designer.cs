@@ -37,8 +37,10 @@
             this.rbClasseRogue = new System.Windows.Forms.RadioButton();
             this.rdClasseMage = new System.Windows.Forms.RadioButton();
             this.btnStartNewGame = new System.Windows.Forms.Button();
+
             this.rbClasseHunter = new System.Windows.Forms.RadioButton();
             this.rdbClasseWarrior = new System.Windows.Forms.RadioButton();
+
             this.SuspendLayout();
             // 
             // txtBoxPseudo
@@ -192,17 +194,29 @@
             this.rdbClasseWarrior.UseVisualStyleBackColor = false;
             this.rdbClasseWarrior.CheckedChanged += new System.EventHandler(this.rdbClasseWarrior_CheckedChanged);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(645, 185);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "retour";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // UC_LoginNewGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+
             this.Controls.Add(this.lblClassName);
             this.Controls.Add(this.rbClasseRogue);
             this.Controls.Add(this.rdClasseMage);
             this.Controls.Add(this.lblWhat);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblWho);
+
             this.Controls.Add(this.btnStartNewGame);
             this.Controls.Add(this.rbClasseHunter);
             this.Controls.Add(this.rdbClasseWarrior);
@@ -222,11 +236,13 @@
         private System.Windows.Forms.RadioButton rdbClasseWarrior;
         private System.Windows.Forms.RadioButton rbClasseHunter;
         private System.Windows.Forms.Button btnStartNewGame;
+
         private System.Windows.Forms.Label lblWho;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblWhat;
         private System.Windows.Forms.RadioButton rdClasseMage;
         private System.Windows.Forms.RadioButton rbClasseRogue;
         private System.Windows.Forms.Label lblClassName;
+
     }
 }

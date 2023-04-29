@@ -28,11 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_LoginMain = new System.Windows.Forms.Panel();
+            this.timerCheckMusic = new System.Windows.Forms.Timer(this.components);
+            this.picBox_VolumeOnOff = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_VolumeOnOff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,13 +50,32 @@
             // 
             // pnl_LoginMain
             // 
+            this.pnl_LoginMain.BackColor = System.Drawing.Color.Transparent;
             this.pnl_LoginMain.Location = new System.Drawing.Point(12, 196);
             this.pnl_LoginMain.Name = "pnl_LoginMain";
             this.pnl_LoginMain.Size = new System.Drawing.Size(776, 242);
             this.pnl_LoginMain.TabIndex = 6;
             // 
+            // timerCheckMusic
+            // 
+            this.timerCheckMusic.Enabled = true;
+            // 
+            // picBox_VolumeOnOff
+            // 
+            this.picBox_VolumeOnOff.BackgroundImage = global::Lynaar_GUI.Properties.Resources.Volume_On;
+            this.picBox_VolumeOnOff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picBox_VolumeOnOff.Location = new System.Drawing.Point(5, 389);
+            this.picBox_VolumeOnOff.Name = "picBox_VolumeOnOff";
+            this.picBox_VolumeOnOff.Size = new System.Drawing.Size(66, 56);
+            this.picBox_VolumeOnOff.TabIndex = 0;
+            this.picBox_VolumeOnOff.TabStop = false;
+            this.picBox_VolumeOnOff.Click += new System.EventHandler(this.OnOffSound);
+            this.picBox_VolumeOnOff.MouseEnter += new System.EventHandler(this.picBox_VolumeOnOff_MouseEnter);
+            this.picBox_VolumeOnOff.MouseLeave += new System.EventHandler(this.picBox_VolumeOnOff_MouseLeave);
+            // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -68,8 +91,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.picBox_VolumeOnOff);
             this.Controls.Add(this.pnl_LoginMain);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(816, 489);
             this.MinimumSize = new System.Drawing.Size(816, 489);
@@ -77,6 +102,7 @@
             this.Text = "Lynaar - Login";
             this.Load += new System.EventHandler(this.LoggingForm_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_VolumeOnOff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -86,5 +112,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnl_LoginMain;
+        private System.Windows.Forms.PictureBox picBox_VolumeOnOff;
+        private System.Windows.Forms.Timer timerCheckMusic;
     }
 }

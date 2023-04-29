@@ -1,0 +1,39 @@
+﻿[SizeAll]
+Path=Medieval Move.cur
+
+[UpArrow]
+Path=Medieval Alternate Select.cur
+
+[SizeNWSE]
+Path=Medieval Diagonal 1.ani
+
+[SizeNESW]
+Path=Medieval Diagonal 2.ani
+
+[SizeWE]
+Path=Medieval Horizontal Resize.ani
+
+[SizeNS]
+Path=Medieval Vertical Resize.ani
+
+[Hand]
+Path=Medieval Link Select.ani
+
+[NWPen]
+Path=Medieval Handwriting.cur
+
+[Arrow]
+Path=Medieval Select.ani
+
+[Wait]
+Path=Medieval Busy.ani
+
+[No]
+Path=Medieval Unavailable.ani
+
+[Help]
+Path=Medieval Help.ani
+
+[AppStarting]
+Path=Medieval Working in Background.ani
+

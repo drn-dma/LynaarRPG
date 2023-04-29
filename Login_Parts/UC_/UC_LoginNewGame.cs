@@ -1,5 +1,7 @@
 ﻿using Lynaar_GUI.Classes;
+
 using Lynaar_GUI.Properties;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,6 +45,7 @@ namespace Lynaar_GUI.Login_Parts.UC_
             Application.Run(new GameForm());
         }
 
+
         private void rbClasseHunter_CheckedChanged(object sender, EventArgs e)
         {
             lblClassName.Text = "HUNTER";
@@ -82,7 +85,7 @@ namespace Lynaar_GUI.Login_Parts.UC_
 
         private void lblWhat_Click(object sender, EventArgs e)
         {
-
+        
         }
     }
 }
