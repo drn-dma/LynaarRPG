@@ -844,9 +844,14 @@ namespace Lynaar_GUI.Properties {
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
 
-        internal static System.Drawing.Bitmap Mage_IcoC {
-            get {
+        internal static System.Drawing.Bitmap Mage_IcoC
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("Mage_IcoC", resourceCulture);
+                return (((System.Drawing.Bitmap)(obj)));
+            }
+        }
 
         internal static System.Drawing.Bitmap NewGame_Parcho_Gris_A {
             get {
