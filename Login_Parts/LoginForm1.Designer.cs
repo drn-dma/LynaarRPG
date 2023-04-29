@@ -69,5 +69,15 @@ namespace Lynaar_GUI.Login_Parts {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Point semblable à {X=17,Y=17}.
+        /// </summary>
+        internal static System.Drawing.Point timerCheckMusic_TrayLocation {
+            get {
+                object obj = ResourceManager.GetObject("timerCheckMusic.TrayLocation", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
     }
 }
