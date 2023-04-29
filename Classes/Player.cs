@@ -65,7 +65,35 @@ namespace Lynaar_GUI.Classes
         #endregion
 
         #region Function
-
+        
+        //fonction qui définie les stats du joueur en fonction de sa classe
+        public void setPlayerStats(string classe)
+        {
+            switch (classe)
+            {
+                case "Hunter":
+                    this.hp = 100;
+                    this.endurance = 10;
+                    this.intelligence = 5;
+                    this.damage = this.endurance * 1/2;
+                    break;
+                case "Warrior":
+                    this.hp = 150;
+                    this.endurance = 15;
+                    this.intelligence = 0;
+                    this.damage = this.endurance * 1/2;
+                    break;
+                case "Mage":
+                    this.hp = 75;
+                    this.endurance = 0;
+                    this.intelligence = 15;
+                    this.damage = this.intelligence * 1/2;
+                    break;
+                default:
+                    break;
+            }
+        }
+        
         #endregion
 
         #region methods

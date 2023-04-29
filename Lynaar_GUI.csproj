@@ -181,7 +181,6 @@
     <EmbeddedResource Include="Game_Parts\UC_\UC_GameInventory.resx">
       <DependentUpon>UC_GameInventory.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Lynaar_GUI_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -427,6 +426,31 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Lynaar_Icon-round.ico" />
+    <None Include="Resources\FondClass_Ico.png" />
+    <None Include="Resources\Rogue_IcoC.png" />
+    <None Include="Resources\Warrior_IcoC.png" />
+    <None Include="Resources\Mage_IcoC.png" />
+    <None Include="Resources\Hunter_IcoC.png" />
+    <None Include="Resources\Warrior_Ico21.png" />
+    <None Include="Resources\Rogue_Ico21.png" />
+    <None Include="Resources\Mage_Ico11.png" />
+    <None Include="Resources\Hunter_Ico31.png" />
+    <None Include="Resources\Hunter_Ico211.png" />
+    <None Include="Resources\Hunter_Ico111.png" />
+    <None Include="Resources\Hunter_Ico11.png" />
+    <None Include="Resources\Warrior_Ico2.png" />
+    <None Include="Resources\Rogue_Ico2.png" />
+    <None Include="Resources\Mage_Ico1.png" />
+    <None Include="Resources\Hunter_Ico3.png" />
+    <None Include="Resources\Hunter_Ico21.png" />
+    <None Include="Resources\Hunter_Ico.png" />
+    <None Include="Resources\Hunter_Ico2.png" />
+    <None Include="Resources\Warrior_Ico1.png" />
+    <None Include="Resources\Rogue_Ico1.png" />
+    <None Include="Resources\Hunter_Ico1.png" />
+    <None Include="Resources\Warrior_Ico.png" />
+    <None Include="Resources\Rogue_Ico.png" />
+    <None Include="Resources\Mage_Ico.png" />
     <None Include="Resources\Parcho_WorldMap_B.png" />
     <None Include="Resources\Parcho_PasBo_B.png" />
     <None Include="Resources\Parcho_Normal_B.png" />

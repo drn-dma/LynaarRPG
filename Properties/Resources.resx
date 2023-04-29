@@ -382,4 +382,19 @@
   <data name="Parcho_WorldMap_Grand" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Parcho_WorldMap_Grand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Hunter_IcoC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hunter_IcoC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mage_IcoC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mage_IcoC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rogue_IcoC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rogue_IcoC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Warrior_IcoC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Warrior_IcoC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FondClass_Ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FondClass_Ico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
