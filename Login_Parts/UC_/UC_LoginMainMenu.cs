@@ -152,5 +152,9 @@ namespace Lynaar_GUI.Login_Parts.UC_
             this.Cursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalSelect.ani"));
         }
 
+        private void picBox_LoadGame_Click(object sender, EventArgs e)
+        {
+            FunctionsLibs.add_UControls(new UC_LoginLoadGame(), this.Parent);
+        }
     }
 }

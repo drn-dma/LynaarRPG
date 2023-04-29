@@ -693,6 +693,26 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Back_Parcho_Gris_A {
+            get {
+                object obj = ResourceManager.GetObject("Back_Parcho_Gris_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Back2_Parcho_Gris_A {
+            get {
+                object obj = ResourceManager.GetObject("Back2_Parcho_Gris_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Exit_Ico {
             get {
                 object obj = ResourceManager.GetObject("Exit_Ico", resourceCulture);

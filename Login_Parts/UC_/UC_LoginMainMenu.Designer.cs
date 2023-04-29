@@ -61,6 +61,7 @@
             this.picBox_LoadGame.Size = new System.Drawing.Size(275, 58);
             this.picBox_LoadGame.TabIndex = 3;
             this.picBox_LoadGame.TabStop = false;
+            this.picBox_LoadGame.Click += new System.EventHandler(this.picBox_LoadGame_Click);
             this.picBox_LoadGame.MouseEnter += new System.EventHandler(this.hoverLoadBtn);
             this.picBox_LoadGame.MouseLeave += new System.EventHandler(this.exitHoverLoadBtn);
             // 

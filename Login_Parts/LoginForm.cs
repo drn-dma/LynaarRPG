@@ -101,6 +101,8 @@ namespace Lynaar_GUI
         }
 
 
+        #region Cursor Methods
+
         private void changeCursor()
         {
             this.Cursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalHelp.ani"));
@@ -110,7 +112,9 @@ namespace Lynaar_GUI
         {
             this.Cursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalSelect.ani"));
         }
+
+        #endregion
     }
 
-    
+
 }
