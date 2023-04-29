@@ -39,6 +39,7 @@
             // 
             // picBox_ExitGame
             // 
+
             this.picBox_ExitGame.BackgroundImage = global::Lynaar_GUI.Properties.Resources.ExitGame_Parcho_Gris_A;
             this.picBox_ExitGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picBox_ExitGame.Location = new System.Drawing.Point(253, 163);
@@ -50,9 +51,11 @@
             this.picBox_ExitGame.Click += new System.EventHandler(this.picBox_ExitGame_Click);
             this.picBox_ExitGame.MouseEnter += new System.EventHandler(this.hoverExitBtn);
             this.picBox_ExitGame.MouseLeave += new System.EventHandler(this.exitHoverExitBtn);
+
             // 
             // picBox_LoadGame
             // 
+
             this.picBox_LoadGame.BackgroundImage = global::Lynaar_GUI.Properties.Resources.LoadGame_Parcho_Gris_A;
             this.picBox_LoadGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picBox_LoadGame.Location = new System.Drawing.Point(253, 97);
@@ -78,17 +81,20 @@
             this.picBox_NewGame.Click += new System.EventHandler(this.picBox_NewGame_Click);
             this.picBox_NewGame.MouseEnter += new System.EventHandler(this.hoverNewBtn);
             this.picBox_NewGame.MouseLeave += new System.EventHandler(this.exitHoverNewBtn);
+
             // 
             // UC_LoginMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.picBox_ExitGame);
             this.Controls.Add(this.picBox_LoadGame);
             this.Controls.Add(this.picBox_NewGame);
+
             this.Name = "UC_LoginMainMenu";
-            this.Size = new System.Drawing.Size(776, 242);
+            this.Size = new System.Drawing.Size(1035, 298);
             this.Load += new System.EventHandler(this.UC_LoginMainMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBox_ExitGame)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_LoadGame)).EndInit();

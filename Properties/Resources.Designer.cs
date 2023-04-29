@@ -741,6 +741,16 @@ namespace Lynaar_GUI.Properties {
         }
         
         /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FondClass_Ico {
+            get {
+                object obj = ResourceManager.GetObject("FondClass_Ico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une ressource localisée de type System.Byte[].
         /// </summary>
         internal static byte[] Font_Alkhemikal {
@@ -766,6 +776,16 @@ namespace Lynaar_GUI.Properties {
         internal static System.Drawing.Bitmap Hunter_Ico {
             get {
                 object obj = ResourceManager.GetObject("Hunter_Ico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hunter_IcoC {
+            get {
+                object obj = ResourceManager.GetObject("Hunter_IcoC", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -823,6 +843,11 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+
+        internal static System.Drawing.Bitmap Mage_IcoC {
+            get {
+                object obj = ResourceManager.GetObject("Mage_IcoC", resourceCulture);
+
         internal static System.Drawing.Bitmap NewGame_Parcho_Gris_A {
             get {
                 object obj = ResourceManager.GetObject("NewGame_Parcho_Gris_A", resourceCulture);
@@ -836,6 +861,7 @@ namespace Lynaar_GUI.Properties {
         internal static System.Drawing.Bitmap NewGame2_Parcho_Gris_A {
             get {
                 object obj = ResourceManager.GetObject("NewGame2_Parcho_Gris_A", resourceCulture);
+
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -963,6 +989,16 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Rogue_IcoC {
+            get {
+                object obj = ResourceManager.GetObject("Rogue_IcoC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Save_Ico {
             get {
                 object obj = ResourceManager.GetObject("Save_Ico", resourceCulture);
@@ -1024,6 +1060,16 @@ namespace Lynaar_GUI.Properties {
         internal static System.Drawing.Bitmap Warrior_Ico {
             get {
                 object obj = ResourceManager.GetObject("Warrior_Ico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Warrior_IcoC {
+            get {
+                object obj = ResourceManager.GetObject("Warrior_IcoC", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

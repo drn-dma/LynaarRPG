@@ -217,6 +217,7 @@
     <EmbeddedResource Include="Game_Parts\UC_\UC_GameInventory.resx">
       <DependentUpon>UC_GameInventory.cs</DependentUpon>
     </EmbeddedResource>
+
     <None Include="Cursors\MedievalBusy.ani" />
     <None Include="Cursors\Medieval Diagonal 1.ani" />
     <None Include="Cursors\Medieval Diagonal 2.ani" />
@@ -233,6 +234,7 @@
     <None Include="Cursors\Medieval Working in Background.ani" />
     <None Include="Cursors\medieval-sword-arrow.crs" />
     <None Include="Lynaar_GUI_TemporaryKey.pfx" />
+
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -486,6 +488,33 @@
     <Content Include="Cursors\Medieval Handwriting.cur" />
     <Content Include="Cursors\Medieval Move.cur" />
     <Content Include="Lynaar_Icon-round.ico" />
+
+    <None Include="Resources\FondClass_Ico.png" />
+    <None Include="Resources\Rogue_IcoC.png" />
+    <None Include="Resources\Warrior_IcoC.png" />
+    <None Include="Resources\Mage_IcoC.png" />
+    <None Include="Resources\Hunter_IcoC.png" />
+    <None Include="Resources\Warrior_Ico21.png" />
+    <None Include="Resources\Rogue_Ico21.png" />
+    <None Include="Resources\Mage_Ico11.png" />
+    <None Include="Resources\Hunter_Ico31.png" />
+    <None Include="Resources\Hunter_Ico211.png" />
+    <None Include="Resources\Hunter_Ico111.png" />
+    <None Include="Resources\Hunter_Ico11.png" />
+    <None Include="Resources\Warrior_Ico2.png" />
+    <None Include="Resources\Rogue_Ico2.png" />
+    <None Include="Resources\Mage_Ico1.png" />
+    <None Include="Resources\Hunter_Ico3.png" />
+    <None Include="Resources\Hunter_Ico21.png" />
+    <None Include="Resources\Hunter_Ico.png" />
+    <None Include="Resources\Hunter_Ico2.png" />
+    <None Include="Resources\Warrior_Ico1.png" />
+    <None Include="Resources\Rogue_Ico1.png" />
+    <None Include="Resources\Hunter_Ico1.png" />
+    <None Include="Resources\Warrior_Ico.png" />
+    <None Include="Resources\Rogue_Ico.png" />
+    <None Include="Resources\Mage_Ico.png" />
+
     <None Include="Resources\Back-Parcho_Gris_A.png" />
     <None Include="Resources\Back2-Parcho_Gris_A.png" />
     <None Include="Resources\mainMenu.wav" />
@@ -498,6 +527,7 @@
     <None Include="Resources\LoadGame2-Parcho_Gris_A.png" />
     <None Include="Resources\NewGame-Parcho_Gris_A.png" />
     <None Include="Resources\NewGame2-Parcho_Gris_A.png" />
+
     <None Include="Resources\Parcho_WorldMap_B.png" />
     <None Include="Resources\Parcho_PasBo_B.png" />
     <None Include="Resources\Parcho_Normal_B.png" />
