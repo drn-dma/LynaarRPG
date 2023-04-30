@@ -28,7 +28,6 @@ namespace Lynaar_GUI
         private WaveOutEvent outputDevice;          //! Correspond au périphérique de sortie audio (le programme)
         private RawSourceWaveStream audioFile;      //! Correspond au fichier audio à lire
 
-
         public LoginForm()
         {
             InitializeComponent();

@@ -34,13 +34,13 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblWhat = new System.Windows.Forms.Label();
             this.lblClassName = new System.Windows.Forms.Label();
-            this.rbClasseRogue = new System.Windows.Forms.RadioButton();
-            this.rdClasseMage = new System.Windows.Forms.RadioButton();
-            this.btnStartNewGame = new System.Windows.Forms.Button();
-
-            this.rbClasseHunter = new System.Windows.Forms.RadioButton();
+            this.rdbClasseRogue = new System.Windows.Forms.RadioButton();
+            this.rdbClasseMage = new System.Windows.Forms.RadioButton();
+            this.rdbClasseHunter = new System.Windows.Forms.RadioButton();
             this.rdbClasseWarrior = new System.Windows.Forms.RadioButton();
-
+            this.picBox_NewGame = new System.Windows.Forms.PictureBox();
+            this.lblError = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_NewGame)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBoxPseudo
@@ -48,7 +48,7 @@
             this.txtBoxPseudo.BackColor = System.Drawing.Color.FloralWhite;
             this.txtBoxPseudo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxPseudo.ForeColor = System.Drawing.Color.Black;
-            this.txtBoxPseudo.Location = new System.Drawing.Point(156, 151);
+            this.txtBoxPseudo.Location = new System.Drawing.Point(185, 149);
             this.txtBoxPseudo.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxPseudo.MaxLength = 255;
             this.txtBoxPseudo.Name = "txtBoxPseudo";
@@ -59,120 +59,101 @@
             // 
             this.lblWho.AutoSize = true;
             this.lblWho.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblWho.Location = new System.Drawing.Point(174, 29);
+            this.lblWho.Location = new System.Drawing.Point(165, 29);
             this.lblWho.Name = "lblWho";
             this.lblWho.Size = new System.Drawing.Size(91, 20);
             this.lblWho.TabIndex = 4;
             this.lblWho.Text = "Who are you ?";
             this.lblWho.UseCompatibleTextRendering = true;
-            this.lblWho.Click += new System.EventHandler(this.lblWho_Click);
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
+            this.lblName.BackColor = System.Drawing.Color.Black;
             this.lblName.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblName.Location = new System.Drawing.Point(182, 108);
+            this.lblName.Location = new System.Drawing.Point(199, 108);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(70, 20);
             this.lblName.TabIndex = 5;
             this.lblName.Text = "Your name";
             this.lblName.UseCompatibleTextRendering = true;
-            this.lblName.Click += new System.EventHandler(this.lblName_Click);
             // 
             // lblWhat
             // 
             this.lblWhat.AutoSize = true;
             this.lblWhat.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblWhat.Location = new System.Drawing.Point(706, 29);
+            this.lblWhat.Location = new System.Drawing.Point(683, 29);
             this.lblWhat.Name = "lblWhat";
             this.lblWhat.Size = new System.Drawing.Size(95, 20);
             this.lblWhat.TabIndex = 6;
             this.lblWhat.Text = "What are you ?";
             this.lblWhat.UseCompatibleTextRendering = true;
-            this.lblWhat.Click += new System.EventHandler(this.lblWhat_Click);
             // 
             // lblClassName
             // 
             this.lblClassName.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblClassName.Location = new System.Drawing.Point(727, 185);
+            this.lblClassName.Location = new System.Drawing.Point(718, 182);
             this.lblClassName.Name = "lblClassName";
             this.lblClassName.Size = new System.Drawing.Size(100, 23);
             this.lblClassName.TabIndex = 9;
-            this.lblClassName.Text = "Class name";
             this.lblClassName.UseCompatibleTextRendering = true;
             // 
-            // rbClasseRogue
+            // rdbClasseRogue
             // 
-            this.rbClasseRogue.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbClasseRogue.BackgroundImage = global::Lynaar_GUI.Properties.Resources.FondClass_Ico;
-            this.rbClasseRogue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.rbClasseRogue.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbClasseRogue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbClasseRogue.ForeColor = System.Drawing.Color.Black;
-            this.rbClasseRogue.Image = ((System.Drawing.Image)(resources.GetObject("rbClasseRogue.Image")));
-            this.rbClasseRogue.Location = new System.Drawing.Point(767, 80);
-            this.rbClasseRogue.Margin = new System.Windows.Forms.Padding(4);
-            this.rbClasseRogue.Name = "rbClasseRogue";
-            this.rbClasseRogue.Size = new System.Drawing.Size(81, 72);
-            this.rbClasseRogue.TabIndex = 8;
-            this.rbClasseRogue.TabStop = true;
-            this.rbClasseRogue.Tag = "classe";
-            this.rbClasseRogue.UseVisualStyleBackColor = true;
-            this.rbClasseRogue.CheckedChanged += new System.EventHandler(this.rbClasseRogue_CheckedChanged);
+            this.rdbClasseRogue.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rdbClasseRogue.BackgroundImage = global::Lynaar_GUI.Properties.Resources.FondClass_Ico;
+            this.rdbClasseRogue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rdbClasseRogue.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rdbClasseRogue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rdbClasseRogue.ForeColor = System.Drawing.Color.Black;
+            this.rdbClasseRogue.Image = ((System.Drawing.Image)(resources.GetObject("rdbClasseRogue.Image")));
+            this.rdbClasseRogue.Location = new System.Drawing.Point(767, 80);
+            this.rdbClasseRogue.Margin = new System.Windows.Forms.Padding(4);
+            this.rdbClasseRogue.Name = "rdbClasseRogue";
+            this.rdbClasseRogue.Size = new System.Drawing.Size(81, 72);
+            this.rdbClasseRogue.TabIndex = 8;
+            this.rdbClasseRogue.TabStop = true;
+            this.rdbClasseRogue.Tag = "classe";
+            this.rdbClasseRogue.UseVisualStyleBackColor = true;
+            this.rdbClasseRogue.CheckedChanged += new System.EventHandler(this.rdbClasseRogue_CheckedChanged);
             // 
-            // rdClasseMage
+            // rdbClasseMage
             // 
-            this.rdClasseMage.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rdClasseMage.BackgroundImage = global::Lynaar_GUI.Properties.Resources.FondClass_Ico;
-            this.rdClasseMage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.rdClasseMage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rdClasseMage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rdClasseMage.ForeColor = System.Drawing.Color.Black;
-            this.rdClasseMage.Image = global::Lynaar_GUI.Properties.Resources.Mage_IcoC;
-            this.rdClasseMage.Location = new System.Drawing.Point(683, 80);
-            this.rdClasseMage.Margin = new System.Windows.Forms.Padding(4);
-            this.rdClasseMage.Name = "rdClasseMage";
-            this.rdClasseMage.Size = new System.Drawing.Size(76, 72);
-            this.rdClasseMage.TabIndex = 7;
-            this.rdClasseMage.TabStop = true;
-            this.rdClasseMage.Tag = "classe";
-            this.rdClasseMage.UseVisualStyleBackColor = true;
-            this.rdClasseMage.CheckedChanged += new System.EventHandler(this.rdClasseMage_CheckedChanged);
+            this.rdbClasseMage.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rdbClasseMage.BackgroundImage = global::Lynaar_GUI.Properties.Resources.FondClass_Ico;
+            this.rdbClasseMage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rdbClasseMage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rdbClasseMage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rdbClasseMage.ForeColor = System.Drawing.Color.Black;
+            this.rdbClasseMage.Image = global::Lynaar_GUI.Properties.Resources.Mage_IcoC;
+            this.rdbClasseMage.Location = new System.Drawing.Point(683, 80);
+            this.rdbClasseMage.Margin = new System.Windows.Forms.Padding(4);
+            this.rdbClasseMage.Name = "rdbClasseMage";
+            this.rdbClasseMage.Size = new System.Drawing.Size(76, 72);
+            this.rdbClasseMage.TabIndex = 7;
+            this.rdbClasseMage.TabStop = true;
+            this.rdbClasseMage.Tag = "classe";
+            this.rdbClasseMage.UseVisualStyleBackColor = true;
+            this.rdbClasseMage.CheckedChanged += new System.EventHandler(this.rdbClasseMage_CheckedChanged);
             // 
-            // btnStartNewGame
+            // rdbClasseHunter
             // 
-            this.btnStartNewGame.BackgroundImage = global::Lynaar_GUI.Properties.Resources.Parcho_Gris_A;
-            this.btnStartNewGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnStartNewGame.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStartNewGame.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnStartNewGame.ImageKey = "(aucun)";
-            this.btnStartNewGame.Location = new System.Drawing.Point(413, 218);
-            this.btnStartNewGame.Margin = new System.Windows.Forms.Padding(4);
-            this.btnStartNewGame.Name = "btnStartNewGame";
-            this.btnStartNewGame.Size = new System.Drawing.Size(208, 59);
-            this.btnStartNewGame.TabIndex = 3;
-            this.btnStartNewGame.Text = "Start a new game";
-            this.btnStartNewGame.UseVisualStyleBackColor = true;
-            this.btnStartNewGame.Click += new System.EventHandler(this.btnStartNewGame_Click);
-            // 
-            // rbClasseHunter
-            // 
-            this.rbClasseHunter.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbClasseHunter.BackgroundImage = global::Lynaar_GUI.Properties.Resources.FondClass_Ico;
-            this.rbClasseHunter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.rbClasseHunter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbClasseHunter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbClasseHunter.ForeColor = System.Drawing.Color.Black;
-            this.rbClasseHunter.Image = global::Lynaar_GUI.Properties.Resources.Hunter_IcoC;
-            this.rbClasseHunter.Location = new System.Drawing.Point(856, 80);
-            this.rbClasseHunter.Margin = new System.Windows.Forms.Padding(4);
-            this.rbClasseHunter.Name = "rbClasseHunter";
-            this.rbClasseHunter.Size = new System.Drawing.Size(80, 72);
-            this.rbClasseHunter.TabIndex = 2;
-            this.rbClasseHunter.TabStop = true;
-            this.rbClasseHunter.Tag = "classe";
-            this.rbClasseHunter.UseVisualStyleBackColor = true;
-            this.rbClasseHunter.CheckedChanged += new System.EventHandler(this.rbClasseHunter_CheckedChanged);
+            this.rdbClasseHunter.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rdbClasseHunter.BackgroundImage = global::Lynaar_GUI.Properties.Resources.FondClass_Ico;
+            this.rdbClasseHunter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rdbClasseHunter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rdbClasseHunter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rdbClasseHunter.ForeColor = System.Drawing.Color.Black;
+            this.rdbClasseHunter.Image = global::Lynaar_GUI.Properties.Resources.Hunter_IcoC;
+            this.rdbClasseHunter.Location = new System.Drawing.Point(856, 80);
+            this.rdbClasseHunter.Margin = new System.Windows.Forms.Padding(4);
+            this.rdbClasseHunter.Name = "rdbClasseHunter";
+            this.rdbClasseHunter.Size = new System.Drawing.Size(80, 72);
+            this.rdbClasseHunter.TabIndex = 2;
+            this.rdbClasseHunter.TabStop = true;
+            this.rdbClasseHunter.Tag = "classe";
+            this.rdbClasseHunter.UseVisualStyleBackColor = true;
+            this.rdbClasseHunter.CheckedChanged += new System.EventHandler(this.rdbClasseHunter_CheckedChanged);
             // 
             // rdbClasseWarrior
             // 
@@ -194,31 +175,51 @@
             this.rdbClasseWarrior.UseVisualStyleBackColor = false;
             this.rdbClasseWarrior.CheckedChanged += new System.EventHandler(this.rdbClasseWarrior_CheckedChanged);
             // 
-            // button1
+            // picBox_NewGame
             // 
-
+            this.picBox_NewGame.BackgroundImage = global::Lynaar_GUI.Properties.Resources.NewGame_Parcho_Gris_A;
+            this.picBox_NewGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picBox_NewGame.Location = new System.Drawing.Point(379, 213);
+            this.picBox_NewGame.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picBox_NewGame.MaximumSize = new System.Drawing.Size(275, 58);
+            this.picBox_NewGame.Name = "picBox_NewGame";
+            this.picBox_NewGame.Size = new System.Drawing.Size(275, 58);
+            this.picBox_NewGame.TabIndex = 10;
+            this.picBox_NewGame.TabStop = false;
+            this.picBox_NewGame.Click += new System.EventHandler(this.picBox_NewGame_Click);
+            this.picBox_NewGame.MouseEnter += new System.EventHandler(this.hoverNewGameButton);
+            this.picBox_NewGame.MouseLeave += new System.EventHandler(this.exitHoverNewGameButton);
+            // 
+            // lblError
+            // 
+            this.lblError.Location = new System.Drawing.Point(715, 213);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(221, 58);
+            this.lblError.TabIndex = 11;
+            this.lblError.Text = "lblError";
+            this.lblError.UseCompatibleTextRendering = true;
             // 
             // UC_LoginNewGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-
+            this.Controls.Add(this.lblError);
+            this.Controls.Add(this.picBox_NewGame);
             this.Controls.Add(this.lblClassName);
-            this.Controls.Add(this.rbClasseRogue);
-            this.Controls.Add(this.rdClasseMage);
+            this.Controls.Add(this.rdbClasseRogue);
+            this.Controls.Add(this.rdbClasseMage);
             this.Controls.Add(this.lblWhat);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblWho);
-
-            this.Controls.Add(this.btnStartNewGame);
-            this.Controls.Add(this.rbClasseHunter);
+            this.Controls.Add(this.rdbClasseHunter);
             this.Controls.Add(this.rdbClasseWarrior);
             this.Controls.Add(this.txtBoxPseudo);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_LoginNewGame";
             this.Size = new System.Drawing.Size(1035, 298);
             this.Load += new System.EventHandler(this.UC_LoginNewGame_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_NewGame)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,15 +229,15 @@
 
         private System.Windows.Forms.TextBox txtBoxPseudo;
         private System.Windows.Forms.RadioButton rdbClasseWarrior;
-        private System.Windows.Forms.RadioButton rbClasseHunter;
-        private System.Windows.Forms.Button btnStartNewGame;
+        private System.Windows.Forms.RadioButton rdbClasseHunter;
 
         private System.Windows.Forms.Label lblWho;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblWhat;
-        private System.Windows.Forms.RadioButton rdClasseMage;
-        private System.Windows.Forms.RadioButton rbClasseRogue;
+        private System.Windows.Forms.RadioButton rdbClasseMage;
+        private System.Windows.Forms.RadioButton rdbClasseRogue;
         private System.Windows.Forms.Label lblClassName;
-
+        private System.Windows.Forms.PictureBox picBox_NewGame;
+        private System.Windows.Forms.Label lblError;
     }
 }
