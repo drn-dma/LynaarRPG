@@ -57,7 +57,6 @@
             this.lbl_Inventaire.TabIndex = 0;
             this.lbl_Inventaire.Text = "Inventaire";
             this.lbl_Inventaire.UseCompatibleTextRendering = true;
-            this.lbl_Inventaire.Click += new System.EventHandler(this.lbl_Inventaire_Click);
             // 
             // pnl_PlayerEquipement
             // 

@@ -20,9 +20,13 @@ namespace Lynaar_GUI.Login_Parts.UC_
         private int diffPicWidth_OnHover = 5;
         private int diffPicHeight_OnHover = 5;
 
-        public UC_LoginLoadGame()
+        private Lynaar_GUI.LoginForm parentForm;
+
+
+        public UC_LoginLoadGame(Lynaar_GUI.LoginForm loginForm)
         {
             InitializeComponent();
+            this.parentForm = loginForm;
         }
 
         private void UC_LoginLoadGame_Load(object sender, EventArgs e)
@@ -72,7 +76,7 @@ namespace Lynaar_GUI.Login_Parts.UC_
 
         private void picBoxBackBtn_Click(object sender, EventArgs e)
         {
-            FunctionsLibs.add_UControls(new UC_LoginMainMenu(), this.Parent);
+            FunctionsLibs.add_UControls(new UC_LoginMainMenu(this.parentForm), this.Parent);
         }
     }
 }

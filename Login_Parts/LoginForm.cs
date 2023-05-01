@@ -28,6 +28,7 @@ namespace Lynaar_GUI
         private WaveOutEvent outputDevice;          //! Correspond au périphérique de sortie audio (le programme)
         private RawSourceWaveStream audioFile;      //! Correspond au fichier audio à lire
 
+
         public LoginForm()
         {
             InitializeComponent();
@@ -36,7 +37,8 @@ namespace Lynaar_GUI
         private void LoggingForm_Load(object sender, EventArgs e)
         {
             //! Ajout de l'UC (UserControl) UC_LoginMainMenu dans le panel 'pnl_LoginMain' au chargement du Formulaire
-            FunctionsLibs.add_UControls(new UC_LoginMainMenu(), pnl_LoginMain);
+            UC_LoginMainMenu uc = new UC_LoginMainMenu(this);
+            FunctionsLibs.add_UControls(uc, pnl_LoginMain);
 
             resetCursor();
             //! Initialisation de la musique
@@ -46,7 +48,7 @@ namespace Lynaar_GUI
         #region Music Methods
 
         //! Fonction permettant de jouer la musique
-        private void playMusic()
+        public void playMusic()
         {
             //!Si le périphérique de sortie audio n'est pas initialisé, on le fait et on joue la musique
             if (outputDevice == null)
