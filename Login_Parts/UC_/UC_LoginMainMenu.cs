@@ -18,7 +18,9 @@ namespace Lynaar_GUI.Login_Parts.UC_
 {
     public partial class UC_LoginMainMenu : UserControl
     {
+        #region Private variables
 
+        //! Différence de taille entre l'image du bouton et l'image du bouton lorsqu'il est survolé
         private int diffPicWidth_OnHover = 5;
         private int diffPicHeight_OnHover = 5;
         private Size sizeBefore;
@@ -29,8 +31,12 @@ namespace Lynaar_GUI.Login_Parts.UC_
         private Point locationBeforeExit;
         private Point locationAfterExit;
         private Size sizeAfter;
+
+        //! Son des boutons
         private Stream stream;
         private SoundPlayer player;
+
+        //! Images des boutons
         private Bitmap NewGame;
         private Bitmap LoadGame;
         private Bitmap ExitGame;
@@ -38,19 +44,29 @@ namespace Lynaar_GUI.Login_Parts.UC_
         private Bitmap LoadGame2;
         private Bitmap ExitGame2;
 
+        //! Curseurs
+        private Cursor originalCursor;
+        private Cursor hoverCursor;
 
-        private Lynaar_GUI.LoginForm parentForm;
 
+        private Lynaar_GUI.LoginForm parentForm; //! Référence au formulaire parent
+
+        #endregion
 
 
         public UC_LoginMainMenu(Lynaar_GUI.LoginForm parentForm)
         {
             InitializeComponent();
+
+            //! Initialisation des variables de position et de taille des boutons
             this.sizeAfter = new Size(this.picBox_NewGame.Width - this.diffPicWidth_OnHover, this.picBox_NewGame.Height - this.diffPicHeight_OnHover);
             this.sizeBefore = new Size(this.picBox_NewGame.Width + this.diffPicWidth_OnHover, this.picBox_NewGame.Height + this.diffPicHeight_OnHover);
+            
+            //! Initialisation du son
             this.stream = Resources.SOUND_mainMenuButtonClick;
             this.player = new SoundPlayer(this.stream);
 
+            //! Initialisation des images des boutons
             this.NewGame = Properties.Resources.NewGame_Parcho_Gris_A;
             this.LoadGame = Properties.Resources.LoadGame_Parcho_Gris_A;
             this.ExitGame = Properties.Resources.ExitGame_Parcho_Gris_A;
@@ -58,6 +74,11 @@ namespace Lynaar_GUI.Login_Parts.UC_
             this.LoadGame2 = Properties.Resources.LoadGame2_Parcho_Gris_A;
             this.ExitGame2 = Properties.Resources.ExitGame2_Parcho_Gris_A;
 
+            //! Initialisation des curseurs
+            this.hoverCursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalHelp.ani"));
+            this.originalCursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalSelect.ani"));
+
+            //! Initialisation du parent
             this.parentForm = parentForm;
         }
 
@@ -73,15 +94,23 @@ namespace Lynaar_GUI.Login_Parts.UC_
         //! Fonction modifiant le style des boutons au survol de la souris
         private void hoverNewBtn(object sender, EventArgs e)
         {
+            //! Récupération du bouton qui a appelé la fonction
+            PictureBox pic = (PictureBox)sender;
+            
+            //! Mise à jour de la position de l'image du bouton lorsqu'il est survolé (si elle n'a pas été initialisée)
             if (this.locationAfterNew.X == 0 && this.locationAfterNew.Y == 0)
             {
                 this.locationAfterNew = new Point(this.picBox_NewGame.Location.X + this.diffPicWidth_OnHover / 2, this.picBox_NewGame.Location.Y + this.diffPicHeight_OnHover / 2);
             }
 
-            PictureBox pic = (PictureBox)sender;
+            
+
+            //! Changement de l'image du bouton, de sa taille et de sa position
             pic.BackgroundImage = this.NewGame2;
             pic.Size = this.sizeAfter;
             pic.Location = this.locationAfterNew;
+
+
             changeCursor();
             playClickSound();
         }
@@ -89,16 +118,20 @@ namespace Lynaar_GUI.Login_Parts.UC_
         //! Fonction modifiant le style des boutons à la sortie de la souris
         private void exitHoverNewBtn(object sender, EventArgs e)
         {
+            //! Récupération du bouton qui a appelé la fonction
             PictureBox pic = (PictureBox)sender;
 
+            //! Mise à jour de la position de l'image du bouton lorsqu'il est survolé (si elle n'a pas été initialisée)
             if (this.locationBeforeNew.X == 0 && this.locationBeforeNew.Y == 0)
             {
                 this.locationBeforeNew = new Point(this.picBox_NewGame.Location.X - this.diffPicWidth_OnHover / 2, this.picBox_NewGame.Location.Y - this.diffPicHeight_OnHover / 2);
             }
-           
+
+            //! Changement de l'image du bouton, de sa taille et de sa position
             pic.BackgroundImage = this.NewGame;
             pic.Size = this.sizeBefore;
             pic.Location = this.locationAfterNew;
+
             resetCursor();
         }
 
@@ -109,17 +142,20 @@ namespace Lynaar_GUI.Login_Parts.UC_
         //! Fonction modifiant le style des boutons au survol de la souris
         private void hoverLoadBtn(object sender, EventArgs e)
         {
+            //! Récupération du bouton qui a appelé la fonction
+            PictureBox pic = (PictureBox)sender;
 
+            //! Mise à jour de la position de l'image du bouton lorsqu'il est survolé (si elle n'a pas été initialisée)
             if (this.locationAfterLoad.X == 0 && this.locationAfterLoad.Y == 0)
             {
                 this.locationAfterLoad = new Point(this.picBox_LoadGame.Location.X + this.diffPicWidth_OnHover / 2, this.picBox_LoadGame.Location.Y + this.diffPicHeight_OnHover / 2);
             }
 
-            PictureBox pic = (PictureBox)sender;
-
+            //! Changement de l'image du bouton, de sa taille et de sa position
             pic.BackgroundImage = this.LoadGame2;
             pic.Size = this.sizeAfter;
             pic.Location = this.locationAfterLoad; 
+
             changeCursor();
             playClickSound();
 
@@ -128,15 +164,20 @@ namespace Lynaar_GUI.Login_Parts.UC_
         //! Fonction modifiant le style des boutons à la sortie de la souris
         private void exitHoverLoadBtn(object sender, EventArgs e)
         {
+            //! Récupération du bouton qui a appelé la fonction
+            PictureBox pic = (PictureBox)sender;
+
+            //! Mise à jour de la position de l'image du bouton lorsqu'il est survolé (si elle n'a pas été initialisée)
             if (this.locationBeforeLoad.X == 0 && this.locationBeforeLoad.Y == 0)
             {
                 this.locationBeforeLoad = new Point(this.picBox_LoadGame.Location.X - this.diffPicWidth_OnHover / 2, this.picBox_LoadGame.Location.Y - this.diffPicHeight_OnHover / 2);
             }
 
-            PictureBox pic = (PictureBox)sender;
+            //! Changement de l'image du bouton, de sa taille et de sa position
             pic.BackgroundImage = this.LoadGame;
             pic.Size = this.sizeBefore;
             pic.Location = this.locationBeforeLoad; 
+
             resetCursor();
 
         }
@@ -148,16 +189,20 @@ namespace Lynaar_GUI.Login_Parts.UC_
         //! Fonction modifiant le style des boutons au survol de la souris
         private void hoverExitBtn(object sender, EventArgs e)
         {
+            //! Récupération du bouton qui a appelé la fonction
+            PictureBox pic = (PictureBox)sender;
 
+            //! Mise à jour de la position de l'image du bouton lorsqu'il est survolé (si elle n'a pas été initialisée)
             if (this.locationAfterExit.X == 0 && this.locationAfterExit.Y == 0)
             {
                 this.locationAfterExit = new Point(this.picBox_ExitGame.Location.X + this.diffPicWidth_OnHover / 2, this.picBox_ExitGame.Location.Y + this.diffPicHeight_OnHover / 2);
             }
 
-            PictureBox pic = (PictureBox)sender;
+            //! Changement de l'image du bouton, de sa taille et de sa position
             pic.BackgroundImage = this.ExitGame2;
             pic.Size = this.sizeAfter;
             pic.Location = this.locationAfterExit; 
+
             changeCursor();
             playClickSound();
 
@@ -166,61 +211,67 @@ namespace Lynaar_GUI.Login_Parts.UC_
         //! Fonction modifiant le style des boutons à la sortie de la souris
         private void exitHoverExitBtn(object sender, EventArgs e)
         {
+            //! Récupération du bouton qui a appelé la fonction
+            PictureBox pic = (PictureBox)sender;
+
+            //! Mise à jour de la position de l'image du bouton lorsqu'il est survolé (si elle n'a pas été initialisée)
             if (this.locationBeforeExit.X == 0 && this.locationBeforeExit.Y == 0)
             {
                 this.locationBeforeExit = new Point(this.picBox_ExitGame.Location.X - this.diffPicWidth_OnHover / 2, this.picBox_ExitGame.Location.Y - this.diffPicHeight_OnHover / 2);
             }
 
-            PictureBox pic = (PictureBox)sender;
+            //! Changement de l'image du bouton, de sa taille et de sa position
             pic.BackgroundImage = this.ExitGame;
             pic.Size = this.sizeBefore;
             pic.Location = this.locationBeforeExit; 
+
             resetCursor();
             
         }
 
-        
-        #endregion
 
         #endregion
 
+        #endregion
+
+        #region Click Events
         private void picBox_ExitGame_Click(object sender, EventArgs e)
         {
-            this.player.Dispose();
-            ((Form)this.TopLevelControl).Close();
+            this.player.Dispose(); //! Libération des ressources utilisées par le player
+            this.parentForm.Close();
         }
 
         private void picBox_NewGame_Click(object sender, EventArgs e)
         {
-            /*this.Dispose();*/
             FunctionsLibs.add_UControls(new UC_LoginNewGame(this.parentForm), this.Parent);
             
-            
-
-        }
-
-        private void playClickSound()
-        {
-            
-            this.player.Play();    
- 
-            
-        }
-
-
-        private void changeCursor()
-        {
-            this.Cursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalHelp.ani"));
-        }
-
-        private void resetCursor()
-        {
-            this.Cursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalSelect.ani"));
         }
 
         private void picBox_LoadGame_Click(object sender, EventArgs e)
         {
             FunctionsLibs.add_UControls(new UC_LoginLoadGame(this.parentForm), this.Parent);
         }
+
+        #endregion
+
+        private void playClickSound()
+        {  
+            this.player.Play();    
+        }
+
+        #region Cursor
+        private void changeCursor()
+        {
+            this.Cursor = this.hoverCursor;
+        }
+
+        private void resetCursor()
+        {
+            this.Cursor = this.originalCursor;
+        }
+
+        #endregion
+
+        
     }
 }

@@ -23,11 +23,13 @@ namespace Lynaar_GUI
 {
     public partial class LoginForm : Form
     {
+        #region Attributs
 
         //! Initialisation des variables pour la musique
         private WaveOutEvent outputDevice;          //! Correspond au périphérique de sortie audio (le programme)
         private RawSourceWaveStream audioFile;      //! Correspond au fichier audio à lire
 
+        #endregion
 
         public LoginForm()
         {
@@ -37,7 +39,7 @@ namespace Lynaar_GUI
         private void LoggingForm_Load(object sender, EventArgs e)
         {
             //! Ajout de l'UC (UserControl) UC_LoginMainMenu dans le panel 'pnl_LoginMain' au chargement du Formulaire
-            UC_LoginMainMenu uc = new UC_LoginMainMenu(this);
+            UC_LoginMainMenu uc = new UC_LoginMainMenu(this);    //? 'this' permet de passer le formulaire en paramètre pour pouvoir le fermer depuis l'UC
             FunctionsLibs.add_UControls(uc, pnl_LoginMain);
 
             resetCursor();
@@ -45,6 +47,8 @@ namespace Lynaar_GUI
             playMusic();
 
         }
+
+
         #region Music Methods
 
         //! Fonction permettant de jouer la musique
@@ -91,11 +95,14 @@ namespace Lynaar_GUI
 
         #endregion
 
+
+        //! Change le curseur quand on passe sur le bouton du son
         private void picBox_VolumeOnOff_MouseEnter(object sender, EventArgs e)
         {
             changeCursor();
         }
 
+        //! Remet le curseur par défaut quand on quitte le bouton du son
         private void picBox_VolumeOnOff_MouseLeave(object sender, EventArgs e)
         {
             resetCursor();
@@ -104,6 +111,7 @@ namespace Lynaar_GUI
 
         #region Cursor Methods
 
+        //! Fonctions permettant de changer le curseur
         private void changeCursor()
         {
             this.Cursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalHelp.ani"));

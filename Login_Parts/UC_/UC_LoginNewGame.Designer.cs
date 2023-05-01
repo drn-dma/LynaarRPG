@@ -114,7 +114,7 @@
             this.rdbClasseRogue.Location = new System.Drawing.Point(575, 65);
             this.rdbClasseRogue.Name = "rdbClasseRogue";
             this.rdbClasseRogue.Size = new System.Drawing.Size(61, 58);
-            this.rdbClasseRogue.TabIndex = 8;
+            this.rdbClasseRogue.TabIndex = 3;
             this.rdbClasseRogue.TabStop = true;
             this.rdbClasseRogue.Tag = "classe";
             this.rdbClasseRogue.UseVisualStyleBackColor = true;
@@ -132,7 +132,7 @@
             this.rdbClasseMage.Location = new System.Drawing.Point(512, 65);
             this.rdbClasseMage.Name = "rdbClasseMage";
             this.rdbClasseMage.Size = new System.Drawing.Size(57, 58);
-            this.rdbClasseMage.TabIndex = 7;
+            this.rdbClasseMage.TabIndex = 2;
             this.rdbClasseMage.TabStop = true;
             this.rdbClasseMage.Tag = "classe";
             this.rdbClasseMage.UseVisualStyleBackColor = true;
@@ -150,7 +150,7 @@
             this.rdbClasseHunter.Location = new System.Drawing.Point(642, 65);
             this.rdbClasseHunter.Name = "rdbClasseHunter";
             this.rdbClasseHunter.Size = new System.Drawing.Size(60, 58);
-            this.rdbClasseHunter.TabIndex = 2;
+            this.rdbClasseHunter.TabIndex = 4;
             this.rdbClasseHunter.TabStop = true;
             this.rdbClasseHunter.Tag = "classe";
             this.rdbClasseHunter.UseVisualStyleBackColor = true;

@@ -15,14 +15,17 @@ namespace Lynaar_GUI
 {
     public partial class UC_GameInventory : UserControl
     {
+        #region Attributs
 
         private Font font40;
 
+        #endregion
 
         public UC_GameInventory()
         {
             InitializeComponent();
             
+            //! Initialisation de la police de caractère
             this.font40 = new Font(FunctionsLibs.getFont(),40);
             
         }
@@ -33,9 +36,5 @@ namespace Lynaar_GUI
             this.lbl_Inventaire.Font = font40;
         }
 
-        private void lbl_Inventaire_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

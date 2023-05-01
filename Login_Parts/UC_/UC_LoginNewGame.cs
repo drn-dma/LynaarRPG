@@ -42,6 +42,10 @@ namespace Lynaar_GUI.Login_Parts.UC_
         //! Son de clic
         SoundPlayer player;
 
+        //! Curseurs
+        private Cursor originalCursor;
+        private Cursor hoverCursor;
+
         //! Référence au formulaire parent (LoginForm)
         private Lynaar_GUI.LoginForm parentForm;
 
@@ -50,8 +54,21 @@ namespace Lynaar_GUI.Login_Parts.UC_
         #region Initialisation component & GameForm
         public UC_LoginNewGame(Lynaar_GUI.LoginForm loginForm)
         {            
-            InitializeComponent();            
+            InitializeComponent();  
+            
+            //! Initialisation du formulaire parent
+            this.parentForm = loginForm;
+            
 
+        }
+
+        #endregion
+
+
+        
+    
+        private void UC_LoginNewGame_Load(object sender, EventArgs e)
+        {
             //! Initialisation des animations de boutons (taille / position)
             this.sizeAfter = new Size(this.picBox_NewGame.Width - this.diffPicWidth_OnHover, this.picBox_NewGame.Height - this.diffPicHeight_OnHover);
             this.locationAfter = new Point(this.picBox_NewGame.Location.X + this.diffPicWidth_OnHover / 2, this.picBox_NewGame.Location.Y + this.diffPicHeight_OnHover / 2);
@@ -72,18 +89,11 @@ namespace Lynaar_GUI.Login_Parts.UC_
             this.font15 = new Font(FunctionsLibs.getFont(), 15);
             this.font20 = new Font(FunctionsLibs.getFont(), 20);
 
-            //! Initialisation du formulaire parent
-            this.parentForm = loginForm;
-
-        }
-
-        #endregion
+            //! Initialisation des curseurs
+            this.hoverCursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalHelp.ani"));
+            this.originalCursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalSelect.ani"));
 
 
-        
-    
-        private void UC_LoginNewGame_Load(object sender, EventArgs e)
-        {
             //! Set the font of the labels
             this.lblWho.Font = this.font15;
             this.lblClassName.Font = this.font15;
@@ -131,10 +141,12 @@ namespace Lynaar_GUI.Login_Parts.UC_
 
         private void UpdateClassSelection(object sender, string className, Color textColor)
         {
+
+            
             //! Initialisation des labels
             this.lblClassName.Text = className;
             this.lblClassName.ForeColor = textColor;
-            this. lblClassName.TextAlign = ContentAlignment.TopCenter;
+            this.lblClassName.TextAlign = ContentAlignment.TopCenter;
 
             //! Récupération du bouton sélectionné
             RadioButton radio = (RadioButton)sender;
@@ -208,6 +220,7 @@ namespace Lynaar_GUI.Login_Parts.UC_
         //! Ajout de la fonction permettant l'ouverture du formulaire de jeu
         private void openGameForm()
         {
+            //TODO Trouver une alternative a Application.run
             Application.Run(new GameForm());
         }
 
@@ -221,12 +234,12 @@ namespace Lynaar_GUI.Login_Parts.UC_
         //!Ajout des fonctions permettant le changement du curseur
         private void changeCursor()
         {
-            this.Cursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalHelp.ani"));
+            this.Cursor = this.hoverCursor;
         }
 
         private void resetCursor()
         {
-            this.Cursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalSelect.ani"));
+            this.Cursor = this.originalCursor;
         }
         #endregion
 
