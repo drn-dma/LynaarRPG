@@ -25,8 +25,8 @@ namespace Lynaar_GUI
         {
             InitializeComponent();
             
-            //! Initialisation de la police de caractère
-            this.font40 = new Font(FunctionsLibs.getFont(),40);
+            /*//! Initialisation de la police de caractère
+            this.font40 = new Font(FunctionsLibs.getFont(),40);*/
             
         }
 
@@ -36,5 +36,9 @@ namespace Lynaar_GUI
             this.lbl_Inventaire.Font = font40;
         }
 
+        private void pnl_InventoryTitle_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

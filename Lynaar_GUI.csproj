@@ -243,6 +243,9 @@
     <EmbeddedResource Include="Game_Parts\UC_\UC_GameInventory.resx">
       <DependentUpon>UC_GameInventory.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Fonts\Alkhemikal.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Cursors\MedievalBusy.ani" />
     <None Include="Cursors\Medieval Diagonal 1.ani" />
     <None Include="Cursors\Medieval Diagonal 2.ani" />
@@ -512,6 +515,7 @@
     <Content Include="Cursors\Medieval Handwriting.cur" />
     <Content Include="Cursors\Medieval Move.cur" />
     <Content Include="Lynaar_Icon-round.ico" />
+    <None Include="Resources\Parchos_Gris_Grand.png" />
     <None Include="Resources\StartGame-Parcho_Gris_A.png" />
     <None Include="Resources\StartGame2-Parcho_Gris_A.png" />
     <None Include="Resources\FondClasse_Active_Ico.png" />

@@ -55,7 +55,7 @@ namespace Lynaar_GUI.Classes
 
         
 
-        //! Ajout de la police Alkhemikal dans le projet
+       /* //! Ajout de la police Alkhemikal dans le projet
         public static FontFamily getFont()
         {
             PrivateFontCollection pfc = new PrivateFontCollection();
@@ -65,7 +65,7 @@ namespace Lynaar_GUI.Classes
             
             return pfc.Families[0];
             
-        }
+        }*/
 
         
 

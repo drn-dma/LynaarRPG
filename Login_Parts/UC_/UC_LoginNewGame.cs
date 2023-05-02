@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
+using System.Reflection;
 using System.IO;
 using System.Linq;
 using System.Media;
@@ -13,6 +15,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection.Emit;
 
 
 namespace Lynaar_GUI.Login_Parts.UC_
@@ -86,8 +89,11 @@ namespace Lynaar_GUI.Login_Parts.UC_
             this.player = new SoundPlayer(stream);
 
             //! Initialisation de la police de caractère
-            this.font15 = new Font(FunctionsLibs.getFont(), 15);
-            this.font20 = new Font(FunctionsLibs.getFont(), 20);
+            /*this.font15 = new Font(FunctionsLibs.getFont(), 15);
+            this.font20 = new Font(FunctionsLibs.getFont(), 20);*/
+
+            this.font15 = new Font(@"Fonts\Alkhemikal.ttf", 15);
+            this.font20 = new Font(@"Fonts\Alkhemikal.ttf", 20);
 
             //! Initialisation des curseurs
             this.hoverCursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalHelp.ani"));
@@ -99,6 +105,9 @@ namespace Lynaar_GUI.Login_Parts.UC_
             this.lblClassName.Font = this.font15;
             this.lblWhat.Font = this.font20;
             this.lblName.Font = this.font15;
+
+            //! Réinitialisaion des labels
+            this.lblClassName.Visible = false;
         }
 
         #region Buttons menu
@@ -141,7 +150,10 @@ namespace Lynaar_GUI.Login_Parts.UC_
 
         private void UpdateClassSelection(object sender, string className, Color textColor)
         {
-
+            if (!this.lblClassName.Visible)
+            {
+                this.lblClassName.Visible = true;
+            }
             
             //! Initialisation des labels
             this.lblClassName.Text = className;
