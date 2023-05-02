@@ -16,6 +16,14 @@ namespace Lynaar_GUI.Classes
     internal static class FunctionsLibs
     {
 
+
+        private static int fontLength = Resources.Font_Alkhemikal.Length;
+        private static byte[] fontdata = Resources.Font_Alkhemikal;
+
+
+
+
+
         #region add_UControls Methods
 
         /// <summary>
@@ -25,10 +33,11 @@ namespace Lynaar_GUI.Classes
         /// <param name="panelObject"></param>
         public static void add_UControls(UserControl uc, Panel panelObject)
         {
+            
             uc.Dock = DockStyle.Fill;       //! Permet de remplir le panel avec l'UC
             panelObject.Controls.Clear();
             panelObject.Controls.Add(uc);
-            uc.BringToFront();
+            uc.BringToFront();            
         }
 
 
@@ -44,27 +53,22 @@ namespace Lynaar_GUI.Classes
 
         #endregion
 
-        //! Ajout de la police Alkhemikal dans le projet
-        private static PrivateFontCollection initFont()
+        
+
+       /* //! Ajout de la police Alkhemikal dans le projet
+        public static FontFamily getFont()
         {
             PrivateFontCollection pfc = new PrivateFontCollection();
-            int fontLength = Resources.Font_Alkhemikal.Length;
-            byte[] fontdata = Resources.Font_Alkhemikal;
-
             IntPtr data = Marshal.AllocCoTaskMem(fontLength);
             Marshal.Copy(fontdata, 0, data, fontLength);
             pfc.AddMemoryFont(data, fontLength);
+            
+            return pfc.Families[0];
+            
+        }*/
 
-            return pfc;
-        }
+        
 
-        //! Change la police d'un label 'lbl' avec la police Alkhemikal et la taille 'size'
-        public static void setFont(Label lbl, int size)
-        {
-            lbl.Font = new Font(initFont().Families[0], size, FontStyle.Regular);
-        }
-
-
-      
+       
     }
 }

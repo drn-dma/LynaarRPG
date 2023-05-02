@@ -43,29 +43,32 @@
             this.pnl_InventoryTitle.Controls.Add(this.lbl_Inventaire);
             this.pnl_InventoryTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_InventoryTitle.Location = new System.Drawing.Point(0, 0);
+            this.pnl_InventoryTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_InventoryTitle.Name = "pnl_InventoryTitle";
-            this.pnl_InventoryTitle.Size = new System.Drawing.Size(1082, 77);
+            this.pnl_InventoryTitle.Size = new System.Drawing.Size(1443, 95);
             this.pnl_InventoryTitle.TabIndex = 0;
+            this.pnl_InventoryTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_InventoryTitle_Paint);
             // 
             // lbl_Inventaire
             // 
             this.lbl_Inventaire.AutoSize = true;
             this.lbl_Inventaire.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Inventaire.Location = new System.Drawing.Point(151, 12);
+            this.lbl_Inventaire.Location = new System.Drawing.Point(201, 15);
+            this.lbl_Inventaire.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Inventaire.Name = "lbl_Inventaire";
-            this.lbl_Inventaire.Size = new System.Drawing.Size(208, 57);
+            this.lbl_Inventaire.Size = new System.Drawing.Size(260, 71);
             this.lbl_Inventaire.TabIndex = 0;
             this.lbl_Inventaire.Text = "Inventaire";
             this.lbl_Inventaire.UseCompatibleTextRendering = true;
-            this.lbl_Inventaire.Click += new System.EventHandler(this.lbl_Inventaire_Click);
             // 
             // pnl_PlayerEquipement
             // 
             this.pnl_PlayerEquipement.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_PlayerEquipement.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnl_PlayerEquipement.Location = new System.Drawing.Point(810, 77);
+            this.pnl_PlayerEquipement.Location = new System.Drawing.Point(1081, 95);
+            this.pnl_PlayerEquipement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_PlayerEquipement.Name = "pnl_PlayerEquipement";
-            this.pnl_PlayerEquipement.Size = new System.Drawing.Size(272, 471);
+            this.pnl_PlayerEquipement.Size = new System.Drawing.Size(362, 579);
             this.pnl_PlayerEquipement.TabIndex = 1;
             // 
             // pnl_Inventory
@@ -73,58 +76,62 @@
             this.pnl_Inventory.Controls.Add(this.table_Inventory);
             this.pnl_Inventory.Controls.Add(this.pnl_ItemInfo);
             this.pnl_Inventory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_Inventory.Location = new System.Drawing.Point(0, 77);
+            this.pnl_Inventory.Location = new System.Drawing.Point(0, 95);
+            this.pnl_Inventory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_Inventory.Name = "pnl_Inventory";
-            this.pnl_Inventory.Size = new System.Drawing.Size(810, 471);
+            this.pnl_Inventory.Size = new System.Drawing.Size(1081, 579);
             this.pnl_Inventory.TabIndex = 2;
             // 
             // table_Inventory
             // 
             this.table_Inventory.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetDouble;
             this.table_Inventory.ColumnCount = 13;
-            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.table_Inventory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.table_Inventory.Location = new System.Drawing.Point(0, 0);
+            this.table_Inventory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.table_Inventory.Name = "table_Inventory";
             this.table_Inventory.RowCount = 5;
-            this.table_Inventory.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.table_Inventory.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 68F));
-            this.table_Inventory.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.table_Inventory.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.table_Inventory.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.table_Inventory.Size = new System.Drawing.Size(810, 274);
+            this.table_Inventory.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 79F));
+            this.table_Inventory.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 84F));
+            this.table_Inventory.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 74F));
+            this.table_Inventory.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 79F));
+            this.table_Inventory.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.table_Inventory.Size = new System.Drawing.Size(1081, 337);
             this.table_Inventory.TabIndex = 0;
             // 
             // pnl_ItemInfo
             // 
             this.pnl_ItemInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_ItemInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnl_ItemInfo.Location = new System.Drawing.Point(0, 274);
+            this.pnl_ItemInfo.Location = new System.Drawing.Point(0, 337);
+            this.pnl_ItemInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_ItemInfo.Name = "pnl_ItemInfo";
-            this.pnl_ItemInfo.Size = new System.Drawing.Size(810, 197);
+            this.pnl_ItemInfo.Size = new System.Drawing.Size(1081, 242);
             this.pnl_ItemInfo.TabIndex = 1;
             // 
-            // UC_Inventory
+            // UC_GameInventory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnl_Inventory);
             this.Controls.Add(this.pnl_PlayerEquipement);
             this.Controls.Add(this.pnl_InventoryTitle);
-            this.Name = "UC_Inventory";
-            this.Size = new System.Drawing.Size(1082, 548);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "UC_GameInventory";
+            this.Size = new System.Drawing.Size(1443, 674);
             this.Load += new System.EventHandler(this.UC_Inventory_Load);
             this.pnl_InventoryTitle.ResumeLayout(false);
             this.pnl_InventoryTitle.PerformLayout();

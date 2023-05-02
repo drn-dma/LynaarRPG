@@ -743,9 +743,29 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FondCarteClass {
+            get {
+                object obj = ResourceManager.GetObject("FondCarteClass", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FondClass_Ico {
             get {
                 object obj = ResourceManager.GetObject("FondClass_Ico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FondClasse_Active_Ico {
+            get {
+                object obj = ResourceManager.GetObject("FondClasse_Active_Ico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -843,16 +863,16 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-
-        internal static System.Drawing.Bitmap Mage_IcoC
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Mage_IcoC {
+            get {
                 object obj = ResourceManager.GetObject("Mage_IcoC", resourceCulture);
-                return (((System.Drawing.Bitmap)(obj)));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap NewGame_Parcho_Gris_A {
             get {
                 object obj = ResourceManager.GetObject("NewGame_Parcho_Gris_A", resourceCulture);
@@ -866,7 +886,6 @@ namespace Lynaar_GUI.Properties {
         internal static System.Drawing.Bitmap NewGame2_Parcho_Gris_A {
             get {
                 object obj = ResourceManager.GetObject("NewGame2_Parcho_Gris_A", resourceCulture);
-
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -984,6 +1003,16 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Parchos_Gris_Grand {
+            get {
+                object obj = ResourceManager.GetObject("Parchos_Gris_Grand", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Rogue_Ico {
             get {
                 object obj = ResourceManager.GetObject("Rogue_Ico", resourceCulture);
@@ -1036,6 +1065,26 @@ namespace Lynaar_GUI.Properties {
         internal static System.IO.UnmanagedMemoryStream SOUND_mainMenuButtonClick {
             get {
                 return ResourceManager.GetStream("SOUND_mainMenuButtonClick", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap StartGame_Parcho_Gris_A {
+            get {
+                object obj = ResourceManager.GetObject("StartGame_Parcho_Gris_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap StartGame2_Parcho_Gris_A {
+            get {
+                object obj = ResourceManager.GetObject("StartGame2_Parcho_Gris_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
