@@ -243,9 +243,6 @@
     <EmbeddedResource Include="Game_Parts\UC_\UC_GameInventory.resx">
       <DependentUpon>UC_GameInventory.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Fonts\Alkhemikal.ttf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="Cursors\MedievalBusy.ani" />
     <None Include="Cursors\Medieval Diagonal 1.ani" />
     <None Include="Cursors\Medieval Diagonal 2.ani" />
@@ -566,6 +563,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fonts\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

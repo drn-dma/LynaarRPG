@@ -22,14 +22,44 @@ namespace Lynaar_GUI.Login_Parts.UC_
         //! Différence de taille des images au survol de la souris (animation)
         private int diffPicWidth_OnHover = 5;
         private int diffPicHeight_OnHover = 5;
+        private Size backButtonSize_Before;
+        private Point backButtonLocation_Before;
+        private Point backButtonLocation_After;
+        private Size backButtonSize_After;
 
         private Lynaar_GUI.LoginForm parentForm; //! Référence au formulaire parent (LoginForm)
+
+        private Bitmap Back2_Parcho;
+        private Bitmap Back_Parcho;
+
+        //! Curseurs
+        private Cursor originalCursor;
+        private Cursor hoverCursor;
+
+        private Stream stream;
+        private SoundPlayer player;
 
         #endregion
 
         public UC_LoginLoadGame(Lynaar_GUI.LoginForm loginForm)
         {
             InitializeComponent();
+
+            this.stream = Resources.SOUND_mainMenuButtonClick;
+            this.player = new SoundPlayer(stream);
+
+
+            this.Back2_Parcho = Properties.Resources.Back2_Parcho_Gris_A;
+            this.Back_Parcho = Properties.Resources.Back_Parcho_Gris_A;
+
+            this.backButtonSize_After = new Size(picBoxBackBtn.Width - this.diffPicWidth_OnHover,picBoxBackBtn.Height - this.diffPicHeight_OnHover);
+            this.backButtonLocation_After = new Point(picBoxBackBtn.Location.X + this.diffPicWidth_OnHover / 2, picBoxBackBtn.Location.Y + this.diffPicHeight_OnHover / 2);
+            this.backButtonSize_Before = new Size(picBoxBackBtn.Width + this.diffPicWidth_OnHover, picBoxBackBtn.Height + this.diffPicHeight_OnHover);
+            this.backButtonLocation_Before = new Point(picBoxBackBtn.Location.X - this.diffPicWidth_OnHover / 2, picBoxBackBtn.Location.Y - this.diffPicHeight_OnHover / 2);
+
+            //! Initialisation des curseurs
+            this.hoverCursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalHelp.ani"));
+            this.originalCursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalSelect.ani"));
 
             //! Initialisation de la référence au formulaire parent passé en paramètre
             this.parentForm = loginForm;
@@ -51,9 +81,9 @@ namespace Lynaar_GUI.Login_Parts.UC_
 
             //! Modification de l'image de fond du bouton
 
-            pic.BackgroundImage = Properties.Resources.Back2_Parcho_Gris_A;
-            pic.Size = new Size(pic.Width - this.diffPicWidth_OnHover, pic.Height - this.diffPicHeight_OnHover);
-            pic.Location = new Point(pic.Location.X + this.diffPicWidth_OnHover / 2, pic.Location.Y + this.diffPicHeight_OnHover / 2);
+            pic.BackgroundImage = this.Back2_Parcho;
+            pic.Size = this.backButtonSize_After;
+            pic.Location = this.backButtonLocation_After;
             changeCursor();
             playClickSound();
         }
@@ -66,32 +96,30 @@ namespace Lynaar_GUI.Login_Parts.UC_
 
             //! Modification de l'image de fond du bouton
 
-            pic.BackgroundImage = Properties.Resources.Back_Parcho_Gris_A;
-            pic.Size = new Size(pic.Width + this.diffPicWidth_OnHover, pic.Height + this.diffPicHeight_OnHover);
-            pic.Location = new Point(pic.Location.X - this.diffPicWidth_OnHover / 2, pic.Location.Y - this.diffPicHeight_OnHover / 2);
+            pic.BackgroundImage = this.Back_Parcho;
+            pic.Size = this.backButtonSize_Before;
+            pic.Location = this.backButtonLocation_Before;
             resetCursor();
         }
 
         #endregion
 
         //! Fonction de modoification du curseur
-        #region Cursor Methods
+        #region Cursor
         private void changeCursor()
         {
-            this.Cursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalHelp.ani"));
+            this.Cursor = this.hoverCursor;
         }
 
         private void resetCursor()
         {
-            this.Cursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalSelect.ani"));
+            this.Cursor = this.originalCursor;
         }
 
         #endregion
 
         private void playClickSound()
         {
-            Stream stream = Resources.SOUND_mainMenuButtonClick;
-            SoundPlayer player = new SoundPlayer(stream);
             player.Play();
         }
 
