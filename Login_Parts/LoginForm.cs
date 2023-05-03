@@ -18,6 +18,7 @@ using NAudio.Wave;
 using System.Diagnostics;
 using Lynaar_GUI.Classes.Miscellaneous;
 using System.Runtime.InteropServices;
+using System.Threading;
 
 namespace Lynaar_GUI
 {
@@ -29,6 +30,17 @@ namespace Lynaar_GUI
         private WaveOutEvent outputDevice;          //! Correspond au périphérique de sortie audio (le programme)
         private RawSourceWaveStream audioFile;      //! Correspond au fichier audio à lire
 
+
+        private Bitmap soundOn;
+        private Bitmap soundOff;
+
+        //! Curseurs
+        private Cursor originalCursor;
+        private Cursor hoverCursor;
+
+        private Thread mainMusic_THREAD;
+
+
         #endregion
 
         public LoginForm()
@@ -38,13 +50,23 @@ namespace Lynaar_GUI
 
         private void LoggingForm_Load(object sender, EventArgs e)
         {
+            //! Initialisation de la musique
+            this.mainMusic_THREAD = new Thread(new ThreadStart(PlayMusic));
+            this.mainMusic_THREAD.Start();
+
             //! Ajout de l'UC (UserControl) UC_LoginMainMenu dans le panel 'pnl_LoginMain' au chargement du Formulaire
-            UC_LoginMainMenu uc = new UC_LoginMainMenu(this);    //? 'this' permet de passer le formulaire en paramètre pour pouvoir le fermer depuis l'UC
-            FunctionsLibs.add_UControls(uc, pnl_LoginMain);
+            FunctionsLibs.add_UControls(new UC_LoginMainMenu(this), pnl_LoginMain);
+
+            this.soundOff = Resources.Volume_Off;
+            this.soundOn = Resources.Volume_On;
+
+            //! Initialisation des curseurs
+            this.hoverCursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalHelp.ani"));
+            this.originalCursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalSelect.ani"));
+
 
             resetCursor();
-            //! Initialisation de la musique
-            playMusic();
+            
 
         }
 
@@ -52,7 +74,7 @@ namespace Lynaar_GUI
         #region Music Methods
 
         //! Fonction permettant de jouer la musique
-        public void playMusic()
+        public void PlayMusic()
         {
             //!Si le périphérique de sortie audio n'est pas initialisé, on le fait et on joue la musique
             if (outputDevice == null)
@@ -81,13 +103,13 @@ namespace Lynaar_GUI
             {
                 this.outputDevice.Pause();
 
-                this.picBox_VolumeOnOff.BackgroundImage = Resources.Volume_Off;
+                this.picBox_VolumeOnOff.BackgroundImage = this.soundOff;
             }
             //! Sinon, on le relance et on change l'image du bouton
             else
             {
                 this.outputDevice.Play();
-                this.picBox_VolumeOnOff.BackgroundImage = Resources.Volume_On;
+                this.picBox_VolumeOnOff.BackgroundImage = this.soundOn;
             }
 
         }
@@ -109,17 +131,15 @@ namespace Lynaar_GUI
         }
 
 
-        #region Cursor Methods
-
-        //! Fonctions permettant de changer le curseur
+        #region Cursor
         private void changeCursor()
         {
-            this.Cursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalHelp.ani"));
+            this.Cursor = this.hoverCursor;
         }
 
         private void resetCursor()
         {
-            this.Cursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalSelect.ani"));
+            this.Cursor = this.originalCursor;
         }
 
         #endregion
