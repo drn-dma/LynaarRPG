@@ -92,8 +92,8 @@ namespace Lynaar_GUI.Login_Parts.UC_
             /*this.font15 = new Font(FunctionsLibs.getFont(), 15);
             this.font20 = new Font(FunctionsLibs.getFont(), 20);*/
 
-            this.font15 = new Font(@"Fonts\Alkhemikal.ttf", 15);
-            this.font20 = new Font(@"Fonts\Alkhemikal.ttf", 20);
+            this.font15 = new Font(FunctionsLibs.Font_Alkhemikal, 15);
+            this.font20 = new Font(FunctionsLibs.Font_Alkhemikal, 20);
 
             //! Initialisation des curseurs
             this.hoverCursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalHelp.ani"));
@@ -121,7 +121,7 @@ namespace Lynaar_GUI.Login_Parts.UC_
                     //! Close the current form and open the game form
                     Thread GameForm_THREAD = new Thread(new ThreadStart(openGameForm));
                     GameForm_THREAD.Start();    
-                    this.parentForm.playMusic(); //! Arret de la musique du LoginForm
+                    this.parentForm.PlayMusic(); //! Arret de la musique du LoginForm
                     this.ParentForm.Dispose();  //! Fermeture du LoginForm et libération des ressources
 
                     

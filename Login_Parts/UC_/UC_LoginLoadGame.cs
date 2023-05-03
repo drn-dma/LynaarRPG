@@ -39,6 +39,9 @@ namespace Lynaar_GUI.Login_Parts.UC_
         private Stream stream;
         private SoundPlayer player;
 
+        private List<Dictionary<string, object>> sqlResult = null;
+        private bool hasReturned = false;
+
         #endregion
 
         public UC_LoginLoadGame(Lynaar_GUI.LoginForm loginForm)
@@ -63,6 +66,16 @@ namespace Lynaar_GUI.Login_Parts.UC_
 
             //! Initialisation de la référence au formulaire parent passé en paramètre
             this.parentForm = loginForm;
+
+            //! Récupération des données de la table "Player" de la base de données
+            //! Si contient joueur, alors afficher leur partie
+            sqlResult = SQLConnect.readDataFromSQL("SELECT * FROM Player");
+
+            if(sqlResult != null)
+            {
+                hasReturned = true;
+            }
+
         }
 
 
@@ -70,7 +83,10 @@ namespace Lynaar_GUI.Login_Parts.UC_
 
         private void UC_LoginLoadGame_Load(object sender, EventArgs e)
         {
-
+            if (hasReturned)
+            {
+                FunctionsLibs.add_UControls(new LoadGame.UC_LoadGameWithSave(this.parentForm, sqlResult), pnl_Save1);
+            }
         }
 
         #region Hover Methods

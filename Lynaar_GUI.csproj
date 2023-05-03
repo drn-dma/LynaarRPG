@@ -189,6 +189,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LoginForm.resx</DependentUpon>
     </Compile>
+    <Compile Include="Login_Parts\UC_\LoadGame\UC_LoadGameWithSave.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Login_Parts\UC_\LoadGame\UC_LoadGameWithSave.Designer.cs">
+      <DependentUpon>UC_LoadGameWithSave.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login_Parts\UC_\UC_LoginLoadGame.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -225,6 +231,9 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>LoginForm1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Parts\UC_\LoadGame\UC_LoadGameWithSave.resx">
+      <DependentUpon>UC_LoadGameWithSave.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Parts\UC_\UC_LoginLoadGame.resx">
       <DependentUpon>UC_LoginLoadGame.cs</DependentUpon>
@@ -512,6 +521,7 @@
     <Content Include="Cursors\Medieval Handwriting.cur" />
     <Content Include="Cursors\Medieval Move.cur" />
     <Content Include="Lynaar_Icon-round.ico" />
+    <None Include="Resources\savedGame_Panel.png" />
     <None Include="Resources\Parchos_Gris_Grand.png" />
     <None Include="Resources\StartGame-Parcho_Gris_A.png" />
     <None Include="Resources\StartGame2-Parcho_Gris_A.png" />

@@ -743,16 +743,6 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FondCarteClass {
-            get {
-                object obj = ResourceManager.GetObject("FondCarteClass", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap FondClass_Ico {
             get {
                 object obj = ResourceManager.GetObject("FondClass_Ico", resourceCulture);
@@ -1036,6 +1026,16 @@ namespace Lynaar_GUI.Properties {
         internal static System.Drawing.Bitmap Save_Ico {
             get {
                 object obj = ResourceManager.GetObject("Save_Ico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap savedGame_Panel {
+            get {
+                object obj = ResourceManager.GetObject("savedGame_Panel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

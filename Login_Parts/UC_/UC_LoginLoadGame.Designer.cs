@@ -28,12 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.picBoxBackBtn = new System.Windows.Forms.PictureBox();
-            this.pnl_Save1 = new System.Windows.Forms.Panel();
             this.pnl_Save2 = new System.Windows.Forms.Panel();
             this.pnl_Save3 = new System.Windows.Forms.Panel();
+            this.pnl_Save1 = new System.Windows.Forms.Panel();
+            this.picBoxBackBtn = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxBackBtn)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pnl_Save2
+            // 
+            this.pnl_Save2.BackColor = System.Drawing.Color.DimGray;
+            this.pnl_Save2.Location = new System.Drawing.Point(195, 68);
+            this.pnl_Save2.Name = "pnl_Save2";
+            this.pnl_Save2.Size = new System.Drawing.Size(387, 50);
+            this.pnl_Save2.TabIndex = 2;
+            // 
+            // pnl_Save3
+            // 
+            this.pnl_Save3.BackColor = System.Drawing.Color.DimGray;
+            this.pnl_Save3.Location = new System.Drawing.Point(195, 125);
+            this.pnl_Save3.Name = "pnl_Save3";
+            this.pnl_Save3.Size = new System.Drawing.Size(387, 50);
+            this.pnl_Save3.TabIndex = 2;
+            // 
+            // pnl_Save1
+            // 
+            this.pnl_Save1.BackColor = System.Drawing.Color.DimGray;
+            this.pnl_Save1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnl_Save1.Location = new System.Drawing.Point(195, 11);
+            this.pnl_Save1.MaximumSize = new System.Drawing.Size(387, 50);
+            this.pnl_Save1.MinimumSize = new System.Drawing.Size(387, 50);
+            this.pnl_Save1.Name = "pnl_Save1";
+            this.pnl_Save1.Size = new System.Drawing.Size(387, 50);
+            this.pnl_Save1.TabIndex = 1;
             // 
             // picBoxBackBtn
             // 
@@ -48,30 +75,6 @@
             this.picBoxBackBtn.Click += new System.EventHandler(this.picBoxBackBtn_Click);
             this.picBoxBackBtn.MouseEnter += new System.EventHandler(this.hoverNewBtn);
             this.picBoxBackBtn.MouseLeave += new System.EventHandler(this.exitHoverNewBtn);
-            // 
-            // pnl_Save1
-            // 
-            this.pnl_Save1.BackColor = System.Drawing.Color.Gray;
-            this.pnl_Save1.Location = new System.Drawing.Point(195, 11);
-            this.pnl_Save1.Name = "pnl_Save1";
-            this.pnl_Save1.Size = new System.Drawing.Size(387, 51);
-            this.pnl_Save1.TabIndex = 1;
-            // 
-            // pnl_Save2
-            // 
-            this.pnl_Save2.BackColor = System.Drawing.Color.DimGray;
-            this.pnl_Save2.Location = new System.Drawing.Point(195, 68);
-            this.pnl_Save2.Name = "pnl_Save2";
-            this.pnl_Save2.Size = new System.Drawing.Size(387, 51);
-            this.pnl_Save2.TabIndex = 2;
-            // 
-            // pnl_Save3
-            // 
-            this.pnl_Save3.BackColor = System.Drawing.Color.DimGray;
-            this.pnl_Save3.Location = new System.Drawing.Point(195, 125);
-            this.pnl_Save3.Name = "pnl_Save3";
-            this.pnl_Save3.Size = new System.Drawing.Size(387, 51);
-            this.pnl_Save3.TabIndex = 2;
             // 
             // UC_LoginLoadGame
             // 
