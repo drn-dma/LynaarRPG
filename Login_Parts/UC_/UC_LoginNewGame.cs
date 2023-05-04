@@ -129,6 +129,7 @@ namespace Lynaar_GUI.Login_Parts.UC_
                     this.ParentForm.Dispose();  //! Fermeture du LoginForm et libération des ressources
 
                     
+                    
                 }
                 else
                 {
@@ -269,6 +270,9 @@ namespace Lynaar_GUI.Login_Parts.UC_
             this.Dispose();
         }
 
-        
+        private void lblError_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

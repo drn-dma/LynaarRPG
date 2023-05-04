@@ -26,6 +26,14 @@ namespace Lynaar_GUI.Login_Parts.UC_
         private Point backButtonLocation_Before;
         private Point backButtonLocation_After;
         private Size backButtonSize_After;
+        private Size savePanel_Before;
+        private Size savePanel_After;
+        private Point savePanelLocation_Before;
+        private Point savePanelLocation_After;
+        private Size deleteButton_Before;
+        private Size deleteButton_After;
+        private Point deleteButtonLocation_Before;
+        private Point deleteButtonLocation_After;
 
         private Lynaar_GUI.LoginForm parentForm; //! Référence au formulaire parent (LoginForm)
 
@@ -130,6 +138,19 @@ namespace Lynaar_GUI.Login_Parts.UC_
             pic.Location = this.backButtonLocation_Before;
             resetCursor();
         }
+
+
+        private void hoverSaveAndDelete(object sender, EventArgs e)
+        {
+            //! Récupération du bouton qui a déclenché l'évènement
+            PictureBox pic = (PictureBox)sender;
+            //! Modification de l'image de fond du bouton
+            pic.Size = new Size(pic.Width - 5, pic.Height - 5);
+            pic.Location = new Point(pic.Location.X + 5 / 2, pic.Location.Y + 5 / 2);
+            changeCursor();
+            playClickSound();
+        }
+
 
         #endregion
 
