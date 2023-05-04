@@ -62,17 +62,19 @@ namespace Lynaar_GUI.Login_Parts.UC_
 
         //! Référence au formulaire parent (LoginForm)
         private Lynaar_GUI.LoginForm parentForm;
+        private List<Dictionary<string, object>> allPlayers;
 
         #endregion
 
         #region Initialisation component & GameForm
-        public UC_LoginNewGame(Lynaar_GUI.LoginForm loginForm)
+        public UC_LoginNewGame(Lynaar_GUI.LoginForm loginForm, List<Dictionary<string, object>> players)
         {            
             InitializeComponent();  
             
             //! Initialisation du formulaire parent
             this.parentForm = loginForm;
             
+            this.allPlayers = players;
 
         }
 
@@ -115,6 +117,7 @@ namespace Lynaar_GUI.Login_Parts.UC_
             /*this.font15 = new Font(@"Fonts\Alkhemikal.ttf", 15);
             this.font20 = new Font(@"Fonts\Alkhemikal.ttf", 20);*/
 
+
             //! Initialisation des curseurs
             this.hoverCursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalHelp.ani"));
             this.originalCursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalSelect.ani"));
@@ -146,9 +149,10 @@ namespace Lynaar_GUI.Login_Parts.UC_
                     //! Close the current form and open the game form
                     Thread GameForm_THREAD = new Thread(new ThreadStart(openGameForm));
                     GameForm_THREAD.Start();    
-                    this.parentForm.playMusic(); //! Arret de la musique du LoginForm
+                    this.parentForm.PlayMusic(); //! Arret de la musique du LoginForm
                     this.ParentForm.Dispose();  //! Fermeture du LoginForm et libération des ressources
 
+                    
                     
                 }
                 else
@@ -346,10 +350,11 @@ namespace Lynaar_GUI.Login_Parts.UC_
         private void pbBackMenu_Click(object sender, EventArgs e)
         {
             this.player.Dispose();
-            FunctionsLibs.add_UControls(new UC_LoginMainMenu(this.parentForm), this.Parent);
+            FunctionsLibs.add_UControls(new UC_LoginMainMenu(this.parentForm, allPlayers), this.Parent);
             this.Dispose();
         }
         #endregion
+
 
         private void lblDescibClass_Click(object sender, EventArgs e)
         {

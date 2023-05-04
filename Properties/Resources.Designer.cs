@@ -693,9 +693,15 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+
         internal static System.Drawing.Bitmap Atk32_Ico {
             get {
                 object obj = ResourceManager.GetObject("Atk32_Ico", resourceCulture);
+
+        internal static System.Drawing.Bitmap Atk16_Ico {
+            get {
+                object obj = ResourceManager.GetObject("Atk16_Ico", resourceCulture);
+
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -723,9 +729,18 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+
         internal static System.Drawing.Bitmap Endure32_Ico {
             get {
                 object obj = ResourceManager.GetObject("Endure32_Ico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+
+        internal static System.Drawing.Bitmap Endur16_Ico {
+            get {
+                object obj = ResourceManager.GetObject("Endur16_Ico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -756,16 +771,6 @@ namespace Lynaar_GUI.Properties {
         internal static System.Drawing.Bitmap ExitGame2_Parcho_Gris_A {
             get {
                 object obj = ResourceManager.GetObject("ExitGame2_Parcho_Gris_A", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap FondCarteClass {
-            get {
-                object obj = ResourceManager.GetObject("FondCarteClass", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -813,9 +818,15 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+
         internal static System.Drawing.Bitmap Hp32_Ico {
             get {
                 object obj = ResourceManager.GetObject("Hp32_Ico", resourceCulture);
+
+        internal static System.Drawing.Bitmap Hp16_Ico {
+            get {
+                object obj = ResourceManager.GetObject("Hp16_Ico", resourceCulture);
+
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -843,9 +854,26 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+
         internal static System.Drawing.Bitmap Int32_Ico {
             get {
                 object obj = ResourceManager.GetObject("Int32_Ico", resourceCulture);
+                }
+        }
+        
+        internal static System.Drawing.Bitmap Hunter_IcoC_x32 {
+            get {
+                object obj = ResourceManager.GetObject("Hunter_IcoC_x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Int16_Ico {
+            get {
+                object obj = ResourceManager.GetObject("Int16_Ico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -913,6 +941,7 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+
         internal static System.Drawing.Bitmap Menu_Icon_Active_x64 {
             get {
                 object obj = ResourceManager.GetObject("Menu_Icon_Active_x64", resourceCulture);
@@ -926,6 +955,12 @@ namespace Lynaar_GUI.Properties {
         internal static System.Drawing.Bitmap Menu_Icon_x64 {
             get {
                 object obj = ResourceManager.GetObject("Menu_Icon_x64", resourceCulture);
+                }
+        }
+
+        internal static System.Drawing.Bitmap Mage_IcoC_x32 {
+            get {
+                object obj = ResourceManager.GetObject("Mage_IcoC_x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -953,6 +988,7 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+
         internal static System.Drawing.Bitmap NormalCardClass {
             get {
                 object obj = ResourceManager.GetObject("NormalCardClass", resourceCulture);
@@ -976,6 +1012,12 @@ namespace Lynaar_GUI.Properties {
         internal static System.Drawing.Bitmap NormalPanelCard {
             get {
                 object obj = ResourceManager.GetObject("NormalPanelCard", resourceCulture);
+                }
+        }
+
+        internal static System.Drawing.Bitmap no_SavedGame_background {
+            get {
+                object obj = ResourceManager.GetObject("no_SavedGame_background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1103,6 +1145,26 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap redCross_x32 {
+            get {
+                object obj = ResourceManager.GetObject("redCross_x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap redCross_x64 {
+            get {
+                object obj = ResourceManager.GetObject("redCross_x64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Rogue_Ico {
             get {
                 object obj = ResourceManager.GetObject("Rogue_Ico", resourceCulture);
@@ -1123,9 +1185,49 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Rogue_IcoC_x32 {
+            get {
+                object obj = ResourceManager.GetObject("Rogue_IcoC_x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Save_Ico {
             get {
                 object obj = ResourceManager.GetObject("Save_Ico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap savedGame_BackFrame {
+            get {
+                object obj = ResourceManager.GetObject("savedGame_BackFrame", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap savedGame_Panel {
+            get {
+                object obj = ResourceManager.GetObject("savedGame_Panel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap separateBarre {
+            get {
+                object obj = ResourceManager.GetObject("separateBarre", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1214,6 +1316,16 @@ namespace Lynaar_GUI.Properties {
         internal static System.Drawing.Bitmap Warrior_IcoC {
             get {
                 object obj = ResourceManager.GetObject("Warrior_IcoC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Warrior_IcoC_x32 {
+            get {
+                object obj = ResourceManager.GetObject("Warrior_IcoC_x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

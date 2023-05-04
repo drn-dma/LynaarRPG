@@ -104,10 +104,20 @@ namespace Lynaar_GUI
                                             //! Ajout dans le dictionnaire si la valeur est un int
                                             resultList[rowCount].Add(reader.GetName(i),reader.GetInt32(i));
                                         }
-                                        catch
+                                        catch(Exception exept)
                                         {
-                                            //! Ajout dans le dictionnaire si la valeur est un bool
-                                            resultList[rowCount].Add(reader.GetName(i),reader.GetBoolean(i));
+                                            if(exept is InvalidCastException)
+                                            {
+                                                try
+                                                {
+                                                    //! Ajout dans le dictionnaire si la valeur est un bool
+                                                    resultList[rowCount].Add(reader.GetName(i), reader.GetBoolean(i));
+                                                }
+                                                catch
+                                                {
+                                                    resultList[rowCount].Add(reader.GetName(i), DateTime.Parse(reader.GetValue(i).ToString()));
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -124,6 +134,13 @@ namespace Lynaar_GUI
             
             return resultList;
         }
+
+        public static List<Dictionary<string, object>> getAllPlayers()
+        {
+            return readDataFromSQL("SELECT * FROM Player");
+        }
+
+
         #endregion
 
 

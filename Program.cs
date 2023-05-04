@@ -19,8 +19,18 @@ namespace Lynaar_GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            
+            //! Personnal Function
+
+            //! Initialisation des objets Player dans un 2nd Thread
+            var allPlayer = FunctionsLibs.initPlayer();
+
             FunctionsLibs.getFont();
-            Application.Run(new LoginForm());
+
+
+            Application.Run(new LoginForm(allPlayer));
+
         }
 
         

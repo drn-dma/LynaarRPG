@@ -1,6 +1,7 @@
 ﻿using Lynaar_GUI.Properties;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Text;
 using System.IO;
@@ -17,7 +18,6 @@ namespace Lynaar_GUI.Classes
     {
         //création de la variable globale pour stocker la police
         public static FontFamily Font_Alkhemikal;
-
 
         private static int fontLength = Resources.Font_Alkhemikal.Length;
         private static byte[] fontdata = Resources.Font_Alkhemikal;
@@ -55,7 +55,29 @@ namespace Lynaar_GUI.Classes
 
         #endregion
 
-        
+
+
+        #region init Data
+
+        //! Initialisation des objets Player
+
+        public static List<Dictionary<string, object>> initPlayer()
+        {
+            List<Dictionary<string, object>> allPlayers = null;
+
+            try
+            {
+                allPlayers = SQLConnect.getAllPlayers();
+                
+            }catch(Exception ex)
+            {
+                Debug.WriteLine("Il n'y a pas de joueurs dans la base de données" + "--- Error : " + ex.Message);
+            }
+
+            return allPlayers;
+        }
+
+        #endregion
 
         //! Ajout de la police Alkhemikal dans le projet
         public static void getFont()
@@ -64,13 +86,13 @@ namespace Lynaar_GUI.Classes
             IntPtr data = Marshal.AllocCoTaskMem(fontLength);
             Marshal.Copy(fontdata, 0, data, fontLength);
             pfc.AddMemoryFont(data, fontLength);
-            
+
             Font_Alkhemikal = pfc.Families[0];
-            
+
         }
 
-        
 
-       
+
+
     }
 }

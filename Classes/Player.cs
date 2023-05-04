@@ -29,6 +29,11 @@ namespace Lynaar_GUI.Classes
         #region Constructeur
 
         //constructor
+
+        //? Exemple Cosntructeur
+        //todo  new Player(player["playerName"].ToString(), player["classes"].ToString(), int.Parse(player["level"].ToString()), int.Parse(player["xp"].ToString()), int.Parse(player["hp"].ToString()), int.Parse(player["maxHp"].ToString()), int.Parse(player["damage"].ToString()), int.Parse(player["additionalDamage"].ToString()), int.Parse(player["endurance"].ToString()), int.Parse(player["intelligence"].ToString()), int.Parse(player["gold"].ToString()), int.Parse(player["fightNumber"].ToString()), int.Parse(player["Id_Player"].ToString()));
+
+
         public Player(string PlayerName, string classe, int level, int experience, int hp, int maxHp, int damage, int additionalDamage, int endurance, int intelligence, int gold, int fightNumber, int id)
         {
             this.PlayerName = PlayerName;

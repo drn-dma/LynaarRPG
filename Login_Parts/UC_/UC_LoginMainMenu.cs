@@ -48,13 +48,14 @@ namespace Lynaar_GUI.Login_Parts.UC_
         private Cursor originalCursor;
         private Cursor hoverCursor;
 
+        List<Dictionary<string, object>> allPlayers;
 
         private Lynaar_GUI.LoginForm parentForm; //! Référence au formulaire parent
 
         #endregion
 
 
-        public UC_LoginMainMenu(Lynaar_GUI.LoginForm parentForm)
+        public UC_LoginMainMenu(Lynaar_GUI.LoginForm parentForm, List<Dictionary<string, object>> players)
         {
             InitializeComponent();
 
@@ -80,6 +81,8 @@ namespace Lynaar_GUI.Login_Parts.UC_
 
             //! Initialisation du parent
             this.parentForm = parentForm;
+
+            allPlayers = players;
         }
 
         private void UC_LoginMainMenu_Load(object sender, EventArgs e)
@@ -243,13 +246,13 @@ namespace Lynaar_GUI.Login_Parts.UC_
 
         private void picBox_NewGame_Click(object sender, EventArgs e)
         {
-            FunctionsLibs.add_UControls(new UC_LoginNewGame(this.parentForm), this.Parent);
+            FunctionsLibs.add_UControls(new UC_LoginNewGame(this.parentForm, allPlayers), this.Parent);
             
         }
 
         private void picBox_LoadGame_Click(object sender, EventArgs e)
         {
-            FunctionsLibs.add_UControls(new UC_LoginLoadGame(this.parentForm), this.Parent);
+            FunctionsLibs.add_UControls(new UC_LoginLoadGame(this.parentForm, allPlayers), this.Parent);
         }
 
         #endregion
