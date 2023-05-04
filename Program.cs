@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lynaar_GUI.Classes;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -18,8 +19,18 @@ namespace Lynaar_GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            
+            //! Personnal Function
 
-            Application.Run(new LoginForm());
+            //! Initialisation des objets Player dans un 2nd Thread
+            var allPlayer = FunctionsLibs.initPlayer();
+
+            
+
+            FunctionsLibs.getFont();
+
+
+            Application.Run(new LoginForm(allPlayer));
         }
 
         

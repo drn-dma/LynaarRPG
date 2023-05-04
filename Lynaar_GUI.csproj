@@ -189,6 +189,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LoginForm.resx</DependentUpon>
     </Compile>
+    <Compile Include="Login_Parts\UC_\LoadGame\UC_LoadGameWithoutSave.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Login_Parts\UC_\LoadGame\UC_LoadGameWithoutSave.Designer.cs">
+      <DependentUpon>UC_LoadGameWithoutSave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Parts\UC_\LoadGame\UC_LoadGameWithSave.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Login_Parts\UC_\LoadGame\UC_LoadGameWithSave.Designer.cs">
+      <DependentUpon>UC_LoadGameWithSave.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login_Parts\UC_\UC_LoginLoadGame.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -226,6 +238,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>LoginForm1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login_Parts\UC_\LoadGame\UC_LoadGameWithoutSave.resx">
+      <DependentUpon>UC_LoadGameWithoutSave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Parts\UC_\LoadGame\UC_LoadGameWithSave.resx">
+      <DependentUpon>UC_LoadGameWithSave.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login_Parts\UC_\UC_LoginLoadGame.resx">
       <DependentUpon>UC_LoginLoadGame.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,9 +261,6 @@
     <EmbeddedResource Include="Game_Parts\UC_\UC_GameInventory.resx">
       <DependentUpon>UC_GameInventory.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Fonts\Alkhemikal.ttf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="Cursors\MedievalBusy.ani" />
     <None Include="Cursors\Medieval Diagonal 1.ani" />
     <None Include="Cursors\Medieval Diagonal 2.ani" />
@@ -515,6 +530,20 @@
     <Content Include="Cursors\Medieval Handwriting.cur" />
     <Content Include="Cursors\Medieval Move.cur" />
     <Content Include="Lynaar_Icon-round.ico" />
+    <None Include="Resources\c136.png" />
+    <None Include="Resources\d136.png" />
+    <None Include="Resources\separateBarre.png" />
+    <None Include="Resources\Int16_Ico.png" />
+    <None Include="Resources\Hp16_Ico.png" />
+    <None Include="Resources\Endur16_Ico.png" />
+    <None Include="Resources\Atk16_Ico.png" />
+    <None Include="Resources\Warrior_IcoC_x32.png" />
+    <None Include="Resources\Rogue_IcoC_x32.png" />
+    <None Include="Resources\Mage_IcoC_x32.png" />
+    <None Include="Resources\no_SavedGame_background.png" />
+    <None Include="Resources\Hunter_IcoC_x32.png" />
+    <None Include="Resources\frame_02.png" />
+    <None Include="Resources\savedGame_Panel.png" />
     <None Include="Resources\Parchos_Gris_Grand.png" />
     <None Include="Resources\StartGame-Parcho_Gris_A.png" />
     <None Include="Resources\StartGame2-Parcho_Gris_A.png" />
@@ -566,6 +595,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fonts\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
