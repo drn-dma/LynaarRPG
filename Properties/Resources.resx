@@ -433,7 +433,37 @@
   <data name="StartGame_Parcho_Gris_A" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\StartGame-Parcho_Gris_A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="FondCarteClass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FondCarteClass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NormalIconCard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NormalIconCard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NormalPanelCard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NormalPanelCard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Parchos_Gris_Grand" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Parchos_Gris_Grand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NormalCardClass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NormalCardClass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Atk32_Ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Atk32_Ico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Endure32_Ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Endure32_Ico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hp32_Ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hp32_Ico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Int32_Ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Int32_Ico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Icon_Active_x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Icon_Active_x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Icon_x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Icon_x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

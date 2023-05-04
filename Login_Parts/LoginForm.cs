@@ -39,8 +39,8 @@ namespace Lynaar_GUI
         private void LoggingForm_Load(object sender, EventArgs e)
         {
             //! Ajout de l'UC (UserControl) UC_LoginMainMenu dans le panel 'pnl_LoginMain' au chargement du Formulaire
-            UC_LoginMainMenu uc = new UC_LoginMainMenu(this);    //? 'this' permet de passer le formulaire en paramètre pour pouvoir le fermer depuis l'UC
-            FunctionsLibs.add_UControls(uc, pnl_LoginMain);
+            //? 'this' permet de passer le formulaire en paramètre pour pouvoir le fermer depuis l'UC
+            FunctionsLibs.add_UControls(new UC_LoginMainMenu(this), pnl_LoginMain);
 
             resetCursor();
             //! Initialisation de la musique

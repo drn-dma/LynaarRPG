@@ -43,17 +43,19 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(16, 15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 178);
+            this.panel1.Size = new System.Drawing.Size(1035, 219);
             this.panel1.TabIndex = 5;
             // 
             // pnl_LoginMain
             // 
             this.pnl_LoginMain.BackColor = System.Drawing.Color.Transparent;
-            this.pnl_LoginMain.Location = new System.Drawing.Point(12, 196);
+            this.pnl_LoginMain.Location = new System.Drawing.Point(16, 241);
+            this.pnl_LoginMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_LoginMain.Name = "pnl_LoginMain";
-            this.pnl_LoginMain.Size = new System.Drawing.Size(776, 242);
+            this.pnl_LoginMain.Size = new System.Drawing.Size(1035, 298);
             this.pnl_LoginMain.TabIndex = 6;
             // 
             // timerCheckMusic
@@ -64,9 +66,10 @@
             // 
             this.picBox_VolumeOnOff.BackgroundImage = global::Lynaar_GUI.Properties.Resources.Volume_On;
             this.picBox_VolumeOnOff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBox_VolumeOnOff.Location = new System.Drawing.Point(5, 389);
+            this.picBox_VolumeOnOff.Location = new System.Drawing.Point(7, 479);
+            this.picBox_VolumeOnOff.Margin = new System.Windows.Forms.Padding(4);
             this.picBox_VolumeOnOff.Name = "picBox_VolumeOnOff";
-            this.picBox_VolumeOnOff.Size = new System.Drawing.Size(66, 56);
+            this.picBox_VolumeOnOff.Size = new System.Drawing.Size(88, 69);
             this.picBox_VolumeOnOff.TabIndex = 0;
             this.picBox_VolumeOnOff.TabStop = false;
             this.picBox_VolumeOnOff.Click += new System.EventHandler(this.OnOffSound);
@@ -80,24 +83,26 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(776, 178);
+            this.pictureBox1.Size = new System.Drawing.Size(1035, 219);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1064, 544);
             this.Controls.Add(this.picBox_VolumeOnOff);
             this.Controls.Add(this.pnl_LoginMain);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(816, 489);
-            this.MinimumSize = new System.Drawing.Size(816, 489);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(1082, 591);
+            this.MinimumSize = new System.Drawing.Size(1082, 591);
             this.Name = "LoginForm";
             this.Text = "Lynaar - Login";
             this.Load += new System.EventHandler(this.LoggingForm_Load);
