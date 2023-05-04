@@ -693,6 +693,16 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Atk32_Ico {
+            get {
+                object obj = ResourceManager.GetObject("Atk32_Ico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Back_Parcho_Gris_A {
             get {
                 object obj = ResourceManager.GetObject("Back_Parcho_Gris_A", resourceCulture);
@@ -706,6 +716,16 @@ namespace Lynaar_GUI.Properties {
         internal static System.Drawing.Bitmap Back2_Parcho_Gris_A {
             get {
                 object obj = ResourceManager.GetObject("Back2_Parcho_Gris_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Endure32_Ico {
+            get {
+                object obj = ResourceManager.GetObject("Endure32_Ico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -793,6 +813,16 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Hp32_Ico {
+            get {
+                object obj = ResourceManager.GetObject("Hp32_Ico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hunter_Ico {
             get {
                 object obj = ResourceManager.GetObject("Hunter_Ico", resourceCulture);
@@ -806,6 +836,16 @@ namespace Lynaar_GUI.Properties {
         internal static System.Drawing.Bitmap Hunter_IcoC {
             get {
                 object obj = ResourceManager.GetObject("Hunter_IcoC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Int32_Ico {
+            get {
+                object obj = ResourceManager.GetObject("Int32_Ico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -873,6 +913,26 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Menu_Icon_Active_x64 {
+            get {
+                object obj = ResourceManager.GetObject("Menu_Icon_Active_x64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Menu_Icon_x64 {
+            get {
+                object obj = ResourceManager.GetObject("Menu_Icon_x64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap NewGame_Parcho_Gris_A {
             get {
                 object obj = ResourceManager.GetObject("NewGame_Parcho_Gris_A", resourceCulture);
@@ -886,6 +946,36 @@ namespace Lynaar_GUI.Properties {
         internal static System.Drawing.Bitmap NewGame2_Parcho_Gris_A {
             get {
                 object obj = ResourceManager.GetObject("NewGame2_Parcho_Gris_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NormalCardClass {
+            get {
+                object obj = ResourceManager.GetObject("NormalCardClass", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NormalIconCard {
+            get {
+                object obj = ResourceManager.GetObject("NormalIconCard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NormalPanelCard {
+            get {
+                object obj = ResourceManager.GetObject("NormalPanelCard", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

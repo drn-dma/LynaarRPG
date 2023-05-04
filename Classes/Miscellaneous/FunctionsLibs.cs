@@ -15,6 +15,8 @@ namespace Lynaar_GUI.Classes
 {
     internal static class FunctionsLibs
     {
+        //création de la variable globale pour stocker la police
+        public static FontFamily Font_Alkhemikal;
 
 
         private static int fontLength = Resources.Font_Alkhemikal.Length;
@@ -55,17 +57,17 @@ namespace Lynaar_GUI.Classes
 
         
 
-       /* //! Ajout de la police Alkhemikal dans le projet
-        public static FontFamily getFont()
+        //! Ajout de la police Alkhemikal dans le projet
+        public static void getFont()
         {
             PrivateFontCollection pfc = new PrivateFontCollection();
             IntPtr data = Marshal.AllocCoTaskMem(fontLength);
             Marshal.Copy(fontdata, 0, data, fontLength);
             pfc.AddMemoryFont(data, fontLength);
             
-            return pfc.Families[0];
+            Font_Alkhemikal = pfc.Families[0];
             
-        }*/
+        }
 
         
 

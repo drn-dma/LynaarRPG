@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lynaar_GUI.Classes;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace Lynaar_GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
+            FunctionsLibs.getFont();
             Application.Run(new LoginForm());
         }
 
