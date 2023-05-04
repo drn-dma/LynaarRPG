@@ -58,6 +58,7 @@ namespace Lynaar_GUI
             this.mainMusic_THREAD.Start();
 
             //! Ajout de l'UC (UserControl) UC_LoginMainMenu dans le panel 'pnl_LoginMain' au chargement du Formulaire
+
             FunctionsLibs.add_UControls(new UC_LoginMainMenu(this, allPlayers), pnl_LoginMain);
 
             this.soundOff = Resources.Volume_Off;

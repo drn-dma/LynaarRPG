@@ -16,6 +16,7 @@ namespace Lynaar_GUI.Classes
 {
     internal static class FunctionsLibs
     {
+        //création de la variable globale pour stocker la police
         public static FontFamily Font_Alkhemikal;
 
         private static int fontLength = Resources.Font_Alkhemikal.Length;
@@ -53,6 +54,7 @@ namespace Lynaar_GUI.Classes
         }
 
         #endregion
+
 
 
         #region init Data

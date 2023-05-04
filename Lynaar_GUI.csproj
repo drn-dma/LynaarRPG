@@ -530,6 +530,28 @@
     <Content Include="Cursors\Medieval Handwriting.cur" />
     <Content Include="Cursors\Medieval Move.cur" />
     <Content Include="Lynaar_Icon-round.ico" />
+
+    <None Include="Resources\Menu_Icon_Active_x64.png" />
+    <None Include="Resources\Menu_Icon_x64.png" />
+    <None Include="Resources\d25.png" />
+    <None Include="Resources\Int32_Ico.png" />
+    <None Include="Resources\Hp32_Ico.png" />
+    <None Include="Resources\Endure32_Ico.png" />
+    <None Include="Resources\Atk32_Ico.png" />
+    <None Include="Resources\Int_Ico.png" />
+    <None Include="Resources\Health_Ico.png" />
+    <None Include="Resources\Endurance_Ico.png" />
+    <None Include="Resources\Atk_Ico.png" />
+    <None Include="Resources\NormalCardClass.png" />
+    <None Include="Resources\classCard.png" />
+    <None Include="Resources\Warrior16_Ico.png" />
+    <None Include="Resources\Rogue16_Ico.png" />
+    <None Include="Resources\Mage16_Ico.png" />
+    <None Include="Resources\Hunter16_Ico.png" />
+    <None Include="Resources\NormalPanelCard.png" />
+    <None Include="Resources\NormalIconCard.png" />
+    <None Include="Resources\FondCarteClass.png" />
+
     <None Include="Resources\c136.png" />
     <None Include="Resources\d136.png" />
     <None Include="Resources\separateBarre.png" />
@@ -544,6 +566,7 @@
     <None Include="Resources\Hunter_IcoC_x32.png" />
     <None Include="Resources\frame_02.png" />
     <None Include="Resources\savedGame_Panel.png" />
+
     <None Include="Resources\Parchos_Gris_Grand.png" />
     <None Include="Resources\StartGame-Parcho_Gris_A.png" />
     <None Include="Resources\StartGame2-Parcho_Gris_A.png" />
