@@ -137,6 +137,7 @@
             this.lblDescibClass.Text = "lblDescibClass";
             this.lblDescibClass.UseCompatibleTextRendering = true;
             this.lblDescibClass.Visible = false;
+            this.lblDescibClass.Click += new System.EventHandler(this.lblDescibClass_Click);
             // 
             // lblHp
             // 

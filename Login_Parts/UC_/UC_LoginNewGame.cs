@@ -350,5 +350,10 @@ namespace Lynaar_GUI.Login_Parts.UC_
             this.Dispose();
         }
         #endregion
+
+        private void lblDescibClass_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
