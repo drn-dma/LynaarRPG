@@ -39,12 +39,12 @@ namespace Lynaar_GUI.Login_Parts.UC_
         private Stream stream;
         private SoundPlayer player;
 
-        private List<Dictionary<string, object>> sqlResult = null;
-        private bool hasReturned = false;
+
+        List<Dictionary<string, object>> allPlayers = null;
 
         #endregion
 
-        public UC_LoginLoadGame(Lynaar_GUI.LoginForm loginForm)
+        public UC_LoginLoadGame(Lynaar_GUI.LoginForm loginForm, List<Dictionary<string, object>> players)
         {
             InitializeComponent();
 
@@ -69,12 +69,10 @@ namespace Lynaar_GUI.Login_Parts.UC_
 
             //! Récupération des données de la table "Player" de la base de données
             //! Si contient joueur, alors afficher leur partie
-            sqlResult = SQLConnect.readDataFromSQL("SELECT * FROM Player");
 
-            if(sqlResult != null)
-            {
-                hasReturned = true;
-            }
+            allPlayers = players;
+
+            
 
         }
 
@@ -83,9 +81,24 @@ namespace Lynaar_GUI.Login_Parts.UC_
 
         private void UC_LoginLoadGame_Load(object sender, EventArgs e)
         {
-            if (hasReturned)
+            if (allPlayers != null)
             {
-                FunctionsLibs.add_UControls(new LoadGame.UC_LoadGameWithSave(this.parentForm, sqlResult), pnl_Save1);
+                int i = 1;
+
+                foreach(var player in allPlayers)
+                {
+                    FunctionsLibs.add_UControls(new LoadGame.UC_LoadGameWithSave(this.parentForm, allPlayers), Parent.Controls.Find("pnl_Save" + i, true)[0]);
+                    Parent.Controls.Find("picBox_Delete" + i, true)[0].Visible = true;
+                    i++;
+                }
+
+                while(i < 4)
+                {
+                    FunctionsLibs.add_UControls(new LoadGame.UC_LoadGameWithoutSave(this.parentForm), Parent.Controls.Find("pnl_Save" + i, true)[0]);
+                    Parent.Controls.Find("picBox_Delete" + i, true)[0].Visible = false;
+                    i++;
+                }
+
             }
         }
 
@@ -144,7 +157,7 @@ namespace Lynaar_GUI.Login_Parts.UC_
         private void picBoxBackBtn_Click(object sender, EventArgs e)
         {
             //! Retour au menu principal
-            FunctionsLibs.add_UControls(new UC_LoginMainMenu(this.parentForm), this.Parent);
+            FunctionsLibs.add_UControls(new UC_LoginMainMenu(this.parentForm, allPlayers), this.Parent);
         }
 
         #endregion

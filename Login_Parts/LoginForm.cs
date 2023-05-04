@@ -41,11 +41,14 @@ namespace Lynaar_GUI
         private Thread mainMusic_THREAD;
 
 
+        List<Dictionary<string, object>> allPlayers;
+
         #endregion
 
-        public LoginForm()
+        public LoginForm(List<Dictionary<string, object>> players)
         {
             InitializeComponent();
+            allPlayers = players;
         }
 
         private void LoggingForm_Load(object sender, EventArgs e)
@@ -55,7 +58,7 @@ namespace Lynaar_GUI
             this.mainMusic_THREAD.Start();
 
             //! Ajout de l'UC (UserControl) UC_LoginMainMenu dans le panel 'pnl_LoginMain' au chargement du Formulaire
-            FunctionsLibs.add_UControls(new UC_LoginMainMenu(this), pnl_LoginMain);
+            FunctionsLibs.add_UControls(new UC_LoginMainMenu(this, allPlayers), pnl_LoginMain);
 
             this.soundOff = Resources.Volume_Off;
             this.soundOn = Resources.Volume_On;

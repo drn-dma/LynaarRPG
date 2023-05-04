@@ -1,6 +1,7 @@
 ﻿using Lynaar_GUI.Properties;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Text;
 using System.IO;
@@ -54,6 +55,27 @@ namespace Lynaar_GUI.Classes
         #endregion
 
 
+        #region init Data
+
+        //! Initialisation des objets Player
+
+        public static List<Dictionary<string, object>> initPlayer()
+        {
+            List<Dictionary<string, object>> allPlayers = null;
+
+            try
+            {
+                allPlayers = SQLConnect.getAllPlayers();
+                
+            }catch(Exception ex)
+            {
+                Debug.WriteLine("Il n'y a pas de joueurs dans la base de données" + "--- Error : " + ex.Message);
+            }
+
+            return allPlayers;
+        }
+
+        #endregion
 
         //! Ajout de la police Alkhemikal dans le projet
         public static void getFont()
