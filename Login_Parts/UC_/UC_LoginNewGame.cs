@@ -54,7 +54,6 @@ namespace Lynaar_GUI.Login_Parts.UC_
         private Font font20;
 
         //! Son de clic
-        SoundPlayer player;
 
         //! Curseurs
         private Cursor originalCursor;
@@ -104,9 +103,6 @@ namespace Lynaar_GUI.Login_Parts.UC_
             this.ExitMenu2 = Properties.Resources.Menu_Icon_Active_x64;
 
 
-            //! Initialisation du son de clic
-            Stream stream = Resources.SOUND_mainMenuButtonClick;
-            this.player = new SoundPlayer(stream);
 
             //! Initialisation de la police de caractère
             this.font10 = new Font(FunctionsLibs.Font_Alkhemikal, 10);
@@ -273,7 +269,6 @@ namespace Lynaar_GUI.Login_Parts.UC_
             pic.Size = this.sizeAfter;
             pic.Location = this.locationAfter; 
 
-            playClickSound();
             changeCursor();
         }
 
@@ -326,10 +321,6 @@ namespace Lynaar_GUI.Login_Parts.UC_
         }
 
         //!Ajout de la fonction permettant le son lors du survol du bouton 
-        private void playClickSound()
-        {
-            player.Play();
-        }
 
         #region Cursor
         //!Ajout des fonctions permettant le changement du curseur
@@ -349,16 +340,12 @@ namespace Lynaar_GUI.Login_Parts.UC_
         #region BackMenu Button
         private void pbBackMenu_Click(object sender, EventArgs e)
         {
-            this.player.Dispose();
             FunctionsLibs.add_UControls(new UC_LoginMainMenu(this.parentForm, allPlayers), this.Parent);
             this.Dispose();
         }
         #endregion
 
 
-        private void lblDescibClass_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

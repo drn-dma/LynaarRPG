@@ -445,7 +445,6 @@
   <data name="Parchos_Gris_Grand" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Parchos_Gris_Grand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-
   <data name="NormalCardClass" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NormalCardClass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -466,7 +465,7 @@
   </data>
   <data name="Menu_Icon_x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu_Icon_x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    
+  </data>
   <data name="savedGame_Panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\savedGame_Panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -508,6 +507,11 @@
   </data>
   <data name="Warrior_IcoC_x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Warrior_IcoC_x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-
+  </data>
+  <data name="legendFrame_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\legendFrame_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SavedGame_Hover_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SavedGame_Hover_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
