@@ -66,6 +66,7 @@
             // 
             this.picBox_Delete2.BackColor = System.Drawing.Color.Transparent;
             this.picBox_Delete2.BackgroundImage = global::Lynaar_GUI.Properties.Resources.FondClass_Ico;
+            this.picBox_Delete2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picBox_Delete2.Image = global::Lynaar_GUI.Properties.Resources.redCross_x32;
             this.picBox_Delete2.Location = new System.Drawing.Point(589, 69);
             this.picBox_Delete2.Name = "picBox_Delete2";
@@ -73,11 +74,15 @@
             this.picBox_Delete2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picBox_Delete2.TabIndex = 5;
             this.picBox_Delete2.TabStop = false;
+            this.picBox_Delete2.Click += new System.EventHandler(this.deleteSave);
+            this.picBox_Delete2.MouseEnter += new System.EventHandler(this.hoverDeleteBtn);
+            this.picBox_Delete2.MouseLeave += new System.EventHandler(this.returnToNormalDel);
             // 
             // picBox_Delete3
             // 
             this.picBox_Delete3.BackColor = System.Drawing.Color.Transparent;
             this.picBox_Delete3.BackgroundImage = global::Lynaar_GUI.Properties.Resources.FondClass_Ico;
+            this.picBox_Delete3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picBox_Delete3.Image = global::Lynaar_GUI.Properties.Resources.redCross_x32;
             this.picBox_Delete3.Location = new System.Drawing.Point(589, 125);
             this.picBox_Delete3.Name = "picBox_Delete3";
@@ -85,11 +90,15 @@
             this.picBox_Delete3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picBox_Delete3.TabIndex = 4;
             this.picBox_Delete3.TabStop = false;
+            this.picBox_Delete3.Click += new System.EventHandler(this.deleteSave);
+            this.picBox_Delete3.MouseEnter += new System.EventHandler(this.hoverDeleteBtn);
+            this.picBox_Delete3.MouseLeave += new System.EventHandler(this.returnToNormalDel);
             // 
             // picBox_Delete1
             // 
             this.picBox_Delete1.BackColor = System.Drawing.Color.Transparent;
             this.picBox_Delete1.BackgroundImage = global::Lynaar_GUI.Properties.Resources.FondClass_Ico;
+            this.picBox_Delete1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picBox_Delete1.Image = global::Lynaar_GUI.Properties.Resources.redCross_x32;
             this.picBox_Delete1.Location = new System.Drawing.Point(589, 13);
             this.picBox_Delete1.Name = "picBox_Delete1";
@@ -97,6 +106,9 @@
             this.picBox_Delete1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picBox_Delete1.TabIndex = 3;
             this.picBox_Delete1.TabStop = false;
+            this.picBox_Delete1.Click += new System.EventHandler(this.deleteSave);
+            this.picBox_Delete1.MouseEnter += new System.EventHandler(this.hoverDeleteBtn);
+            this.picBox_Delete1.MouseLeave += new System.EventHandler(this.returnToNormalDel);
             // 
             // picBoxBackBtn
             // 
@@ -109,8 +121,8 @@
             this.picBoxBackBtn.TabIndex = 0;
             this.picBoxBackBtn.TabStop = false;
             this.picBoxBackBtn.Click += new System.EventHandler(this.picBoxBackBtn_Click);
-            this.picBoxBackBtn.MouseEnter += new System.EventHandler(this.hoverNewBtn);
-            this.picBoxBackBtn.MouseLeave += new System.EventHandler(this.exitHoverNewBtn);
+            this.picBoxBackBtn.MouseEnter += new System.EventHandler(this.hoverBackBtn);
+            this.picBoxBackBtn.MouseLeave += new System.EventHandler(this.exitHoverBackBtn);
             // 
             // UC_LoginLoadGame
             // 

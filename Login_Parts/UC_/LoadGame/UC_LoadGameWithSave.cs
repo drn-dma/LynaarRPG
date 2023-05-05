@@ -1,9 +1,12 @@
 ﻿using Lynaar_GUI.Classes;
+using Lynaar_GUI.Classes.Miscellaneous;
+using Lynaar_GUI.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,19 +17,42 @@ namespace Lynaar_GUI.Login_Parts.UC_.LoadGame
     public partial class UC_LoadGameWithSave : UserControl
     {
 
-       private Form parentForm;
-        private List<Dictionary<string, object>> allPlayer = null;
+        #region Variables
+
+        private Form parentForm; //! Formulaire parent : LoginForm
+
+        private List<Dictionary<string, object>> allPlayer = null; //! Liste de tous les joueurs
+
+
         private int playerIndex;
- 
+
+        //! Images
+        private Bitmap onHover_Back;
+        private Bitmap normal_Back;
+
+        //! Curseurs
+        private Cursor originalCursor;
+        private Cursor hoverCursor;
+
+
+        #endregion
+
         public UC_LoadGameWithSave(Form parent, List<Dictionary<string, object>> players) //todo Enlever le commentaire pour introduire le sql
         {
             InitializeComponent();
 
-            parentForm = parent;
+            this.parentForm = parent;
 
-            allPlayer = players;
+            this.allPlayer = players;
 
-            
+            //! Initialisation des images
+            this.onHover_Back = Resources.SavedGame_Hover_background;
+            this.normal_Back = this.BackgroundImage as Bitmap;
+
+            //! Initialisation des curseurs
+            this.hoverCursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalHelp.ani"));
+            this.originalCursor = CustomCursor.Create(Path.Combine(Application.StartupPath, "Cursors\\MedievalSelect.ani"));
+
         }
 
         private void UC_LoadGameWithSave_Load(object sender, EventArgs e)
@@ -115,11 +141,42 @@ namespace Lynaar_GUI.Login_Parts.UC_.LoadGame
             }
         }
 
+
+
+        #region Hover & Click Events
+
         private void UC_LoadGameWithSave_Click(object sender, EventArgs e)
         {
             this.parentForm.Hide();
-            Form gameForm = new GameForm(/*allPlayer[playerIndex]*/);
+            Form gameForm = new GameForm();
             gameForm.Show();
         }
+
+        private void UC_LoadGameWithSave_MouseEnter(object sender, EventArgs e)
+        {
+            this.BackgroundImage = this.onHover_Back;
+            changeCursor();
+        }
+
+        private void UC_LoadGameWithSave_MouseLeave(object sender, EventArgs e)
+        {
+            this.BackgroundImage = this.normal_Back;
+            resetCursor();
+        }
+
+        #endregion
+
+        #region Cursor
+        private void changeCursor()
+        {
+            this.Cursor = this.hoverCursor;
+        }
+
+        private void resetCursor()
+        {
+            this.Cursor = this.originalCursor;
+        }
+
+        #endregion
     }
 }

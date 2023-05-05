@@ -39,13 +39,14 @@ namespace Lynaar_GUI.Login_Parts.UC_
 
         private Bitmap Back2_Parcho;
         private Bitmap Back_Parcho;
+        private Bitmap normal_Del;
+        private Bitmap onHover_Del;
 
         //! Curseurs
         private Cursor originalCursor;
         private Cursor hoverCursor;
 
-        private Stream stream;
-        private SoundPlayer player;
+
 
 
         List<Dictionary<string, object>> allPlayers = null;
@@ -56,8 +57,7 @@ namespace Lynaar_GUI.Login_Parts.UC_
         {
             InitializeComponent();
 
-            this.stream = Resources.SOUND_mainMenuButtonClick;
-            this.player = new SoundPlayer(stream);
+
 
 
             this.Back2_Parcho = Properties.Resources.Back2_Parcho_Gris_A;
@@ -80,6 +80,8 @@ namespace Lynaar_GUI.Login_Parts.UC_
 
             allPlayers = players;
 
+            this.onHover_Del = Resources.legendFrame_Hover;
+            this.normal_Del = Resources.FondClass_Ico;
             
 
         }
@@ -111,7 +113,7 @@ namespace Lynaar_GUI.Login_Parts.UC_
         }
 
         #region Hover Methods
-        private void hoverNewBtn(object sender, EventArgs e)
+        private void hoverBackBtn(object sender, EventArgs e)
         {
             //! Récupération du bouton qui a déclenché l'évènement
             PictureBox pic = (PictureBox)sender;
@@ -122,11 +124,10 @@ namespace Lynaar_GUI.Login_Parts.UC_
             pic.Size = this.backButtonSize_After;
             pic.Location = this.backButtonLocation_After;
             changeCursor();
-            playClickSound();
         }
 
         //! Fonction modifiant le style des boutons à la sortie de la souris
-        private void exitHoverNewBtn(object sender, EventArgs e)
+        private void exitHoverBackBtn(object sender, EventArgs e)
         {
             //! Récupération du bouton qui a déclenché l'évènement
             PictureBox pic = (PictureBox)sender;
@@ -139,17 +140,25 @@ namespace Lynaar_GUI.Login_Parts.UC_
             resetCursor();
         }
 
-
-        private void hoverSaveAndDelete(object sender, EventArgs e)
+        private void hoverDeleteBtn(object sender, EventArgs e)
         {
             //! Récupération du bouton qui a déclenché l'évènement
             PictureBox pic = (PictureBox)sender;
             //! Modification de l'image de fond du bouton
-            pic.Size = new Size(pic.Width - 5, pic.Height - 5);
-            pic.Location = new Point(pic.Location.X + 5 / 2, pic.Location.Y + 5 / 2);
+            pic.BackgroundImage = this.onHover_Del;
             changeCursor();
-            playClickSound();
         }
+
+        private void returnToNormalDel(object send, EventArgs e)
+        {
+            //! Récupération du bouton qui a déclenché l'évènement
+            PictureBox pic = (PictureBox)send;
+            //! Modification de l'image de fond du bouton
+            pic.BackgroundImage = this.normal_Del;
+            resetCursor();
+        }
+        
+
 
 
         #endregion
@@ -168,10 +177,6 @@ namespace Lynaar_GUI.Login_Parts.UC_
 
         #endregion
 
-        private void playClickSound()
-        {
-            player.Play();
-        }
 
         #region Click Methods
 
@@ -180,6 +185,27 @@ namespace Lynaar_GUI.Login_Parts.UC_
             //! Retour au menu principal
             FunctionsLibs.add_UControls(new UC_LoginMainMenu(this.parentForm, allPlayers), this.Parent);
         }
+
+
+        #region Delete Methods
+
+        private void deleteSave(object sender, EventArgs e)
+        {
+            //! Récupération du bouton qui a déclenché l'évènement
+            PictureBox pic = (PictureBox)sender;
+            //! Récupération du numéro de la sauvegarde
+            int saveNumber = int.Parse(pic.Name.Substring(pic.Name.Length - 1));
+            //! Récupération du nom du joueur
+            string playerId = allPlayers[saveNumber - 1]["Id_Player"].ToString();
+            //! Suppression du joueur de la base de données
+            SQLConnect.ExecuteSQL($"DELETE FROM Player WHERE Id_Player = {playerId}");
+            this.allPlayers = FunctionsLibs.initPlayer();
+            //! Retour au menu principal
+            FunctionsLibs.add_UControls(new UC_LoginMainMenu(this.parentForm, allPlayers), this.Parent);
+        }
+
+        #endregion
+
 
         #endregion
 

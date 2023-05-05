@@ -57,6 +57,9 @@
             this.picBox_ClasseIcon.Size = new System.Drawing.Size(32, 32);
             this.picBox_ClasseIcon.TabIndex = 0;
             this.picBox_ClasseIcon.TabStop = false;
+            this.picBox_ClasseIcon.Click += new System.EventHandler(this.UC_LoadGameWithSave_Click);
+            this.picBox_ClasseIcon.MouseEnter += new System.EventHandler(this.UC_LoadGameWithSave_MouseEnter);
+            this.picBox_ClasseIcon.MouseLeave += new System.EventHandler(this.UC_LoadGameWithSave_MouseLeave);
             // 
             // lbl_Pseudo
             // 
@@ -68,6 +71,9 @@
             this.lbl_Pseudo.TabIndex = 1;
             this.lbl_Pseudo.Text = "Pseudo";
             this.lbl_Pseudo.UseCompatibleTextRendering = true;
+            this.lbl_Pseudo.Click += new System.EventHandler(this.UC_LoadGameWithSave_Click);
+            this.lbl_Pseudo.MouseEnter += new System.EventHandler(this.UC_LoadGameWithSave_MouseEnter);
+            this.lbl_Pseudo.MouseLeave += new System.EventHandler(this.UC_LoadGameWithSave_MouseLeave);
             // 
             // lbl_Niv
             // 
@@ -80,6 +86,9 @@
             this.lbl_Niv.TabIndex = 2;
             this.lbl_Niv.Text = "Level :";
             this.lbl_Niv.UseCompatibleTextRendering = true;
+            this.lbl_Niv.Click += new System.EventHandler(this.UC_LoadGameWithSave_Click);
+            this.lbl_Niv.MouseEnter += new System.EventHandler(this.UC_LoadGameWithSave_MouseEnter);
+            this.lbl_Niv.MouseLeave += new System.EventHandler(this.UC_LoadGameWithSave_MouseLeave);
             // 
             // lbl_Date
             // 
@@ -92,6 +101,9 @@
             this.lbl_Date.TabIndex = 3;
             this.lbl_Date.Text = "Saved :";
             this.lbl_Date.UseCompatibleTextRendering = true;
+            this.lbl_Date.Click += new System.EventHandler(this.UC_LoadGameWithSave_Click);
+            this.lbl_Date.MouseEnter += new System.EventHandler(this.UC_LoadGameWithSave_MouseEnter);
+            this.lbl_Date.MouseLeave += new System.EventHandler(this.UC_LoadGameWithSave_MouseLeave);
             // 
             // lbl_Level
             // 
@@ -103,6 +115,9 @@
             this.lbl_Level.TabIndex = 4;
             this.lbl_Level.Text = "lvlNumber";
             this.lbl_Level.UseCompatibleTextRendering = true;
+            this.lbl_Level.Click += new System.EventHandler(this.UC_LoadGameWithSave_Click);
+            this.lbl_Level.MouseEnter += new System.EventHandler(this.UC_LoadGameWithSave_MouseEnter);
+            this.lbl_Level.MouseLeave += new System.EventHandler(this.UC_LoadGameWithSave_MouseLeave);
             // 
             // pictureBox1
             // 
@@ -112,6 +127,9 @@
             this.pictureBox1.Size = new System.Drawing.Size(16, 16);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.UC_LoadGameWithSave_Click);
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.UC_LoadGameWithSave_MouseEnter);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.UC_LoadGameWithSave_MouseLeave);
             // 
             // pictureBox2
             // 
@@ -121,6 +139,9 @@
             this.pictureBox2.Size = new System.Drawing.Size(16, 16);
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.UC_LoadGameWithSave_Click);
+            this.pictureBox2.MouseEnter += new System.EventHandler(this.UC_LoadGameWithSave_MouseEnter);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.UC_LoadGameWithSave_MouseLeave);
             // 
             // picBoxIntEnd
             // 
@@ -129,6 +150,9 @@
             this.picBoxIntEnd.Size = new System.Drawing.Size(16, 16);
             this.picBoxIntEnd.TabIndex = 7;
             this.picBoxIntEnd.TabStop = false;
+            this.picBoxIntEnd.Click += new System.EventHandler(this.UC_LoadGameWithSave_Click);
+            this.picBoxIntEnd.MouseEnter += new System.EventHandler(this.UC_LoadGameWithSave_MouseEnter);
+            this.picBoxIntEnd.MouseLeave += new System.EventHandler(this.UC_LoadGameWithSave_MouseLeave);
             // 
             // lbl_Hp
             // 
@@ -140,6 +164,9 @@
             this.lbl_Hp.TabIndex = 8;
             this.lbl_Hp.Text = "9999";
             this.lbl_Hp.UseCompatibleTextRendering = true;
+            this.lbl_Hp.Click += new System.EventHandler(this.UC_LoadGameWithSave_Click);
+            this.lbl_Hp.MouseEnter += new System.EventHandler(this.UC_LoadGameWithSave_MouseEnter);
+            this.lbl_Hp.MouseLeave += new System.EventHandler(this.UC_LoadGameWithSave_MouseLeave);
             // 
             // lbl_Atk
             // 
@@ -151,6 +178,9 @@
             this.lbl_Atk.TabIndex = 9;
             this.lbl_Atk.Text = "9999";
             this.lbl_Atk.UseCompatibleTextRendering = true;
+            this.lbl_Atk.Click += new System.EventHandler(this.UC_LoadGameWithSave_Click);
+            this.lbl_Atk.MouseEnter += new System.EventHandler(this.UC_LoadGameWithSave_MouseEnter);
+            this.lbl_Atk.MouseLeave += new System.EventHandler(this.UC_LoadGameWithSave_MouseLeave);
             // 
             // lbl_IntEnd
             // 
@@ -162,6 +192,9 @@
             this.lbl_IntEnd.TabIndex = 10;
             this.lbl_IntEnd.Text = "9999";
             this.lbl_IntEnd.UseCompatibleTextRendering = true;
+            this.lbl_IntEnd.Click += new System.EventHandler(this.UC_LoadGameWithSave_Click);
+            this.lbl_IntEnd.MouseEnter += new System.EventHandler(this.UC_LoadGameWithSave_MouseEnter);
+            this.lbl_IntEnd.MouseLeave += new System.EventHandler(this.UC_LoadGameWithSave_MouseLeave);
             // 
             // lbl_DateSave
             // 
@@ -174,6 +207,9 @@
             this.lbl_DateSave.TabIndex = 11;
             this.lbl_DateSave.Text = "date";
             this.lbl_DateSave.UseCompatibleTextRendering = true;
+            this.lbl_DateSave.Click += new System.EventHandler(this.UC_LoadGameWithSave_Click);
+            this.lbl_DateSave.MouseEnter += new System.EventHandler(this.UC_LoadGameWithSave_MouseEnter);
+            this.lbl_DateSave.MouseLeave += new System.EventHandler(this.UC_LoadGameWithSave_MouseLeave);
             // 
             // pictureBox4
             // 
@@ -184,6 +220,9 @@
             this.pictureBox4.Size = new System.Drawing.Size(10, 35);
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.UC_LoadGameWithSave_Click);
+            this.pictureBox4.MouseEnter += new System.EventHandler(this.UC_LoadGameWithSave_MouseEnter);
+            this.pictureBox4.MouseLeave += new System.EventHandler(this.UC_LoadGameWithSave_MouseLeave);
             // 
             // UC_LoadGameWithSave
             // 
@@ -210,6 +249,8 @@
             this.Size = new System.Drawing.Size(387, 50);
             this.Load += new System.EventHandler(this.UC_LoadGameWithSave_Load);
             this.Click += new System.EventHandler(this.UC_LoadGameWithSave_Click);
+            this.MouseEnter += new System.EventHandler(this.UC_LoadGameWithSave_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.UC_LoadGameWithSave_MouseLeave);
             ((System.ComponentModel.ISupportInitialize)(this.picBox_ClasseIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -33,8 +33,7 @@ namespace Lynaar_GUI.Login_Parts.UC_
         private Size sizeAfter;
 
         //! Son des boutons
-        private Stream stream;
-        private SoundPlayer player;
+
 
         //! Images des boutons
         private Bitmap NewGame;
@@ -64,8 +63,7 @@ namespace Lynaar_GUI.Login_Parts.UC_
             this.sizeBefore = new Size(this.picBox_NewGame.Width + this.diffPicWidth_OnHover, this.picBox_NewGame.Height + this.diffPicHeight_OnHover);
             
             //! Initialisation du son
-            this.stream = Resources.SOUND_mainMenuButtonClick;
-            this.player = new SoundPlayer(this.stream);
+
 
             //! Initialisation des images des boutons
             this.NewGame = Properties.Resources.NewGame_Parcho_Gris_A;
@@ -115,7 +113,6 @@ namespace Lynaar_GUI.Login_Parts.UC_
 
 
             changeCursor();
-            playClickSound();
         }
 
         //! Fonction modifiant le style des boutons à la sortie de la souris
@@ -160,7 +157,6 @@ namespace Lynaar_GUI.Login_Parts.UC_
             pic.Location = this.locationAfterLoad; 
 
             changeCursor();
-            playClickSound();
 
         }
 
@@ -207,7 +203,6 @@ namespace Lynaar_GUI.Login_Parts.UC_
             pic.Location = this.locationAfterExit; 
 
             changeCursor();
-            playClickSound();
 
         }
 
@@ -240,7 +235,6 @@ namespace Lynaar_GUI.Login_Parts.UC_
         #region Click Events
         private void picBox_ExitGame_Click(object sender, EventArgs e)
         {
-            this.player.Dispose(); //! Libération des ressources utilisées par le player
             this.parentForm.Close();
         }
 
@@ -257,10 +251,6 @@ namespace Lynaar_GUI.Login_Parts.UC_
 
         #endregion
 
-        private void playClickSound()
-        {  
-            this.player.Play();    
-        }
 
         #region Cursor
         private void changeCursor()
