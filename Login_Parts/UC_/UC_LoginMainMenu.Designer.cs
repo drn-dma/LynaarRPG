@@ -41,11 +41,11 @@
             // 
             this.picBox_ExitGame.BackgroundImage = global::Lynaar_GUI.Properties.Resources.ExitGame_Parcho_Gris_A;
             this.picBox_ExitGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBox_ExitGame.Location = new System.Drawing.Point(284, 132);
-            this.picBox_ExitGame.Margin = new System.Windows.Forms.Padding(2);
-            this.picBox_ExitGame.MaximumSize = new System.Drawing.Size(206, 47);
+            this.picBox_ExitGame.Location = new System.Drawing.Point(379, 162);
+            this.picBox_ExitGame.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picBox_ExitGame.MaximumSize = new System.Drawing.Size(275, 58);
             this.picBox_ExitGame.Name = "picBox_ExitGame";
-            this.picBox_ExitGame.Size = new System.Drawing.Size(206, 47);
+            this.picBox_ExitGame.Size = new System.Drawing.Size(275, 58);
             this.picBox_ExitGame.TabIndex = 4;
             this.picBox_ExitGame.TabStop = false;
             this.picBox_ExitGame.Click += new System.EventHandler(this.picBox_ExitGame_Click);
@@ -56,11 +56,11 @@
             // 
             this.picBox_LoadGame.BackgroundImage = global::Lynaar_GUI.Properties.Resources.LoadGame_Parcho_Gris_A;
             this.picBox_LoadGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBox_LoadGame.Location = new System.Drawing.Point(284, 79);
-            this.picBox_LoadGame.Margin = new System.Windows.Forms.Padding(2);
-            this.picBox_LoadGame.MaximumSize = new System.Drawing.Size(206, 47);
+            this.picBox_LoadGame.Location = new System.Drawing.Point(379, 97);
+            this.picBox_LoadGame.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picBox_LoadGame.MaximumSize = new System.Drawing.Size(275, 58);
             this.picBox_LoadGame.Name = "picBox_LoadGame";
-            this.picBox_LoadGame.Size = new System.Drawing.Size(206, 47);
+            this.picBox_LoadGame.Size = new System.Drawing.Size(275, 58);
             this.picBox_LoadGame.TabIndex = 3;
             this.picBox_LoadGame.TabStop = false;
             this.picBox_LoadGame.Click += new System.EventHandler(this.picBox_LoadGame_Click);
@@ -71,11 +71,11 @@
             // 
             this.picBox_NewGame.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBox_NewGame.BackgroundImage")));
             this.picBox_NewGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBox_NewGame.Location = new System.Drawing.Point(284, 22);
-            this.picBox_NewGame.Margin = new System.Windows.Forms.Padding(2);
-            this.picBox_NewGame.MaximumSize = new System.Drawing.Size(206, 47);
+            this.picBox_NewGame.Location = new System.Drawing.Point(379, 27);
+            this.picBox_NewGame.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picBox_NewGame.MaximumSize = new System.Drawing.Size(275, 58);
             this.picBox_NewGame.Name = "picBox_NewGame";
-            this.picBox_NewGame.Size = new System.Drawing.Size(206, 47);
+            this.picBox_NewGame.Size = new System.Drawing.Size(275, 58);
             this.picBox_NewGame.TabIndex = 2;
             this.picBox_NewGame.TabStop = false;
             this.picBox_NewGame.Click += new System.EventHandler(this.picBox_NewGame_Click);
@@ -84,15 +84,14 @@
             // 
             // UC_LoginMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.picBox_ExitGame);
             this.Controls.Add(this.picBox_LoadGame);
             this.Controls.Add(this.picBox_NewGame);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_LoginMainMenu";
-            this.Size = new System.Drawing.Size(776, 242);
+            this.Size = new System.Drawing.Size(1035, 298);
             this.Load += new System.EventHandler(this.UC_LoginMainMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBox_ExitGame)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_LoadGame)).EndInit();

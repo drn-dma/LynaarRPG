@@ -60,11 +60,11 @@
             this.txtBoxPseudo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(35)))), ((int)(((byte)(12)))));
             this.txtBoxPseudo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxPseudo.ForeColor = System.Drawing.Color.White;
-            this.txtBoxPseudo.Location = new System.Drawing.Point(144, 117);
-            this.txtBoxPseudo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBoxPseudo.Location = new System.Drawing.Point(134, 177);
+            this.txtBoxPseudo.Margin = new System.Windows.Forms.Padding(5);
             this.txtBoxPseudo.MaxLength = 255;
             this.txtBoxPseudo.Name = "txtBoxPseudo";
-            this.txtBoxPseudo.Size = new System.Drawing.Size(114, 13);
+            this.txtBoxPseudo.Size = new System.Drawing.Size(152, 15);
             this.txtBoxPseudo.TabIndex = 0;
             // 
             // lblWho
@@ -73,9 +73,10 @@
             this.lblWho.BackColor = System.Drawing.Color.Transparent;
             this.lblWho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblWho.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblWho.Location = new System.Drawing.Point(144, 37);
+            this.lblWho.Location = new System.Drawing.Point(134, 34);
+            this.lblWho.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWho.Name = "lblWho";
-            this.lblWho.Size = new System.Drawing.Size(77, 17);
+            this.lblWho.Size = new System.Drawing.Size(91, 20);
             this.lblWho.TabIndex = 4;
             this.lblWho.Text = "Who are you ?";
             this.lblWho.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -86,9 +87,10 @@
             this.lblName.AutoSize = true;
             this.lblName.BackColor = System.Drawing.Color.Transparent;
             this.lblName.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblName.Location = new System.Drawing.Point(155, 76);
+            this.lblName.Location = new System.Drawing.Point(148, 125);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(66, 17);
+            this.lblName.Size = new System.Drawing.Size(77, 20);
             this.lblName.TabIndex = 5;
             this.lblName.Text = "Your name :";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -98,9 +100,10 @@
             // 
             this.lblWhat.AutoSize = true;
             this.lblWhat.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblWhat.Location = new System.Drawing.Point(316, -4);
+            this.lblWhat.Location = new System.Drawing.Point(425, 4);
+            this.lblWhat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWhat.Name = "lblWhat";
-            this.lblWhat.Size = new System.Drawing.Size(74, 17);
+            this.lblWhat.Size = new System.Drawing.Size(87, 20);
             this.lblWhat.TabIndex = 6;
             this.lblWhat.Text = "Select a class";
             this.lblWhat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -108,9 +111,10 @@
             // 
             // lblError
             // 
-            this.lblError.Location = new System.Drawing.Point(126, 230);
+            this.lblError.Location = new System.Drawing.Point(134, 231);
+            this.lblError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(166, 47);
+            this.lblError.Size = new System.Drawing.Size(221, 58);
             this.lblError.TabIndex = 11;
             this.lblError.Text = "lblError";
             this.lblError.UseCompatibleTextRendering = true;
@@ -119,9 +123,10 @@
             // 
             this.lblClass.AutoSize = true;
             this.lblClass.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblClass.Location = new System.Drawing.Point(495, 37);
+            this.lblClass.Location = new System.Drawing.Point(683, 34);
+            this.lblClass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblClass.Name = "lblClass";
-            this.lblClass.Size = new System.Drawing.Size(44, 17);
+            this.lblClass.Size = new System.Drawing.Size(52, 20);
             this.lblClass.TabIndex = 13;
             this.lblClass.Text = "lblClass";
             this.lblClass.UseCompatibleTextRendering = true;
@@ -130,9 +135,10 @@
             // lblDescibClass
             // 
             this.lblDescibClass.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblDescibClass.Location = new System.Drawing.Point(495, 75);
+            this.lblDescibClass.Location = new System.Drawing.Point(683, 84);
+            this.lblDescibClass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescibClass.Name = "lblDescibClass";
-            this.lblDescibClass.Size = new System.Drawing.Size(278, 160);
+            this.lblDescibClass.Size = new System.Drawing.Size(321, 163);
             this.lblDescibClass.TabIndex = 14;
             this.lblDescibClass.Text = "lblDescibClass";
             this.lblDescibClass.UseCompatibleTextRendering = true;
@@ -142,9 +148,10 @@
             // 
             this.lblHp.AutoSize = true;
             this.lblHp.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblHp.Location = new System.Drawing.Point(763, 255);
+            this.lblHp.Location = new System.Drawing.Point(736, 254);
+            this.lblHp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHp.Name = "lblHp";
-            this.lblHp.Size = new System.Drawing.Size(30, 17);
+            this.lblHp.Size = new System.Drawing.Size(35, 20);
             this.lblHp.TabIndex = 18;
             this.lblHp.Text = "lblHp";
             this.lblHp.UseCompatibleTextRendering = true;
@@ -154,9 +161,10 @@
             // 
             this.lblAtk.AutoSize = true;
             this.lblAtk.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblAtk.Location = new System.Drawing.Point(863, 255);
+            this.lblAtk.Location = new System.Drawing.Point(827, 254);
+            this.lblAtk.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAtk.Name = "lblAtk";
-            this.lblAtk.Size = new System.Drawing.Size(32, 17);
+            this.lblAtk.Size = new System.Drawing.Size(38, 20);
             this.lblAtk.TabIndex = 19;
             this.lblAtk.Text = "lblAtk";
             this.lblAtk.UseCompatibleTextRendering = true;
@@ -166,9 +174,10 @@
             // 
             this.lblIntAndEndure.AutoSize = true;
             this.lblIntAndEndure.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblIntAndEndure.Location = new System.Drawing.Point(955, 255);
+            this.lblIntAndEndure.Location = new System.Drawing.Point(921, 254);
+            this.lblIntAndEndure.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIntAndEndure.Name = "lblIntAndEndure";
-            this.lblIntAndEndure.Size = new System.Drawing.Size(85, 17);
+            this.lblIntAndEndure.Size = new System.Drawing.Size(100, 20);
             this.lblIntAndEndure.TabIndex = 20;
             this.lblIntAndEndure.Text = "lblIntAndEndure";
             this.lblIntAndEndure.UseCompatibleTextRendering = true;
@@ -178,9 +187,10 @@
             // 
             this.pbBackMenu.BackgroundImage = global::Lynaar_GUI.Properties.Resources.Menu_Icon_x64;
             this.pbBackMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbBackMenu.Location = new System.Drawing.Point(0, 3);
+            this.pbBackMenu.Location = new System.Drawing.Point(4, 4);
+            this.pbBackMenu.Margin = new System.Windows.Forms.Padding(4);
             this.pbBackMenu.Name = "pbBackMenu";
-            this.pbBackMenu.Size = new System.Drawing.Size(51, 51);
+            this.pbBackMenu.Size = new System.Drawing.Size(50, 50);
             this.pbBackMenu.TabIndex = 21;
             this.pbBackMenu.TabStop = false;
             this.pbBackMenu.Click += new System.EventHandler(this.pbBackMenu_Click);
@@ -191,9 +201,10 @@
             // 
             this.pbIntAndEndure.BackgroundImage = global::Lynaar_GUI.Properties.Resources.Endure32_Ico;
             this.pbIntAndEndure.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbIntAndEndure.Location = new System.Drawing.Point(661, 188);
+            this.pbIntAndEndure.Location = new System.Drawing.Point(873, 244);
+            this.pbIntAndEndure.Margin = new System.Windows.Forms.Padding(4);
             this.pbIntAndEndure.Name = "pbIntAndEndure";
-            this.pbIntAndEndure.Size = new System.Drawing.Size(30, 30);
+            this.pbIntAndEndure.Size = new System.Drawing.Size(40, 40);
             this.pbIntAndEndure.TabIndex = 17;
             this.pbIntAndEndure.TabStop = false;
             this.pbIntAndEndure.Visible = false;
@@ -202,9 +213,10 @@
             // 
             this.pbAtk.BackgroundImage = global::Lynaar_GUI.Properties.Resources.Atk32_Ico;
             this.pbAtk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbAtk.Location = new System.Drawing.Point(579, 188);
+            this.pbAtk.Location = new System.Drawing.Point(779, 244);
+            this.pbAtk.Margin = new System.Windows.Forms.Padding(4);
             this.pbAtk.Name = "pbAtk";
-            this.pbAtk.Size = new System.Drawing.Size(30, 30);
+            this.pbAtk.Size = new System.Drawing.Size(40, 40);
             this.pbAtk.TabIndex = 16;
             this.pbAtk.TabStop = false;
             this.pbAtk.Visible = false;
@@ -213,9 +225,10 @@
             // 
             this.pbHp.BackgroundImage = global::Lynaar_GUI.Properties.Resources.Hp32_Ico;
             this.pbHp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbHp.Location = new System.Drawing.Point(509, 188);
+            this.pbHp.Location = new System.Drawing.Point(688, 244);
+            this.pbHp.Margin = new System.Windows.Forms.Padding(4);
             this.pbHp.Name = "pbHp";
-            this.pbHp.Size = new System.Drawing.Size(30, 30);
+            this.pbHp.Size = new System.Drawing.Size(40, 40);
             this.pbHp.TabIndex = 15;
             this.pbHp.TabStop = false;
             this.pbHp.Visible = false;
@@ -224,11 +237,11 @@
             // 
             this.picBox_NewGame.BackgroundImage = global::Lynaar_GUI.Properties.Resources.StartGame_Parcho_Gris_A;
             this.picBox_NewGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBox_NewGame.Location = new System.Drawing.Point(285, 188);
-            this.picBox_NewGame.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picBox_NewGame.MaximumSize = new System.Drawing.Size(206, 47);
+            this.picBox_NewGame.Location = new System.Drawing.Point(380, 231);
+            this.picBox_NewGame.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.picBox_NewGame.MaximumSize = new System.Drawing.Size(275, 58);
             this.picBox_NewGame.Name = "picBox_NewGame";
-            this.picBox_NewGame.Size = new System.Drawing.Size(206, 47);
+            this.picBox_NewGame.Size = new System.Drawing.Size(275, 58);
             this.picBox_NewGame.TabIndex = 10;
             this.picBox_NewGame.TabStop = false;
             this.picBox_NewGame.Click += new System.EventHandler(this.picBox_NewGame_Click);
@@ -249,10 +262,10 @@
             this.rdbClasseRogue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rdbClasseRogue.ForeColor = System.Drawing.Color.Black;
             this.rdbClasseRogue.Image = ((System.Drawing.Image)(resources.GetObject("rdbClasseRogue.Image")));
-            this.rdbClasseRogue.Location = new System.Drawing.Point(318, 103);
+            this.rdbClasseRogue.Location = new System.Drawing.Point(432, 138);
             this.rdbClasseRogue.Margin = new System.Windows.Forms.Padding(0);
             this.rdbClasseRogue.Name = "rdbClasseRogue";
-            this.rdbClasseRogue.Size = new System.Drawing.Size(70, 70);
+            this.rdbClasseRogue.Size = new System.Drawing.Size(80, 80);
             this.rdbClasseRogue.TabIndex = 3;
             this.rdbClasseRogue.Tag = "classe";
             this.rdbClasseRogue.UseVisualStyleBackColor = true;
@@ -272,10 +285,10 @@
             this.rdbClasseMage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rdbClasseMage.ForeColor = System.Drawing.Color.Black;
             this.rdbClasseMage.Image = global::Lynaar_GUI.Properties.Resources.Mage_IcoC;
-            this.rdbClasseMage.Location = new System.Drawing.Point(395, 28);
+            this.rdbClasseMage.Location = new System.Drawing.Point(522, 52);
             this.rdbClasseMage.Margin = new System.Windows.Forms.Padding(0);
             this.rdbClasseMage.Name = "rdbClasseMage";
-            this.rdbClasseMage.Size = new System.Drawing.Size(70, 70);
+            this.rdbClasseMage.Size = new System.Drawing.Size(80, 80);
             this.rdbClasseMage.TabIndex = 2;
             this.rdbClasseMage.Tag = "classe";
             this.rdbClasseMage.UseVisualStyleBackColor = true;
@@ -295,10 +308,10 @@
             this.rdbClasseHunter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rdbClasseHunter.ForeColor = System.Drawing.Color.Black;
             this.rdbClasseHunter.Image = global::Lynaar_GUI.Properties.Resources.Hunter_IcoC;
-            this.rdbClasseHunter.Location = new System.Drawing.Point(395, 103);
+            this.rdbClasseHunter.Location = new System.Drawing.Point(522, 138);
             this.rdbClasseHunter.Margin = new System.Windows.Forms.Padding(0);
             this.rdbClasseHunter.Name = "rdbClasseHunter";
-            this.rdbClasseHunter.Size = new System.Drawing.Size(70, 70);
+            this.rdbClasseHunter.Size = new System.Drawing.Size(80, 80);
             this.rdbClasseHunter.TabIndex = 4;
             this.rdbClasseHunter.Tag = "classe";
             this.rdbClasseHunter.UseVisualStyleBackColor = true;
@@ -318,10 +331,10 @@
             this.rdbClasseWarrior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rdbClasseWarrior.ForeColor = System.Drawing.Color.Black;
             this.rdbClasseWarrior.Image = global::Lynaar_GUI.Properties.Resources.Warrior_IcoC;
-            this.rdbClasseWarrior.Location = new System.Drawing.Point(318, 28);
+            this.rdbClasseWarrior.Location = new System.Drawing.Point(432, 52);
             this.rdbClasseWarrior.Margin = new System.Windows.Forms.Padding(0);
             this.rdbClasseWarrior.Name = "rdbClasseWarrior";
-            this.rdbClasseWarrior.Size = new System.Drawing.Size(70, 70);
+            this.rdbClasseWarrior.Size = new System.Drawing.Size(80, 80);
             this.rdbClasseWarrior.TabIndex = 1;
             this.rdbClasseWarrior.Tag = "classe";
             this.rdbClasseWarrior.UseVisualStyleBackColor = false;
@@ -329,8 +342,7 @@
             // 
             // UC_LoginNewGame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.pbBackMenu);
             this.Controls.Add(this.lblIntAndEndure);
@@ -353,7 +365,7 @@
             this.Controls.Add(this.lblDescibClass);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "UC_LoginNewGame";
-            this.Size = new System.Drawing.Size(776, 242);
+            this.Size = new System.Drawing.Size(1035, 298);
             this.Load += new System.EventHandler(this.UC_LoginNewGame_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbBackMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIntAndEndure)).EndInit();
