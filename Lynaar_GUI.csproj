@@ -530,6 +530,12 @@
     <Content Include="Cursors\Medieval Handwriting.cur" />
     <Content Include="Cursors\Medieval Move.cur" />
     <Content Include="Lynaar_Icon-round.ico" />
+    <None Include="Resources\Cadre_Avatar.png" />
+    <None Include="Resources\FondPlayerPanel.png" />
+    <None Include="Resources\Xp_Ico_x32.png" />
+    <None Include="Resources\Floor_Ico_x32.png" />
+    <None Include="Resources\Boss_Ico_x32.png" />
+    <None Include="Resources\Gold_Ico_x32.png" />
     <None Include="Resources\legendFrame_Hover.png" />
     <None Include="Resources\SavedGame_Hover_background.png" />
     <None Include="Resources\Menu_Icon_Active_x64.png" />

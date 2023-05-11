@@ -32,8 +32,8 @@
             this.lbl_Inventaire = new System.Windows.Forms.Label();
             this.pnl_PlayerEquipement = new System.Windows.Forms.Panel();
             this.pnl_Inventory = new System.Windows.Forms.Panel();
-            this.table_Inventory = new System.Windows.Forms.TableLayoutPanel();
             this.pnl_ItemInfo = new System.Windows.Forms.Panel();
+            this.table_Inventory = new System.Windows.Forms.TableLayoutPanel();
             this.pnl_InventoryTitle.SuspendLayout();
             this.pnl_Inventory.SuspendLayout();
             this.SuspendLayout();
@@ -43,7 +43,7 @@
             this.pnl_InventoryTitle.Controls.Add(this.lbl_Inventaire);
             this.pnl_InventoryTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_InventoryTitle.Location = new System.Drawing.Point(0, 0);
-            this.pnl_InventoryTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_InventoryTitle.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_InventoryTitle.Name = "pnl_InventoryTitle";
             this.pnl_InventoryTitle.Size = new System.Drawing.Size(1443, 95);
             this.pnl_InventoryTitle.TabIndex = 0;
@@ -66,7 +66,7 @@
             this.pnl_PlayerEquipement.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_PlayerEquipement.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnl_PlayerEquipement.Location = new System.Drawing.Point(1081, 95);
-            this.pnl_PlayerEquipement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_PlayerEquipement.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_PlayerEquipement.Name = "pnl_PlayerEquipement";
             this.pnl_PlayerEquipement.Size = new System.Drawing.Size(362, 579);
             this.pnl_PlayerEquipement.TabIndex = 1;
@@ -77,10 +77,20 @@
             this.pnl_Inventory.Controls.Add(this.pnl_ItemInfo);
             this.pnl_Inventory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Inventory.Location = new System.Drawing.Point(0, 95);
-            this.pnl_Inventory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Inventory.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Inventory.Name = "pnl_Inventory";
             this.pnl_Inventory.Size = new System.Drawing.Size(1081, 579);
             this.pnl_Inventory.TabIndex = 2;
+            // 
+            // pnl_ItemInfo
+            // 
+            this.pnl_ItemInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_ItemInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnl_ItemInfo.Location = new System.Drawing.Point(0, 337);
+            this.pnl_ItemInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_ItemInfo.Name = "pnl_ItemInfo";
+            this.pnl_ItemInfo.Size = new System.Drawing.Size(1081, 242);
+            this.pnl_ItemInfo.TabIndex = 1;
             // 
             // table_Inventory
             // 
@@ -98,10 +108,10 @@
             this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
             this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
             this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
-            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.table_Inventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.table_Inventory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.table_Inventory.Location = new System.Drawing.Point(0, 0);
-            this.table_Inventory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.table_Inventory.Margin = new System.Windows.Forms.Padding(4);
             this.table_Inventory.Name = "table_Inventory";
             this.table_Inventory.RowCount = 5;
             this.table_Inventory.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 79F));
@@ -112,16 +122,6 @@
             this.table_Inventory.Size = new System.Drawing.Size(1081, 337);
             this.table_Inventory.TabIndex = 0;
             // 
-            // pnl_ItemInfo
-            // 
-            this.pnl_ItemInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnl_ItemInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnl_ItemInfo.Location = new System.Drawing.Point(0, 337);
-            this.pnl_ItemInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pnl_ItemInfo.Name = "pnl_ItemInfo";
-            this.pnl_ItemInfo.Size = new System.Drawing.Size(1081, 242);
-            this.pnl_ItemInfo.TabIndex = 1;
-            // 
             // UC_GameInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -129,7 +129,7 @@
             this.Controls.Add(this.pnl_Inventory);
             this.Controls.Add(this.pnl_PlayerEquipement);
             this.Controls.Add(this.pnl_InventoryTitle);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_GameInventory";
             this.Size = new System.Drawing.Size(1443, 674);
             this.Load += new System.EventHandler(this.UC_Inventory_Load);
