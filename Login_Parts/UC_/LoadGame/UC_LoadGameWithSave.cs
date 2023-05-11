@@ -23,9 +23,7 @@ namespace Lynaar_GUI.Login_Parts.UC_.LoadGame
 
         private List<Dictionary<string, object>> allPlayer = null; //! Liste de tous les joueurs
 
-
         private int playerIndex;
-
         //! Images
         private Bitmap onHover_Back;
         private Bitmap normal_Back;
@@ -147,8 +145,12 @@ namespace Lynaar_GUI.Login_Parts.UC_.LoadGame
 
         private void UC_LoadGameWithSave_Click(object sender, EventArgs e)
         {
+            Dictionary<string, object> player = allPlayer.Find(x => x["Id_Player"].ToString() == this.playerIndex.ToString());
+
+            Player p1 = new Player(player["playerName"].ToString(), player["classes"].ToString(), int.Parse(player["level"].ToString()), int.Parse(player["xp"].ToString()), int.Parse(player["hp"].ToString()), int.Parse(player["maxHp"].ToString()), int.Parse(player["damage"].ToString()), int.Parse(player["additionalDamage"].ToString()), int.Parse(player["endurance"].ToString()), int.Parse(player["intelligence"].ToString()), int.Parse(player["gold"].ToString()), int.Parse(player["fightNumber"].ToString()), int.Parse(player["Id_Player"].ToString()));
+
             this.parentForm.Hide();
-            Form gameForm = new GameForm();
+            Form gameForm = new GameForm(p1);
             gameForm.Show();
         }
 

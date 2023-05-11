@@ -17,6 +17,7 @@ namespace Lynaar_GUI
     public partial class GameForm : Form
     {
 
+
         //! Initialisation des polices
         private Font font10;
         private Font font12;
@@ -27,9 +28,11 @@ namespace Lynaar_GUI
         private Player currentPlayer;
 
         internal Player CurrentPlayer { get => currentPlayer; set => currentPlayer = value; }
+
         public GameForm()
         {
             InitializeComponent();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)

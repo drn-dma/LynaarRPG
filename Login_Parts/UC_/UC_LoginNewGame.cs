@@ -144,6 +144,7 @@ namespace Lynaar_GUI.Login_Parts.UC_
             {
                 if (rdbClasseHunter.Checked || rdbClasseMage.Checked || rdbClasseRogue.Checked || rdbClasseWarrior.Checked) 
                 {
+
                     //!Attribue les stats en fonction de la classe choisie
                     if (rdbClasseMage.Checked)
                     {
@@ -167,6 +168,7 @@ namespace Lynaar_GUI.Login_Parts.UC_
                     //! Close the current form and open the game form
                     //
                     Thread GameForm_THREAD = new Thread(() => Application.Run(GameForm));
+
                     GameForm_THREAD.Start();
                     this.parentForm.PlayMusic(); //! Arret de la musique du LoginForm
                     this.ParentForm.Dispose();  //! Fermeture du LoginForm et libération des ressources
@@ -336,12 +338,6 @@ namespace Lynaar_GUI.Login_Parts.UC_
 
         #region Functions
 
-        //! Ajout de la fonction permettant l'ouverture du formulaire de jeu
-        private void openGameForm()
-        {
-            
-
-        }
 
         //!Ajout de la fonction permettant le son lors du survol du bouton 
 

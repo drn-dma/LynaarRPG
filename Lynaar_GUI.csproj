@@ -178,6 +178,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GameForm.resx</DependentUpon>
     </Compile>
+    <Compile Include="Game_Parts\UC_\Items\UC_ItemAndQuantity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Game_Parts\UC_\Items\UC_ItemAndQuantity.Designer.cs">
+      <DependentUpon>UC_ItemAndQuantity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login_Parts\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +238,9 @@
       <DependentUpon>GameForm.cs</DependentUpon>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>GameForm1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game_Parts\UC_\Items\UC_ItemAndQuantity.resx">
+      <DependentUpon>UC_ItemAndQuantity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Parts\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -530,12 +539,18 @@
     <Content Include="Cursors\Medieval Handwriting.cur" />
     <Content Include="Cursors\Medieval Move.cur" />
     <Content Include="Lynaar_Icon-round.ico" />
+
     <None Include="Resources\Cadre_Avatar.png" />
     <None Include="Resources\FondPlayerPanel.png" />
     <None Include="Resources\Xp_Ico_x32.png" />
     <None Include="Resources\Floor_Ico_x32.png" />
     <None Include="Resources\Boss_Ico_x32.png" />
     <None Include="Resources\Gold_Ico_x32.png" />
+
+    <None Include="Resources\Inv_Background.png" />
+    <None Include="Resources\Equip_2.png" />
+    <None Include="Resources\Equip_1.png" />
+
     <None Include="Resources\legendFrame_Hover.png" />
     <None Include="Resources\SavedGame_Hover_background.png" />
     <None Include="Resources\Menu_Icon_Active_x64.png" />
