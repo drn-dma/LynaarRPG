@@ -17,9 +17,14 @@ namespace Lynaar_GUI
     public partial class GameForm : Form
     {
 
+        private Player p1;
+
+        internal Player P1 { get => p1; set => p1 = value; }
+
         public GameForm()
         {
             InitializeComponent();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)

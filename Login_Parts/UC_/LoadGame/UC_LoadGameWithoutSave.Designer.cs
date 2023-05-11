@@ -50,8 +50,6 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImage = global::Lynaar_GUI.Properties.Resources.no_SavedGame_background;
             this.Controls.Add(this.lbl_Empty);
-            this.MaximumSize = new System.Drawing.Size(387, 50);
-            this.MinimumSize = new System.Drawing.Size(387, 50);
             this.Name = "UC_LoadGameWithoutSave";
             this.Size = new System.Drawing.Size(387, 50);
             this.Load += new System.EventHandler(this.UC_LoadGameWithoutSave_Load);

@@ -141,10 +141,10 @@ namespace Lynaar_GUI.Login_Parts.UC_
             if (txtBoxPseudo.Text != "")
             {
                 if (rdbClasseHunter.Checked || rdbClasseMage.Checked || rdbClasseRogue.Checked || rdbClasseWarrior.Checked) 
-                { 
+                {
                     //! Close the current form and open the game form
                     Thread GameForm_THREAD = new Thread(new ThreadStart(openGameForm));
-                    GameForm_THREAD.Start();    
+                    GameForm_THREAD.Start();
                     this.parentForm.PlayMusic(); //! Arret de la musique du LoginForm
                     this.ParentForm.Dispose();  //! Fermeture du LoginForm et libération des ressources
 
@@ -314,11 +314,17 @@ namespace Lynaar_GUI.Login_Parts.UC_
         #region Functions
 
         //! Ajout de la fonction permettant l'ouverture du formulaire de jeu
-        private void openGameForm()
+        /*private void openGameForm()
         {
+            
+
+            this.Hide();
+ 
+            gameForm.Show();
+
             //TODO Trouver une alternative a Application.run
-            Application.Run(new GameForm());
-        }
+            *//*Application.Run(new GameForm());*//*
+        }*/
 
         //!Ajout de la fonction permettant le son lors du survol du bouton 
 

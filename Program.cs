@@ -30,7 +30,7 @@ namespace Lynaar_GUI
 
 
             Application.Run(new LoginForm(allPlayer));
-
+            
         }
 
         
