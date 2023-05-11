@@ -33,7 +33,6 @@
             this.pnl_PlayerEquipement = new System.Windows.Forms.Panel();
             this.pnl_Inventory = new System.Windows.Forms.Panel();
 
-            this.table_Inventory = new System.Windows.Forms.TableLayoutPanel();
             this.pnl_Item48 = new System.Windows.Forms.Panel();
             this.pnl_Item3 = new System.Windows.Forms.Panel();
             this.pnl_Item1 = new System.Windows.Forms.Panel();
@@ -149,7 +148,6 @@
             // table_Inventory
             // 
             this.table_Inventory.BackColor = System.Drawing.Color.Transparent;
-            this.table_Inventory.BackgroundImage = global::Lynaar_GUI.Properties.Resources.Inv_Background;
             this.table_Inventory.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.table_Inventory.ColumnCount = 13;
 

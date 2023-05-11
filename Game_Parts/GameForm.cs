@@ -44,25 +44,31 @@ namespace Lynaar_GUI
             this.font20 = new Font(FunctionsLibs.Font_Alkhemikal, 20);
 
 
+            this.pBarHp.Maximum = currentPlayer.MaxHp;
+            this.pBarHp.Value = currentPlayer.Hp;
+
+            this.pBarXp.Maximum = currentPlayer.Experience + 100000;
+            this.pBarXp.Value = currentPlayer.Experience;
+
         #region Affichage des informations du joueur
 
         //!Affichage de l'avatar de la classe en fonction de la classe du joueur
             switch (this.currentPlayer.Classe)
             {
-                case "Warrior":
-                    picBoxAvatar.BackgroundImage = Properties.Resources.Warrior_Ico;
+                case "warrior":
+                    picBoxAvatar.BackgroundImage = Properties.Resources.Icon_Warrior;
                     lblName.ForeColor = Color.Red;
                     break;
-                case "Mage":
-                    picBoxAvatar.BackgroundImage = Properties.Resources.Mage_Ico;
+                case "mage":
+                    picBoxAvatar.BackgroundImage = Properties.Resources.Icon_Mage;
                     lblName.ForeColor = Color.Blue;
                     break;
-                case "Rogue":
-                    picBoxAvatar.BackgroundImage = Properties.Resources.Rogue_Ico;
+                case "rogue":
+                    picBoxAvatar.BackgroundImage = Properties.Resources.Icon_Rogue;
                     lblName.ForeColor = Color.Purple;
                     break;
-                case "Hunter":
-                    picBoxAvatar.BackgroundImage = Properties.Resources.Hunter_Ico;
+                case "hunter":
+                    picBoxAvatar.BackgroundImage = Properties.Resources.Icon_Hunter;
                     lblName.ForeColor = Color.Green;
                     break;
             }
@@ -110,6 +116,9 @@ namespace Lynaar_GUI
             }
             #endregion
 
+
+
+            
         }
 
         #region Gestion des boutons du menu
@@ -127,7 +136,14 @@ namespace Lynaar_GUI
                     break;
             }
 
-            
+            while (currentPlayer.Hp > 0)
+            {
+                currentPlayer.Hp -= 10;
+                pBarHp.Value = currentPlayer.Hp;
+                lblHp.Text = currentPlayer.Hp.ToString();
+                System.Threading.Thread.Sleep(100);
+            }
+
         }
         #endregion
 

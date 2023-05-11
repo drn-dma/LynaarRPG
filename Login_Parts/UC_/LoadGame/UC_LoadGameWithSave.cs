@@ -9,6 +9,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -146,12 +147,26 @@ namespace Lynaar_GUI.Login_Parts.UC_.LoadGame
         private void UC_LoadGameWithSave_Click(object sender, EventArgs e)
         {
             Dictionary<string, object> player = allPlayer.Find(x => x["Id_Player"].ToString() == this.playerIndex.ToString());
+            Player p1;
+            try
+            {
+                p1 = new Player(player["playerName"].ToString(), player["classes"].ToString(), int.Parse(player["level"].ToString()), int.Parse(player["xp"].ToString()), int.Parse(player["hp"].ToString()), int.Parse(player["maxHp"].ToString()), int.Parse(player["damage"].ToString()), int.Parse(player["additionalDamage"].ToString()), int.Parse(player["endurance"].ToString()), int.Parse(player["intelligence"].ToString()), int.Parse(player["gold"].ToString()), int.Parse(player["fightNumber"].ToString()), int.Parse(player["Id_Player"].ToString()), DateTime.Parse(player["dateSave"].ToString()));
+            }
+            catch
+            {
+                p1 = new Player(player["playerName"].ToString(), player["classes"].ToString(), int.Parse(player["level"].ToString()), int.Parse(player["xp"].ToString()), int.Parse(player["hp"].ToString()), int.Parse(player["maxHp"].ToString()), int.Parse(player["damage"].ToString()), int.Parse(player["additionalDamage"].ToString()), int.Parse(player["endurance"].ToString()), int.Parse(player["endurance"].ToString()), int.Parse(player["gold"].ToString()), int.Parse(player["fightNumber"].ToString()), int.Parse(player["Id_Player"].ToString()), DateTime.Parse(player["dateSave"].ToString()));
+            }
 
-            Player p1 = new Player(player["playerName"].ToString(), player["classes"].ToString(), int.Parse(player["level"].ToString()), int.Parse(player["xp"].ToString()), int.Parse(player["hp"].ToString()), int.Parse(player["maxHp"].ToString()), int.Parse(player["damage"].ToString()), int.Parse(player["additionalDamage"].ToString()), int.Parse(player["endurance"].ToString()), int.Parse(player["intelligence"].ToString()), int.Parse(player["gold"].ToString()), int.Parse(player["fightNumber"].ToString()), int.Parse(player["Id_Player"].ToString()));
+            //!Création d'une nouvelle fenêtre de jeu
+            GameForm GameForm = new GameForm();
+            GameForm.CurrentPlayer = p1;
 
-            this.parentForm.Hide();
-            Form gameForm = new GameForm(p1);
-            gameForm.Show();
+            //! Close the current form and open the game form
+            //
+            Thread GameForm_THREAD = new Thread(() => Application.Run(GameForm));
+
+            GameForm_THREAD.Start();
+            this.ParentForm.Dispose();  //! Fermeture du LoginForm et libération des ressources
         }
 
         private void UC_LoadGameWithSave_MouseEnter(object sender, EventArgs e)
