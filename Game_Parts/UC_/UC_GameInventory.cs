@@ -33,7 +33,9 @@ namespace Lynaar_GUI
 
             //! Initialisation de la police de caractère
             this.font40 = new Font(FunctionsLibs.Font_Alkhemikal, 40);
-
+            this.table_Inventory.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
+            this.table_Inventory.Visible = true;
+            this.table_Inventory.Refresh();
         }
 
         private void UC_Inventory_Load(object sender, EventArgs e)

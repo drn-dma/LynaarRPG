@@ -539,6 +539,7 @@
     <Content Include="Cursors\Medieval Handwriting.cur" />
     <Content Include="Cursors\Medieval Move.cur" />
     <Content Include="Lynaar_Icon-round.ico" />
+    <None Include="Resources\Inv_Background.png" />
     <None Include="Resources\Equip_2.png" />
     <None Include="Resources\Equip_1.png" />
     <None Include="Resources\legendFrame_Hover.png" />

@@ -141,10 +141,10 @@ namespace Lynaar_GUI.Login_Parts.UC_
             if (txtBoxPseudo.Text != "")
             {
                 if (rdbClasseHunter.Checked || rdbClasseMage.Checked || rdbClasseRogue.Checked || rdbClasseWarrior.Checked) 
-                { 
+                {
                     //! Close the current form and open the game form
-/*                    Thread GameForm_THREAD = new Thread(new ThreadStart(openGameForm));
-                    GameForm_THREAD.Start();*/    
+                    Thread GameForm_THREAD = new Thread(new ThreadStart(openGameForm));
+                    GameForm_THREAD.Start();
                     this.parentForm.PlayMusic(); //! Arret de la musique du LoginForm
                     this.ParentForm.Dispose();  //! Fermeture du LoginForm et libération des ressources
 

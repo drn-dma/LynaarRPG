@@ -923,6 +923,16 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Inv_Background {
+            get {
+                object obj = ResourceManager.GetObject("Inv_Background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Inventory_Ico {
             get {
                 object obj = ResourceManager.GetObject("Inventory_Ico", resourceCulture);
