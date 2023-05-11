@@ -32,9 +32,9 @@
             this.pnl_Top = new System.Windows.Forms.Panel();
             this.pnl_TabControl = new System.Windows.Forms.Panel();
             this.table_MenuButton = new System.Windows.Forms.TableLayoutPanel();
+            this.pnl_Main = new System.Windows.Forms.Panel();
             this.picBox_Inventory = new System.Windows.Forms.PictureBox();
             this.picBox_Home = new System.Windows.Forms.PictureBox();
-            this.pnl_Main = new System.Windows.Forms.Panel();
             this.pnl_PlayerInfo = new System.Windows.Forms.Panel();
             this.picBoxAvatar = new System.Windows.Forms.PictureBox();
             this.lblXp = new System.Windows.Forms.Label();
@@ -77,9 +77,8 @@
             this.pnl_Top.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pnl_Top.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Top.Location = new System.Drawing.Point(0, 0);
-            this.pnl_Top.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Top.Name = "pnl_Top";
-            this.pnl_Top.Size = new System.Drawing.Size(1685, 92);
+            this.pnl_Top.Size = new System.Drawing.Size(1264, 75);
             this.pnl_Top.TabIndex = 0;
             this.pnl_Top.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_Top_Paint);
             // 
@@ -87,10 +86,9 @@
             // 
             this.pnl_TabControl.Controls.Add(this.table_MenuButton);
             this.pnl_TabControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_TabControl.Location = new System.Drawing.Point(243, 92);
-            this.pnl_TabControl.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_TabControl.Location = new System.Drawing.Point(182, 75);
             this.pnl_TabControl.Name = "pnl_TabControl";
-            this.pnl_TabControl.Size = new System.Drawing.Size(1442, 71);
+            this.pnl_TabControl.Size = new System.Drawing.Size(1082, 58);
             this.pnl_TabControl.TabIndex = 2;
             // 
             // table_MenuButton
@@ -105,13 +103,22 @@
             this.table_MenuButton.Controls.Add(this.picBox_Home, 0, 0);
             this.table_MenuButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.table_MenuButton.Location = new System.Drawing.Point(0, 0);
-            this.table_MenuButton.Margin = new System.Windows.Forms.Padding(4);
             this.table_MenuButton.Name = "table_MenuButton";
             this.table_MenuButton.RowCount = 1;
             this.table_MenuButton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.table_MenuButton.Size = new System.Drawing.Size(1442, 71);
+            this.table_MenuButton.Size = new System.Drawing.Size(1082, 58);
             this.table_MenuButton.TabIndex = 0;
             this.table_MenuButton.Paint += new System.Windows.Forms.PaintEventHandler(this.table_MenuButton_Paint);
+            // 
+            // pnl_Main
+            // 
+            this.pnl_Main.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pnl_Main.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_Main.Location = new System.Drawing.Point(182, 133);
+            this.pnl_Main.Name = "pnl_Main";
+            this.pnl_Main.Size = new System.Drawing.Size(1082, 548);
+            this.pnl_Main.TabIndex = 3;
+            this.pnl_Main.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_Main_Paint);
             // 
             // picBox_Inventory
             // 
@@ -119,12 +126,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.picBox_Inventory.BackColor = System.Drawing.Color.Transparent;
-            this.picBox_Inventory.BackgroundImage = global::Lynaar_GUI.Properties.Resources.Inventory_Ico;
             this.picBox_Inventory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBox_Inventory.Location = new System.Drawing.Point(151, 6);
-            this.picBox_Inventory.Margin = new System.Windows.Forms.Padding(4);
+            this.picBox_Inventory.Image = global::Lynaar_GUI.Properties.Resources.icon_Inventory;
+            this.picBox_Inventory.Location = new System.Drawing.Point(114, 5);
             this.picBox_Inventory.Name = "picBox_Inventory";
-            this.picBox_Inventory.Size = new System.Drawing.Size(135, 59);
+            this.picBox_Inventory.Size = new System.Drawing.Size(101, 48);
+            this.picBox_Inventory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox_Inventory.TabIndex = 0;
             this.picBox_Inventory.TabStop = false;
             this.picBox_Inventory.Click += new System.EventHandler(this.BtnMenu_Click);
@@ -135,25 +142,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.picBox_Home.BackColor = System.Drawing.Color.Transparent;
-            this.picBox_Home.BackgroundImage = global::Lynaar_GUI.Properties.Resources.Home_Ico;
             this.picBox_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBox_Home.Location = new System.Drawing.Point(6, 6);
-            this.picBox_Home.Margin = new System.Windows.Forms.Padding(4);
+            this.picBox_Home.Image = global::Lynaar_GUI.Properties.Resources.icon_Home;
+            this.picBox_Home.Location = new System.Drawing.Point(5, 5);
             this.picBox_Home.Name = "picBox_Home";
-            this.picBox_Home.Size = new System.Drawing.Size(135, 59);
+            this.picBox_Home.Size = new System.Drawing.Size(101, 48);
+            this.picBox_Home.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox_Home.TabIndex = 1;
             this.picBox_Home.TabStop = false;
-            // 
-            // pnl_Main
-            // 
-            this.pnl_Main.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pnl_Main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_Main.Location = new System.Drawing.Point(243, 163);
-            this.pnl_Main.Margin = new System.Windows.Forms.Padding(4);
-            this.pnl_Main.Name = "pnl_Main";
-            this.pnl_Main.Size = new System.Drawing.Size(1442, 675);
-            this.pnl_Main.TabIndex = 3;
-            this.pnl_Main.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_Main_Paint);
             // 
             // pnl_PlayerInfo
             // 
@@ -181,18 +177,18 @@
             this.pnl_PlayerInfo.Controls.Add(this.picBoxHp);
             this.pnl_PlayerInfo.Controls.Add(this.picBoxFondAvatar);
             this.pnl_PlayerInfo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnl_PlayerInfo.Location = new System.Drawing.Point(0, 92);
-            this.pnl_PlayerInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_PlayerInfo.Location = new System.Drawing.Point(0, 75);
             this.pnl_PlayerInfo.Name = "pnl_PlayerInfo";
-            this.pnl_PlayerInfo.Size = new System.Drawing.Size(243, 746);
+            this.pnl_PlayerInfo.Size = new System.Drawing.Size(182, 606);
             this.pnl_PlayerInfo.TabIndex = 1;
             // 
             // picBoxAvatar
             // 
             this.picBoxAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picBoxAvatar.Location = new System.Drawing.Point(32, 127);
+            this.picBoxAvatar.Location = new System.Drawing.Point(24, 103);
+            this.picBoxAvatar.Margin = new System.Windows.Forms.Padding(2);
             this.picBoxAvatar.Name = "picBoxAvatar";
-            this.picBoxAvatar.Size = new System.Drawing.Size(180, 180);
+            this.picBoxAvatar.Size = new System.Drawing.Size(135, 146);
             this.picBoxAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxAvatar.TabIndex = 20;
             this.picBoxAvatar.TabStop = false;
@@ -202,9 +198,10 @@
             this.lblXp.AutoSize = true;
             this.lblXp.BackColor = System.Drawing.Color.Transparent;
             this.lblXp.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblXp.Location = new System.Drawing.Point(57, 680);
+            this.lblXp.Location = new System.Drawing.Point(43, 552);
+            this.lblXp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblXp.Name = "lblXp";
-            this.lblXp.Size = new System.Drawing.Size(35, 20);
+            this.lblXp.Size = new System.Drawing.Size(29, 17);
             this.lblXp.TabIndex = 19;
             this.lblXp.Text = "lblXp";
             this.lblXp.UseCompatibleTextRendering = true;
@@ -212,20 +209,21 @@
             // pBarHp
             // 
             this.pBarHp.ForeColor = System.Drawing.Color.Firebrick;
-            this.pBarHp.Location = new System.Drawing.Point(21, 395);
+            this.pBarHp.Location = new System.Drawing.Point(16, 321);
+            this.pBarHp.Margin = new System.Windows.Forms.Padding(2);
             this.pBarHp.Name = "pBarHp";
             this.pBarHp.RightToLeftLayout = true;
-            this.pBarHp.Size = new System.Drawing.Size(201, 23);
+            this.pBarHp.Size = new System.Drawing.Size(151, 19);
             this.pBarHp.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.pBarHp.TabIndex = 18;
-            this.pBarHp.Value = 100;
             // 
             // pBarXp
             // 
             this.pBarXp.ForeColor = System.Drawing.Color.DarkViolet;
-            this.pBarXp.Location = new System.Drawing.Point(21, 711);
+            this.pBarXp.Location = new System.Drawing.Point(16, 578);
+            this.pBarXp.Margin = new System.Windows.Forms.Padding(2);
             this.pBarXp.Name = "pBarXp";
-            this.pBarXp.Size = new System.Drawing.Size(200, 23);
+            this.pBarXp.Size = new System.Drawing.Size(150, 19);
             this.pBarXp.TabIndex = 17;
             // 
             // lblNextBossFloor
@@ -233,9 +231,10 @@
             this.lblNextBossFloor.AutoSize = true;
             this.lblNextBossFloor.BackColor = System.Drawing.Color.Transparent;
             this.lblNextBossFloor.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblNextBossFloor.Location = new System.Drawing.Point(180, 510);
+            this.lblNextBossFloor.Location = new System.Drawing.Point(135, 414);
+            this.lblNextBossFloor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNextBossFloor.Name = "lblNextBossFloor";
-            this.lblNextBossFloor.Size = new System.Drawing.Size(106, 20);
+            this.lblNextBossFloor.Size = new System.Drawing.Size(90, 17);
             this.lblNextBossFloor.TabIndex = 16;
             this.lblNextBossFloor.Text = "lblNextBossFloor";
             this.lblNextBossFloor.UseCompatibleTextRendering = true;
@@ -245,9 +244,10 @@
             this.lblFloor.AutoSize = true;
             this.lblFloor.BackColor = System.Drawing.Color.Transparent;
             this.lblFloor.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblFloor.Location = new System.Drawing.Point(59, 510);
+            this.lblFloor.Location = new System.Drawing.Point(44, 414);
+            this.lblFloor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFloor.Name = "lblFloor";
-            this.lblFloor.Size = new System.Drawing.Size(49, 20);
+            this.lblFloor.Size = new System.Drawing.Size(42, 17);
             this.lblFloor.TabIndex = 15;
             this.lblFloor.Text = "lblFloor";
             this.lblFloor.UseCompatibleTextRendering = true;
@@ -257,9 +257,10 @@
             this.picBoxNextBossFloor.BackColor = System.Drawing.Color.Transparent;
             this.picBoxNextBossFloor.BackgroundImage = global::Lynaar_GUI.Properties.Resources.Boss_Ico_x32;
             this.picBoxNextBossFloor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxNextBossFloor.Location = new System.Drawing.Point(142, 505);
+            this.picBoxNextBossFloor.Location = new System.Drawing.Point(106, 410);
+            this.picBoxNextBossFloor.Margin = new System.Windows.Forms.Padding(2);
             this.picBoxNextBossFloor.Name = "picBoxNextBossFloor";
-            this.picBoxNextBossFloor.Size = new System.Drawing.Size(32, 32);
+            this.picBoxNextBossFloor.Size = new System.Drawing.Size(24, 26);
             this.picBoxNextBossFloor.TabIndex = 14;
             this.picBoxNextBossFloor.TabStop = false;
             // 
@@ -268,9 +269,10 @@
             this.picBoxFloor.BackColor = System.Drawing.Color.Transparent;
             this.picBoxFloor.BackgroundImage = global::Lynaar_GUI.Properties.Resources.Floor_Ico_x32;
             this.picBoxFloor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxFloor.Location = new System.Drawing.Point(21, 505);
+            this.picBoxFloor.Location = new System.Drawing.Point(16, 410);
+            this.picBoxFloor.Margin = new System.Windows.Forms.Padding(2);
             this.picBoxFloor.Name = "picBoxFloor";
-            this.picBoxFloor.Size = new System.Drawing.Size(32, 32);
+            this.picBoxFloor.Size = new System.Drawing.Size(24, 26);
             this.picBoxFloor.TabIndex = 13;
             this.picBoxFloor.TabStop = false;
             // 
@@ -279,9 +281,10 @@
             this.lblGold.AutoSize = true;
             this.lblGold.BackColor = System.Drawing.Color.Transparent;
             this.lblGold.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblGold.Location = new System.Drawing.Point(59, 632);
+            this.lblGold.Location = new System.Drawing.Point(44, 514);
+            this.lblGold.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGold.Name = "lblGold";
-            this.lblGold.Size = new System.Drawing.Size(47, 20);
+            this.lblGold.Size = new System.Drawing.Size(40, 17);
             this.lblGold.TabIndex = 12;
             this.lblGold.Text = "lblGold";
             this.lblGold.UseCompatibleTextRendering = true;
@@ -291,9 +294,10 @@
             this.lblLevel.AutoSize = true;
             this.lblLevel.BackColor = System.Drawing.Color.Transparent;
             this.lblLevel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblLevel.Location = new System.Drawing.Point(134, 347);
+            this.lblLevel.Location = new System.Drawing.Point(100, 282);
+            this.lblLevel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(50, 20);
+            this.lblLevel.Size = new System.Drawing.Size(43, 17);
             this.lblLevel.TabIndex = 11;
             this.lblLevel.Text = "lblLevel";
             this.lblLevel.UseCompatibleTextRendering = true;
@@ -303,9 +307,10 @@
             this.lblAtk.AutoSize = true;
             this.lblAtk.BackColor = System.Drawing.Color.Transparent;
             this.lblAtk.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblAtk.Location = new System.Drawing.Point(180, 448);
+            this.lblAtk.Location = new System.Drawing.Point(135, 364);
+            this.lblAtk.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAtk.Name = "lblAtk";
-            this.lblAtk.Size = new System.Drawing.Size(38, 20);
+            this.lblAtk.Size = new System.Drawing.Size(32, 17);
             this.lblAtk.TabIndex = 10;
             this.lblAtk.Text = "lblAtk";
             this.lblAtk.UseCompatibleTextRendering = true;
@@ -315,9 +320,10 @@
             this.lblIntAndEnd.AutoSize = true;
             this.lblIntAndEnd.BackColor = System.Drawing.Color.Transparent;
             this.lblIntAndEnd.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblIntAndEnd.Location = new System.Drawing.Point(61, 448);
+            this.lblIntAndEnd.Location = new System.Drawing.Point(46, 364);
+            this.lblIntAndEnd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIntAndEnd.Name = "lblIntAndEnd";
-            this.lblIntAndEnd.Size = new System.Drawing.Size(81, 20);
+            this.lblIntAndEnd.Size = new System.Drawing.Size(69, 17);
             this.lblIntAndEnd.TabIndex = 9;
             this.lblIntAndEnd.Text = "lblIntAndEnd";
             this.lblIntAndEnd.UseCompatibleTextRendering = true;
@@ -327,9 +333,10 @@
             this.lblHp.AutoSize = true;
             this.lblHp.BackColor = System.Drawing.Color.Transparent;
             this.lblHp.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblHp.Location = new System.Drawing.Point(57, 347);
+            this.lblHp.Location = new System.Drawing.Point(43, 282);
+            this.lblHp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHp.Name = "lblHp";
-            this.lblHp.Size = new System.Drawing.Size(35, 20);
+            this.lblHp.Size = new System.Drawing.Size(30, 17);
             this.lblHp.TabIndex = 8;
             this.lblHp.Text = "lblHp";
             this.lblHp.UseCompatibleTextRendering = true;
@@ -337,9 +344,10 @@
             // lblName
             // 
             this.lblName.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblName.Location = new System.Drawing.Point(21, 45);
+            this.lblName.Location = new System.Drawing.Point(16, 37);
+            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(201, 35);
+            this.lblName.Size = new System.Drawing.Size(151, 28);
             this.lblName.TabIndex = 7;
             this.lblName.Text = "lblName";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -349,9 +357,10 @@
             // 
             this.picBoxXp.BackColor = System.Drawing.Color.Transparent;
             this.picBoxXp.BackgroundImage = global::Lynaar_GUI.Properties.Resources.Xp_Ico_x32;
-            this.picBoxXp.Location = new System.Drawing.Point(21, 673);
+            this.picBoxXp.Location = new System.Drawing.Point(16, 547);
+            this.picBoxXp.Margin = new System.Windows.Forms.Padding(2);
             this.picBoxXp.Name = "picBoxXp";
-            this.picBoxXp.Size = new System.Drawing.Size(32, 32);
+            this.picBoxXp.Size = new System.Drawing.Size(24, 26);
             this.picBoxXp.TabIndex = 6;
             this.picBoxXp.TabStop = false;
             // 
@@ -360,9 +369,10 @@
             this.picBoxIntAndEnd.BackColor = System.Drawing.Color.Transparent;
             this.picBoxIntAndEnd.BackgroundImage = global::Lynaar_GUI.Properties.Resources.Endure32_Ico;
             this.picBoxIntAndEnd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxIntAndEnd.Location = new System.Drawing.Point(21, 441);
+            this.picBoxIntAndEnd.Location = new System.Drawing.Point(16, 358);
+            this.picBoxIntAndEnd.Margin = new System.Windows.Forms.Padding(2);
             this.picBoxIntAndEnd.Name = "picBoxIntAndEnd";
-            this.picBoxIntAndEnd.Size = new System.Drawing.Size(32, 32);
+            this.picBoxIntAndEnd.Size = new System.Drawing.Size(24, 26);
             this.picBoxIntAndEnd.TabIndex = 5;
             this.picBoxIntAndEnd.TabStop = false;
             // 
@@ -371,9 +381,10 @@
             this.picBoxGold.BackColor = System.Drawing.Color.Transparent;
             this.picBoxGold.BackgroundImage = global::Lynaar_GUI.Properties.Resources.Gold_Ico_x32;
             this.picBoxGold.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxGold.Location = new System.Drawing.Point(21, 626);
+            this.picBoxGold.Location = new System.Drawing.Point(16, 509);
+            this.picBoxGold.Margin = new System.Windows.Forms.Padding(2);
             this.picBoxGold.Name = "picBoxGold";
-            this.picBoxGold.Size = new System.Drawing.Size(32, 32);
+            this.picBoxGold.Size = new System.Drawing.Size(24, 26);
             this.picBoxGold.TabIndex = 3;
             this.picBoxGold.TabStop = false;
             // 
@@ -382,9 +393,10 @@
             this.picBoxAtk.BackColor = System.Drawing.Color.Transparent;
             this.picBoxAtk.BackgroundImage = global::Lynaar_GUI.Properties.Resources.Atk32_Ico;
             this.picBoxAtk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxAtk.Location = new System.Drawing.Point(142, 441);
+            this.picBoxAtk.Location = new System.Drawing.Point(106, 358);
+            this.picBoxAtk.Margin = new System.Windows.Forms.Padding(2);
             this.picBoxAtk.Name = "picBoxAtk";
-            this.picBoxAtk.Size = new System.Drawing.Size(32, 32);
+            this.picBoxAtk.Size = new System.Drawing.Size(24, 26);
             this.picBoxAtk.TabIndex = 2;
             this.picBoxAtk.TabStop = false;
             // 
@@ -393,9 +405,10 @@
             this.picBoxHp.BackColor = System.Drawing.Color.Transparent;
             this.picBoxHp.BackgroundImage = global::Lynaar_GUI.Properties.Resources.Hp32_Ico;
             this.picBoxHp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxHp.Location = new System.Drawing.Point(21, 340);
+            this.picBoxHp.Location = new System.Drawing.Point(16, 276);
+            this.picBoxHp.Margin = new System.Windows.Forms.Padding(2);
             this.picBoxHp.Name = "picBoxHp";
-            this.picBoxHp.Size = new System.Drawing.Size(32, 32);
+            this.picBoxHp.Size = new System.Drawing.Size(24, 26);
             this.picBoxHp.TabIndex = 1;
             this.picBoxHp.TabStop = false;
             // 
@@ -404,23 +417,23 @@
             this.picBoxFondAvatar.BackColor = System.Drawing.Color.Transparent;
             this.picBoxFondAvatar.BackgroundImage = global::Lynaar_GUI.Properties.Resources.Cadre_Avatar;
             this.picBoxFondAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picBoxFondAvatar.Location = new System.Drawing.Point(27, 122);
+            this.picBoxFondAvatar.Location = new System.Drawing.Point(20, 99);
+            this.picBoxFondAvatar.Margin = new System.Windows.Forms.Padding(2);
             this.picBoxFondAvatar.Name = "picBoxFondAvatar";
-            this.picBoxFondAvatar.Size = new System.Drawing.Size(190, 190);
+            this.picBoxFondAvatar.Size = new System.Drawing.Size(142, 154);
             this.picBoxFondAvatar.TabIndex = 0;
             this.picBoxFondAvatar.TabStop = false;
             // 
             // GameForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1685, 838);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.pnl_Main);
             this.Controls.Add(this.pnl_TabControl);
             this.Controls.Add(this.pnl_PlayerInfo);
             this.Controls.Add(this.pnl_Top);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GameForm";
             this.Text = "Lynaar";
             this.Load += new System.EventHandler(this.Form1_Load);

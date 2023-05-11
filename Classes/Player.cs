@@ -23,6 +23,8 @@ namespace Lynaar_GUI.Classes
         private int intelligence;
         private int gold;
         private int fightNumber;
+        private DateTime lastSave;
+        private int? maxExperience;
 
         #endregion
 
@@ -34,7 +36,7 @@ namespace Lynaar_GUI.Classes
         //todo  new Player(player["playerName"].ToString(), player["classes"].ToString(), int.Parse(player["level"].ToString()), int.Parse(player["xp"].ToString()), int.Parse(player["hp"].ToString()), int.Parse(player["maxHp"].ToString()), int.Parse(player["damage"].ToString()), int.Parse(player["additionalDamage"].ToString()), int.Parse(player["endurance"].ToString()), int.Parse(player["intelligence"].ToString()), int.Parse(player["gold"].ToString()), int.Parse(player["fightNumber"].ToString()), int.Parse(player["Id_Player"].ToString()));
 
 
-        public Player(string PlayerName, string classe, int level, int experience, int hp, int maxHp, int damage, int additionalDamage, int endurance, int intelligence, int gold, int fightNumber, int id)
+        public Player(string PlayerName, string classe, int level, int experience, int hp, int maxHp, int damage, int additionalDamage, int endurance, int intelligence, int gold, int fightNumber, int id, DateTime lastSave/*, int? maxXp*/)
         {
             this.PlayerName = PlayerName;
             this.classe = classe;
@@ -49,7 +51,9 @@ namespace Lynaar_GUI.Classes
             this.gold = gold;
             this.fightNumber = fightNumber;
             this.id = id;
-        }
+            this.lastSave = lastSave;
+/*            this.maxExperience = maxXp;
+*/        }
 
         #endregion
 

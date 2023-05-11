@@ -159,7 +159,7 @@ namespace Lynaar_GUI.Login_Parts.UC_
                     }
 
                     //! Création du joueur
-                    Player newPlayer = new Player(txtBoxPseudo.Text, lblClass.Text, 1, 0, Convert.ToInt32(lblHp.Text), Convert.ToInt32(lblHp.Text), Convert.ToInt32(lblAtk.Text), 0, resistStat, intStat, 0, 0, 0);
+                    Player newPlayer = new Player(txtBoxPseudo.Text, lblClass.Text, 1, 0, Convert.ToInt32(lblHp.Text), Convert.ToInt32(lblHp.Text), Convert.ToInt32(lblAtk.Text), 0, resistStat, intStat, 0, 0, 0, DateTime.Now);
 
                     //!Création d'une nouvelle fenêtre de jeu
                     GameForm GameForm = new GameForm();

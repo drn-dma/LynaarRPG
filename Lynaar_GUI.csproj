@@ -164,6 +164,11 @@
     <Compile Include="Classes\Miscellaneous\FunctionsLibs.cs" />
     <Compile Include="Classes\Inventory.cs" />
     <Compile Include="Classes\Miscellaneous\LoopStream.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Monstre.cs" />
     <Compile Include="Classes\Player.cs" />
     <Compile Include="Classes\Story.cs" />
@@ -234,6 +239,10 @@
     <Compile Include="Game_Parts\UC_\UC_GameInventory.Designer.cs">
       <DependentUpon>UC_GameInventory.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Game_Parts\GameForm.resx">
       <DependentUpon>GameForm.cs</DependentUpon>
       <Generator>ResXFileCodeGenerator</Generator>
@@ -262,11 +271,6 @@
     <EmbeddedResource Include="Login_Parts\UC_\UC_LoginNewGame.resx">
       <DependentUpon>UC_LoginNewGame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Game_Parts\UC_\UC_GameInventory.resx">
       <DependentUpon>UC_GameInventory.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,11 +295,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -539,18 +538,15 @@
     <Content Include="Cursors\Medieval Handwriting.cur" />
     <Content Include="Cursors\Medieval Move.cur" />
     <Content Include="Lynaar_Icon-round.ico" />
-
     <None Include="Resources\Cadre_Avatar.png" />
     <None Include="Resources\FondPlayerPanel.png" />
     <None Include="Resources\Xp_Ico_x32.png" />
     <None Include="Resources\Floor_Ico_x32.png" />
     <None Include="Resources\Boss_Ico_x32.png" />
     <None Include="Resources\Gold_Ico_x32.png" />
-
     <None Include="Resources\Inv_Background.png" />
     <None Include="Resources\Equip_2.png" />
     <None Include="Resources\Equip_1.png" />
-
     <None Include="Resources\legendFrame_Hover.png" />
     <None Include="Resources\SavedGame_Hover_background.png" />
     <None Include="Resources\Menu_Icon_Active_x64.png" />
