@@ -27,6 +27,8 @@ namespace Lynaar_GUI.Login_Parts.UC_
         //! Différence de taille entre l'image avant et après le hover
         private int diffPicWidth_OnHover = 5;
         private int diffPicHeight_OnHover = 5;
+        private int intStat;
+        private int resistStat;
         private Size sizeBefore;
         private Size sizeAfter;
         private Point locationBefore;
@@ -142,8 +144,31 @@ namespace Lynaar_GUI.Login_Parts.UC_
             {
                 if (rdbClasseHunter.Checked || rdbClasseMage.Checked || rdbClasseRogue.Checked || rdbClasseWarrior.Checked) 
                 {
+
+                    //!Attribue les stats en fonction de la classe choisie
+                    if (rdbClasseMage.Checked)
+                    {
+                        intStat = Convert.ToInt32(lblIntAndEndure.Text);
+                        resistStat = 0;
+                    }
+
+                    else
+                    {
+                        intStat = 0;
+                        resistStat = Convert.ToInt32(lblIntAndEndure.Text);
+                    }
+
+                    //! Création du joueur
+                    Player newPlayer = new Player(txtBoxPseudo.Text, lblClass.Text, 1, 0, Convert.ToInt32(lblHp.Text), Convert.ToInt32(lblHp.Text), Convert.ToInt32(lblAtk.Text), 0, resistStat, intStat, 0, 0, 0);
+
+                    //!Création d'une nouvelle fenêtre de jeu
+                    GameForm GameForm = new GameForm();
+                    GameForm.CurrentPlayer = newPlayer;
+
                     //! Close the current form and open the game form
-                    Thread GameForm_THREAD = new Thread(new ThreadStart(openGameForm));
+                    //
+                    Thread GameForm_THREAD = new Thread(() => Application.Run(GameForm));
+
                     GameForm_THREAD.Start();
                     this.parentForm.PlayMusic(); //! Arret de la musique du LoginForm
                     this.ParentForm.Dispose();  //! Fermeture du LoginForm et libération des ressources
@@ -313,18 +338,6 @@ namespace Lynaar_GUI.Login_Parts.UC_
 
         #region Functions
 
-        //! Ajout de la fonction permettant l'ouverture du formulaire de jeu
-        /*private void openGameForm()
-        {
-            
-
-            this.Hide();
- 
-            gameForm.Show();
-
-            //TODO Trouver une alternative a Application.run
-            *//*Application.Run(new GameForm());*//*
-        }*/
 
         //!Ajout de la fonction permettant le son lors du survol du bouton 
 
@@ -350,8 +363,6 @@ namespace Lynaar_GUI.Login_Parts.UC_
             this.Dispose();
         }
         #endregion
-
-
         
     }
 }

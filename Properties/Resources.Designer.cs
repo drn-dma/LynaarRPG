@@ -733,6 +733,26 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Boss_Ico_x32 {
+            get {
+                object obj = ResourceManager.GetObject("Boss_Ico_x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cadre_Avatar {
+            get {
+                object obj = ResourceManager.GetObject("Cadre_Avatar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Endur16_Ico {
             get {
                 object obj = ResourceManager.GetObject("Endur16_Ico", resourceCulture);
@@ -803,6 +823,16 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Floor_Ico_x32 {
+            get {
+                object obj = ResourceManager.GetObject("Floor_Ico_x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FondCarteClass {
             get {
                 object obj = ResourceManager.GetObject("FondCarteClass", resourceCulture);
@@ -831,12 +861,32 @@ namespace Lynaar_GUI.Properties {
         }
         
         /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FondPlayerPanel {
+            get {
+                object obj = ResourceManager.GetObject("FondPlayerPanel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une ressource localisée de type System.Byte[].
         /// </summary>
         internal static byte[] Font_Alkhemikal {
             get {
                 object obj = ResourceManager.GetObject("Font_Alkhemikal", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gold_Ico_x32 {
+            get {
+                object obj = ResourceManager.GetObject("Gold_Ico_x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -1404,6 +1454,16 @@ namespace Lynaar_GUI.Properties {
         internal static System.Drawing.Bitmap Warrior_IcoC_x32 {
             get {
                 object obj = ResourceManager.GetObject("Warrior_IcoC_x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Xp_Ico_x32 {
+            get {
+                object obj = ResourceManager.GetObject("Xp_Ico_x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

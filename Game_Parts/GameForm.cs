@@ -17,9 +17,17 @@ namespace Lynaar_GUI
     public partial class GameForm : Form
     {
 
-        private Player p1;
 
-        internal Player P1 { get => p1; set => p1 = value; }
+        //! Initialisation des polices
+        private Font font10;
+        private Font font12;
+        private Font font15;
+        private Font font20;
+
+        //lien de 1 à 1 avec player
+        private Player currentPlayer;
+
+        internal Player CurrentPlayer { get => currentPlayer; set => currentPlayer = value; }
 
         public GameForm()
         {
@@ -30,11 +38,81 @@ namespace Lynaar_GUI
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            pic_ClasseIcon.BackgroundImage = Properties.Resources.Warrior_Ico;
-            
+            this.font10 = new Font(FunctionsLibs.Font_Alkhemikal, 10);
+            this.font12 = new Font(FunctionsLibs.Font_Alkhemikal, 12);
+            this.font15 = new Font(FunctionsLibs.Font_Alkhemikal, 15);
+            this.font20 = new Font(FunctionsLibs.Font_Alkhemikal, 20);
+
+
+        #region Affichage des informations du joueur
+
+        //!Affichage de l'avatar de la classe en fonction de la classe du joueur
+            switch (this.currentPlayer.Classe)
+            {
+                case "Warrior":
+                    picBoxAvatar.BackgroundImage = Properties.Resources.Warrior_Ico;
+                    lblName.ForeColor = Color.Red;
+                    break;
+                case "Mage":
+                    picBoxAvatar.BackgroundImage = Properties.Resources.Mage_Ico;
+                    lblName.ForeColor = Color.Blue;
+                    break;
+                case "Rogue":
+                    picBoxAvatar.BackgroundImage = Properties.Resources.Rogue_Ico;
+                    lblName.ForeColor = Color.Purple;
+                    break;
+                case "Hunter":
+                    picBoxAvatar.BackgroundImage = Properties.Resources.Hunter_Ico;
+                    lblName.ForeColor = Color.Green;
+                    break;
+            }
+
+            //! remplissage des labels avec les infos du joueur
+            lblName.Text = this.currentPlayer.PlayerName1;
+            lblLevel.Text ="LvL : " + this.currentPlayer.Level.ToString();
+            lblGold.Text = this.currentPlayer.Gold.ToString();
+            lblXp.Text = this.currentPlayer.Experience.ToString();
+            lblHp.Text = this.currentPlayer.Hp.ToString();
+            lblAtk.Text = this.currentPlayer.Damage.ToString();
+            lblFloor.Text = this.currentPlayer.FightNumber.ToString();
+            lblNextBossFloor.Text = this.currentPlayer.FightNumber.ToString();
+
+            //! Application de la police aux labels
+            lblName.Font = font20;
+            lblLevel.Font = font15;
+            lblGold.Font = font15;
+            lblXp.Font = font15;
+            lblHp.Font = font15;
+            lblAtk.Font = font15;
+            lblFloor.Font = font15;
+            lblNextBossFloor.Font = font15;
+            lblIntAndEnd.Font = font15;
+
+
+
+            //! réglage de l'affichage du boss floor pour afficher la prochaine dizaine d'étages
+            lblNextBossFloor.Text = "10";
+            if (this.currentPlayer.FightNumber % 10 == 0)
+            {
+                lblNextBossFloor.Text = (this.currentPlayer.FightNumber + 10).ToString();
+            }
+
+
+            //! réglage de l'affichage de l'endure ou de l'int en fonction de la classe
+            if (this.currentPlayer.Classe == "Mage")
+            {
+                picBoxIntAndEnd.BackgroundImage = Properties.Resources.Int32_Ico;
+                lblIntAndEnd.Text = this.currentPlayer.Intelligence.ToString();
+            }
+            else
+            {
+                lblIntAndEnd.Text = this.currentPlayer.Endurance.ToString();
+            }
+            #endregion
+
         }
 
-        
+        #region Gestion des boutons du menu
         //! Fonction affichage des UC (UserControl) dans le panel principal 'pnl_Main' en fonction du bouton cliqué
         private void BtnMenu_Click(object sender, EventArgs e)
         {
@@ -50,6 +128,22 @@ namespace Lynaar_GUI
             }
 
             
+        }
+        #endregion
+
+        private void pnl_Main_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnl_Top_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void table_MenuButton_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
