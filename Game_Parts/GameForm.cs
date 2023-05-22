@@ -1,4 +1,5 @@
 ﻿using Lynaar_GUI.Classes;
+using Lynaar_GUI.Game_Parts.UC_;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,9 @@ namespace Lynaar_GUI
         //lien de 1 à 1 avec player
         private Player currentPlayer;
 
+        private UC_GameFight _GameFight;
+        private UC_GameInventory _GameInventory;
+
         internal Player CurrentPlayer { get => currentPlayer; set => currentPlayer = value; }
 
         public GameForm()
@@ -47,34 +51,37 @@ namespace Lynaar_GUI
             this.pBarHp.Maximum = currentPlayer.MaxHp;
             this.pBarHp.Value = currentPlayer.Hp;
 
-            this.pBarXp.Maximum = currentPlayer.Experience + 100000;
+            this.pBarXp.Maximum = currentPlayer.MaxExperience;
             this.pBarXp.Value = currentPlayer.Experience;
+
+            FunctionsLibs.add_UControls(this._GameFight = new UC_GameFight(this), this.pnl_Main);
+            this._GameInventory = new UC_GameInventory(this);
 
         #region Affichage des informations du joueur
 
-        //!Affichage de l'avatar de la classe en fonction de la classe du joueur
+            //!Affichage de l'avatar de la classe en fonction de la classe du joueur
             switch (this.currentPlayer.Classe)
             {
                 case "warrior":
                     picBoxAvatar.BackgroundImage = Properties.Resources.Icon_Warrior;
-                    lblName.ForeColor = Color.Red;
+                    lblName.ForeColor = currentPlayer.ClasseColor;
                     break;
-                case "mage":
+                case "sorcerer":
                     picBoxAvatar.BackgroundImage = Properties.Resources.Icon_Mage;
-                    lblName.ForeColor = Color.Blue;
+                    lblName.ForeColor = currentPlayer.ClasseColor;
                     break;
                 case "rogue":
                     picBoxAvatar.BackgroundImage = Properties.Resources.Icon_Rogue;
-                    lblName.ForeColor = Color.Purple;
+                    lblName.ForeColor = currentPlayer.ClasseColor;
                     break;
                 case "hunter":
                     picBoxAvatar.BackgroundImage = Properties.Resources.Icon_Hunter;
-                    lblName.ForeColor = Color.Green;
+                    lblName.ForeColor = currentPlayer.ClasseColor;
                     break;
             }
 
             //! remplissage des labels avec les infos du joueur
-            lblName.Text = this.currentPlayer.PlayerName1;
+            lblName.Text = this.currentPlayer.PlayerName;
             lblLevel.Text ="LvL : " + this.currentPlayer.Level.ToString();
             lblGold.Text = this.currentPlayer.Gold.ToString();
             lblXp.Text = this.currentPlayer.Experience.ToString();
@@ -132,17 +139,14 @@ namespace Lynaar_GUI
             switch(btn.Name)
             {
                 case "picBox_Inventory":
-                    FunctionsLibs.add_UControls(new UC_GameInventory(),pnl_Main);
+                    FunctionsLibs.add_UControls(this._GameInventory,pnl_Main);
+                    break;
+                case "picBox_Home":
+                    FunctionsLibs.add_UControls(this._GameFight, this.pnl_Main);
                     break;
             }
 
-            while (currentPlayer.Hp > 0)
-            {
-                currentPlayer.Hp -= 10;
-                pBarHp.Value = currentPlayer.Hp;
-                lblHp.Text = currentPlayer.Hp.ToString();
-                System.Threading.Thread.Sleep(100);
-            }
+            
 
         }
         #endregion
@@ -154,12 +158,41 @@ namespace Lynaar_GUI
 
         private void pnl_Top_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
 
         private void table_MenuButton_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        //! fonctions permettant l'affichage d'un nouveau combat
+        private void loadNewCombat()
+        {
+            this._GameFight.Dispose();
+            FunctionsLibs.add_UControls(this._GameFight = new UC_GameFight(this),this.pnl_Main);
+        }
+
+        private void pnl_Top_Click(object sender, EventArgs e)
+        {
+        }
+
+        public void refreshPlayerInfos()
+        {
+            this.pBarHp.Value = this.currentPlayer.Hp;
+            this.pBarXp.Value = this.currentPlayer.Experience;
+            this.lblGold.Text = this.currentPlayer.Gold.ToString();
+            this.lblXp.Text = this.currentPlayer.Experience.ToString();
+            this.lblHp.Text = this.currentPlayer.Hp.ToString();
+            this.lblAtk.Text = this.currentPlayer.Damage.ToString();
+            this.lblFloor.Text = this.currentPlayer.FightNumber.ToString();
+            this.lblNextBossFloor.Text = this.currentPlayer.FightNumber.ToString();
+            //! réglage de l'affichage du boss floor pour afficher la prochaine dizaine d'étages
+            lblNextBossFloor.Text = "10";
+            if (this.currentPlayer.FightNumber % 10 == 0)
+            {
+                lblNextBossFloor.Text = (this.currentPlayer.FightNumber + 10).ToString();
+            }
         }
     }
 }

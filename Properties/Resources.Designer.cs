@@ -773,6 +773,16 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Conso_1 {
+            get {
+                object obj = ResourceManager.GetObject("Conso_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap d136 {
             get {
                 object obj = ResourceManager.GetObject("d136", resourceCulture);
@@ -986,6 +996,16 @@ namespace Lynaar_GUI.Properties {
         internal static System.Drawing.Bitmap Gold_Ico_x32 {
             get {
                 object obj = ResourceManager.GetObject("Gold_Ico_x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap H_SPELL_HeadShot {
+            get {
+                object obj = ResourceManager.GetObject("H_SPELL_HeadShot", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1452,6 +1472,16 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap R_SPELL_Attack_From_Back {
+            get {
+                object obj = ResourceManager.GetObject("R_SPELL_Attack_From_Back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap redCross_x32 {
             get {
                 object obj = ResourceManager.GetObject("redCross_x32", resourceCulture);
@@ -1495,6 +1525,16 @@ namespace Lynaar_GUI.Properties {
         internal static System.Drawing.Bitmap Rogue16_Ico {
             get {
                 object obj = ResourceManager.GetObject("Rogue16_Ico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap S_SPELL_Ice_Tempest {
+            get {
+                object obj = ResourceManager.GetObject("S_SPELL_Ice_Tempest", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1551,6 +1591,16 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SPELL_Auto {
+            get {
+                object obj = ResourceManager.GetObject("SPELL_Auto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap StartGame_Parcho_Gris_A {
             get {
                 object obj = ResourceManager.GetObject("StartGame_Parcho_Gris_A", resourceCulture);
@@ -1584,6 +1634,16 @@ namespace Lynaar_GUI.Properties {
         internal static System.Drawing.Bitmap Volume_On {
             get {
                 object obj = ResourceManager.GetObject("Volume_On", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap W_SPELL_Boost_Attack {
+            get {
+                object obj = ResourceManager.GetObject("W_SPELL_Boost_Attack", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

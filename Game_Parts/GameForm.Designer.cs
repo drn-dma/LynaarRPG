@@ -32,9 +32,9 @@
             this.pnl_Top = new System.Windows.Forms.Panel();
             this.pnl_TabControl = new System.Windows.Forms.Panel();
             this.table_MenuButton = new System.Windows.Forms.TableLayoutPanel();
-            this.pnl_Main = new System.Windows.Forms.Panel();
             this.picBox_Inventory = new System.Windows.Forms.PictureBox();
             this.picBox_Home = new System.Windows.Forms.PictureBox();
+            this.pnl_Main = new System.Windows.Forms.Panel();
             this.pnl_PlayerInfo = new System.Windows.Forms.Panel();
             this.picBoxAvatar = new System.Windows.Forms.PictureBox();
             this.lblXp = new System.Windows.Forms.Label();
@@ -80,6 +80,7 @@
             this.pnl_Top.Name = "pnl_Top";
             this.pnl_Top.Size = new System.Drawing.Size(1264, 75);
             this.pnl_Top.TabIndex = 0;
+            this.pnl_Top.Click += new System.EventHandler(this.pnl_Top_Click);
             this.pnl_Top.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_Top_Paint);
             // 
             // pnl_TabControl
@@ -109,16 +110,6 @@
             this.table_MenuButton.Size = new System.Drawing.Size(1082, 58);
             this.table_MenuButton.TabIndex = 0;
             this.table_MenuButton.Paint += new System.Windows.Forms.PaintEventHandler(this.table_MenuButton_Paint);
-            // 
-            // pnl_Main
-            // 
-            this.pnl_Main.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pnl_Main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_Main.Location = new System.Drawing.Point(182, 133);
-            this.pnl_Main.Name = "pnl_Main";
-            this.pnl_Main.Size = new System.Drawing.Size(1082, 548);
-            this.pnl_Main.TabIndex = 3;
-            this.pnl_Main.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_Main_Paint);
             // 
             // picBox_Inventory
             // 
@@ -150,6 +141,17 @@
             this.picBox_Home.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox_Home.TabIndex = 1;
             this.picBox_Home.TabStop = false;
+            this.picBox_Home.Click += new System.EventHandler(this.BtnMenu_Click);
+            // 
+            // pnl_Main
+            // 
+            this.pnl_Main.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pnl_Main.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_Main.Location = new System.Drawing.Point(182, 133);
+            this.pnl_Main.Name = "pnl_Main";
+            this.pnl_Main.Size = new System.Drawing.Size(1082, 548);
+            this.pnl_Main.TabIndex = 3;
+            this.pnl_Main.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_Main_Paint);
             // 
             // pnl_PlayerInfo
             // 

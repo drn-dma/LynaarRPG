@@ -92,11 +92,17 @@
     <OutputPath>bin\x86\Release\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Win32.Registry, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.Win32.Registry.4.7.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
+    <Reference Include="ConsoleControl, Version=1.3.0.0, Culture=neutral, PublicKeyToken=7edd23586f5e297f, processorArchitecture=MSIL">
+      <HintPath>packages\ConsoleControl.1.3.0\lib\net40-client\ConsoleControl.dll</HintPath>
+    </Reference>
+    <Reference Include="ConsoleControlAPI, Version=1.3.0.0, Culture=neutral, PublicKeyToken=7c86b8a36b9c33e2, processorArchitecture=MSIL">
+      <HintPath>packages\ConsoleControlAPI.1.3.0\lib\net40\ConsoleControlAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Win32.Registry.5.0.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
     </Reference>
     <Reference Include="MySqlConnector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
-      <HintPath>packages\MySqlConnector.2.2.5\lib\net471\MySqlConnector.dll</HintPath>
+      <HintPath>packages\MySqlConnector.2.2.6\lib\net471\MySqlConnector.dll</HintPath>
     </Reference>
     <Reference Include="NAudio, Version=2.1.0.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
       <HintPath>packages\NAudio.2.1.0\lib\net472\NAudio.dll</HintPath>
@@ -124,8 +130,8 @@
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
-    <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Diagnostics.DiagnosticSource.6.0.0\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.7.0.2\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
     <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
@@ -135,11 +141,11 @@
       <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Security.AccessControl.4.7.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
     </Reference>
-    <Reference Include="System.Security.Principal.Windows, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Security.Principal.Windows.4.7.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
@@ -164,6 +170,13 @@
     <Compile Include="Classes\Miscellaneous\FunctionsLibs.cs" />
     <Compile Include="Classes\Inventory.cs" />
     <Compile Include="Classes\Miscellaneous\LoopStream.cs" />
+    <Compile Include="Classes\Miscellaneous\Settings.cs" />
+    <Compile Include="Game_Parts\UC_\UC_GameFight.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Game_Parts\UC_\UC_GameFight.Designer.cs">
+      <DependentUpon>UC_GameFight.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -239,6 +252,9 @@
     <Compile Include="Game_Parts\UC_\UC_GameInventory.Designer.cs">
       <DependentUpon>UC_GameInventory.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Game_Parts\UC_\UC_GameFight.resx">
+      <DependentUpon>UC_GameFight.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -534,10 +550,17 @@
     <None Include="Resources\Icon_Warrior.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Console.ico" />
     <Content Include="Cursors\Medieval Alternate Select.cur" />
     <Content Include="Cursors\Medieval Handwriting.cur" />
     <Content Include="Cursors\Medieval Move.cur" />
     <Content Include="Lynaar_Icon-round.ico" />
+    <None Include="Resources\SPELL_Auto.png" />
+    <None Include="Resources\W_SPELL_Boost-Attack.png" />
+    <None Include="Resources\S_SPELL_Ice Tempest.png" />
+    <None Include="Resources\R_SPELL_Attack-From-Back.png" />
+    <None Include="Resources\H_SPELL_HeadShot.png" />
+    <None Include="Resources\Conso_1.png" />
     <None Include="Resources\Cadre_Avatar.png" />
     <None Include="Resources\FondPlayerPanel.png" />
     <None Include="Resources\Xp_Ico_x32.png" />
