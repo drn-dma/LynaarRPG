@@ -19,6 +19,8 @@ namespace Lynaar_GUI.Classes
         private int dmgMax;
         private int goldMin;
         private int goldMax;
+        private bool isDead;
+        private Random rnd;
 
         #endregion
 
@@ -35,7 +37,24 @@ namespace Lynaar_GUI.Classes
             this.dmgMax = dmgMax;
             this.goldMin = goldMin;
             this.goldMax = goldMax;
+            this.isDead = false;
+            rnd = new Random();
         }
+
+        public Enemy(Dictionary<string, object> keyValuePairs)
+        {
+            this.id = int.Parse(keyValuePairs["Id_Entity"].ToString());
+            this.name = keyValuePairs["name"].ToString();
+            this.hp = int.Parse(keyValuePairs["hp"].ToString());
+            this.xp = int.Parse(keyValuePairs["xp"].ToString());
+            this.dmgMin = int.Parse(keyValuePairs["dmgMin"].ToString());
+            this.dmgMax = int.Parse(keyValuePairs["dmgMax"].ToString());
+            this.goldMin = int.Parse(keyValuePairs["goldMin"].ToString());
+            this.goldMax = int.Parse(keyValuePairs["goldMax"].ToString());
+            this.isDead = false;
+            rnd = new Random();
+        }
+            
         #endregion
 
         #region accesseur
@@ -47,8 +66,36 @@ namespace Lynaar_GUI.Classes
         public int DmgMax { get => dmgMax; set => dmgMax = value; }
         public int GoldMin { get => goldMin; set => goldMin = value; }
         public int GoldMax { get => goldMax; set => goldMax = value; }
-
+        public bool IsDead { get => isDead; set => isDead = value; }
         #endregion
 
+
+
+        #region methodes
+
+        private int calculDmg()
+        {
+            return this.rnd.Next(this.dmgMin, this.dmgMax);
+        }
+
+        public int attack(Player player)
+        {
+            int dmg = calculDmg();
+
+            if (player.Hp - dmg < 0)
+            {
+                player.Hp = 0;
+                player.IsDead = true;
+            }
+            else
+            {
+                player.Hp -= dmg;
+
+            }
+
+            return dmg;
+        }
+
+        #endregion
     }
 }

@@ -140,6 +140,35 @@ namespace Lynaar_GUI
             return readDataFromSQL("SELECT * FROM Player");
         }
 
+        public static List<Dictionary<string, object>> getPlayerEquipement(int idPlayer)
+        {
+            return readDataFromSQL($"SELECT * FROM Inventory_Equipement WHERE Id_Player = {idPlayer}");
+        }
+
+        public static List<Dictionary<string, object>> getPlayerConsumable(int idPlayer)
+        {
+            return readDataFromSQL($"SELECT * FROM possessed WHERE Id_Player = {idPlayer}");
+        }
+
+        public static bool isEquiped(int idPlayer, int idEquipement)
+        {
+            return readDataFromSQL($"SELECT * FROM Inventory_Equipement WHERE Id_Player = {idPlayer} AND Id_Equipement = {idEquipement}")[0]["isEquiped"].ToString() == "True";
+        }
+
+        public static List<Dictionary<string, object>> viewMonsters()
+        {
+            return readDataFromSQL("SELECT * FROM Enemy JOIN Monsters on Monsters.Id_Entity = Enemy.Id_Entity");
+        }
+
+        public static int getAdditionnalDamage(int idItem)
+        {
+            return int.Parse(readDataFromSQL($"SELECT atk FROM Equipement WHERE Id_Equipement = {idItem}")[0]["atk"].ToString());
+        }
+
+        public static int getAdditionnalHealth(int idItem)
+        {
+            return int.Parse(readDataFromSQL($"SELECT pv FROM Equipement WHERE Id_Equipement = {idItem}")[0]["pv"].ToString());
+        }
 
         #endregion
 
@@ -189,6 +218,51 @@ namespace Lynaar_GUI
             }
             return sucess;
         }
+
+
+        public static bool equipWeaponOrArmor(int idPlayer, int idEquipement)
+        {
+            return ExecuteSQL($"UPDATE Inventory_Equipement SET IsEquiped = 1 WHERE Id_Player = {idPlayer} AND Id_Equipement = {idEquipement}");
+        }
+
+        public static bool unequipWeaponOrArmor(int idPlayer, int idEquipement)
+        {
+            return ExecuteSQL($"UPDATE Inventory_Equipement SET IsEquiped = 0 WHERE Id_Player = {idPlayer} AND Id_Equipement = {idEquipement}");
+        }
+
+        
+
+        /*public static bool savePlayer(Player player)
+        {
+            //save or insert player in database
+            if (player.Id == 0)
+            {
+                int tempID;
+                try
+                {
+                    var data = readDataFromSQL("SELECT Id_Player FROM Player order by Id_Player asc");
+
+                    if (int.Parse(data[0]["Id_Player"].ToString()) != 1 && int.Parse(data[1]["Id_Player"].ToString()).E){
+                        player.Id = 1;
+                    }else if (){
+
+                    }
+                }
+                catch
+                {
+                    player.Id = 1;
+                }
+
+
+                
+
+                return ExecuteSQL($"INSERT INTO Player (Id_Player,playerName,classes,level,xp,hp,maxHp,damage,additionalDamage,endurance,intelligence,gold,fightNumber,dateSave) VALUES (1,{player.PlayerName},)");
+            }
+            else
+            {
+                return ExecuteSQL($"UPDATE Player SET Name = '{player.Name}', PV = {player.PV}, ATK = {player.ATK}, DEF = {player.DEF}, Id_Entity = {player.Id_Entity} WHERE Id_Player = {player.Id_Player}");
+            }
+        }*/
         #endregion
 
     }

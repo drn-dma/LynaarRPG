@@ -142,6 +142,9 @@
   <data name="classCard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\classCard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Conso_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Conso_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="d136" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\d136.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -228,6 +231,9 @@
   </data>
   <data name="Hunter_IcoC_x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hunter_IcoC_x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="H_SPELL_HeadShot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\H_SPELL_HeadShot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\d32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -361,6 +367,9 @@
   <data name="Rogue_IcoC_x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rogue_IcoC_x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="R_SPELL_Attack_From_Back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\R_SPELL_Attack-From-Back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="savedGame_BackFrame" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frame_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -376,11 +385,17 @@
   <data name="SOUND_mainMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mainMenu.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="SPELL_Auto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SPELL_Auto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="StartGame2_Parcho_Gris_A" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\StartGame2-Parcho_Gris_A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="StartGame_Parcho_Gris_A" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\StartGame-Parcho_Gris_A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_SPELL_Ice_Tempest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_SPELL_Ice Tempest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Volume_Off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Volume_Off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -399,6 +414,9 @@
   </data>
   <data name="Warrior_IcoC_x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Warrior_IcoC_x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="W_SPELL_Boost_Attack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W_SPELL_Boost-Attack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Xp_Ico_x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Xp_Ico_x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

@@ -23,11 +23,12 @@ namespace Lynaar_GUI
 
         private Font font40;
 
-        private List<Dictionary<string, object>> equip_Inventory;
+        private Player player;
 
+        internal Player Player { get => player; set => player = value; }
         #endregion
 
-        public UC_GameInventory()
+        public UC_GameInventory(GameForm parentForm)
         {
             InitializeComponent();
 
@@ -36,29 +37,45 @@ namespace Lynaar_GUI
             this.table_Inventory.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
             this.table_Inventory.Visible = true;
             this.table_Inventory.Refresh();
+
+            this.player = parentForm.CurrentPlayer;
         }
 
         private void UC_Inventory_Load(object sender, EventArgs e)
         {
             //! Modification de la police de caractère du label 'lbl_Inventaire' au chargement de l'UC
             this.lbl_Inventaire.Font = font40;
-
-            //todo Améliorer cette partie pour mélanger equipement et consommable et mettre Id_Player variable
-
-            equip_Inventory = SQLConnect.readDataFromSQL($"SELECT * FROM Inventory_Equipement WHERE Id_Player = 2");
+           
 
             int i = 1;
 
-            foreach (var equipement in equip_Inventory)
+            foreach (var equipement in SQLConnect.getPlayerEquipement(this.player.Id))
             {
                 string panelName = "pnl_Item" + i;
                 Panel panel = (Panel)Controls.Find(panelName,true).FirstOrDefault();
-                FunctionsLibs.add_UControls(new UC_ItemAndQuantity(int.Parse(equipement["Id_Equipement"].ToString())),panel);
+                UC_ItemAndQuantity uc = new UC_ItemAndQuantity(int.Parse(equipement["Id_Equipement"].ToString()));
+                uc.Player = this.player;
+                uc.InventoryPanel = this;
+                FunctionsLibs.add_UControls(uc,panel);
                 i++;
             }
 
+            foreach(var Consommable in SQLConnect.getPlayerConsumable(this.player.Id))
+            {
+                string panelName = "pnl_Item" + i;
+                Panel panel = (Panel)Controls.Find(panelName, true).FirstOrDefault();
+                UC_ItemAndQuantity uc = new UC_ItemAndQuantity(int.Parse(Consommable["Id_Consumables"].ToString()), int.Parse(Consommable["quantity"].ToString()));
+                uc.Player = this.player;
+                uc.InventoryPanel = this;
+                FunctionsLibs.add_UControls(uc, panel);
+                i++;
+            }
 
         }
 
+        private void picBox_EquiWeapon_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

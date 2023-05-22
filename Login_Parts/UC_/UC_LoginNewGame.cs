@@ -159,7 +159,7 @@ namespace Lynaar_GUI.Login_Parts.UC_
                     }
 
                     //! Création du joueur
-                    Player newPlayer = new Player(txtBoxPseudo.Text, lblClass.Text, 1, 0, Convert.ToInt32(lblHp.Text), Convert.ToInt32(lblHp.Text), Convert.ToInt32(lblAtk.Text), 0, resistStat, intStat, 0, 0, 0, DateTime.Now);
+                    Player newPlayer = new Player(txtBoxPseudo.Text, lblClass.Text.ToLower(), 1, 0, Convert.ToInt32(lblHp.Text), Convert.ToInt32(lblHp.Text), Convert.ToInt32(lblAtk.Text), 0, resistStat, intStat, 0, 0, 0, DateTime.Now);
 
                     //!Création d'une nouvelle fenêtre de jeu
                     GameForm GameForm = new GameForm();
@@ -219,7 +219,7 @@ namespace Lynaar_GUI.Login_Parts.UC_
                 }
 
                 //!ajout de l'image Int et Endure en fonction de la classe sélectionnée
-                if (className == "Mage")
+                if (className == "sorcerer")
                 {
                     pbIntAndEndure.BackgroundImage = Int;
                 }
@@ -272,7 +272,7 @@ namespace Lynaar_GUI.Login_Parts.UC_
         }
         private void rdbClasseMage_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateClassSelection(sender, "Mage", Color.Blue);
+            UpdateClassSelection(sender, "Sorcerer", Color.Blue);
             lblDescibClass.Text = "The Mage is a spellcaster, who uses his powers to curse enemies, deal large amounts of damage and teleport around enemies.";
             lblAtk.Text = "15";
             lblHp.Text = "90";

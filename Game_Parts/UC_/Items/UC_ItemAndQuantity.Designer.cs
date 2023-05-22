@@ -35,17 +35,18 @@
             // 
             // lbl_Quantity
             // 
-            this.lbl_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Quantity.AutoSize = true;
             this.lbl_Quantity.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Quantity.Dock = System.Windows.Forms.DockStyle.Top;
             this.lbl_Quantity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_Quantity.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbl_Quantity.Location = new System.Drawing.Point(27, 42);
+            this.lbl_Quantity.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_Quantity.Location = new System.Drawing.Point(0, 0);
             this.lbl_Quantity.Name = "lbl_Quantity";
             this.lbl_Quantity.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl_Quantity.Size = new System.Drawing.Size(31, 13);
+            this.lbl_Quantity.Size = new System.Drawing.Size(29, 17);
             this.lbl_Quantity.TabIndex = 0;
             this.lbl_Quantity.Text = "9999";
-            this.lbl_Quantity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl_Quantity.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.lbl_Quantity.UseCompatibleTextRendering = true;
             // 
             // picBox_Item
@@ -57,6 +58,7 @@
             this.picBox_Item.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBox_Item.TabIndex = 1;
             this.picBox_Item.TabStop = false;
+            this.picBox_Item.Click += new System.EventHandler(this.onItemClick);
             // 
             // UC_ItemAndQuantity
             // 
@@ -74,6 +76,7 @@
             this.Load += new System.EventHandler(this.UC_ItemAndQuantity_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBox_Item)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
