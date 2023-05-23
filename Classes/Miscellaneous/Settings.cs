@@ -32,6 +32,11 @@ namespace Lynaar_GUI.Classes.Miscellaneous
             return Convert.ToInt32(gain);
         }
 
+        public static int SUIVI_HPMAX_JOUEUR(Player player)
+        {
+            return Convert.ToInt32(player.MaxHp * 0.1d);
+        }
+
         /////
         //// Dégats aléatoire entre les deux variables
         ///

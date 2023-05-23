@@ -1,4 +1,5 @@
 ﻿using Lynaar_GUI.Classes;
+using Lynaar_GUI.Classes.Miscellaneous;
 using Lynaar_GUI.Game_Parts.UC_;
 using System;
 using System.Collections.Generic;
@@ -51,7 +52,7 @@ namespace Lynaar_GUI
             this.pBarHp.Maximum = currentPlayer.MaxHp;
             this.pBarHp.Value = currentPlayer.Hp;
 
-            this.pBarXp.Maximum = currentPlayer.MaxExperience;
+/*            this.pBarXp.Maximum = currentPlayer.MaxExperience;*/
             this.pBarXp.Value = currentPlayer.Experience;
 
             FunctionsLibs.add_UControls(this._GameFight = new UC_GameFight(this), this.pnl_Main);
@@ -86,7 +87,7 @@ namespace Lynaar_GUI
             lblGold.Text = this.currentPlayer.Gold.ToString();
             lblXp.Text = this.currentPlayer.Experience.ToString();
             lblHp.Text = this.currentPlayer.Hp.ToString();
-            lblAtk.Text = this.currentPlayer.Damage.ToString();
+            lblAtk.Text = (this.currentPlayer.Damage + Settings.PLAYER_DAMAGE_REDUCE) + " - " + (this.currentPlayer.Damage + Settings.PLAYER_DAMAGE_BOOST);
             lblFloor.Text = this.currentPlayer.FightNumber.ToString();
             lblNextBossFloor.Text = this.currentPlayer.FightNumber.ToString();
 
@@ -167,7 +168,7 @@ namespace Lynaar_GUI
         }
 
         //! fonctions permettant l'affichage d'un nouveau combat
-        private void loadNewCombat()
+        public void loadNewCombat()
         {
             this._GameFight.Dispose();
             FunctionsLibs.add_UControls(this._GameFight = new UC_GameFight(this),this.pnl_Main);
@@ -180,11 +181,14 @@ namespace Lynaar_GUI
         public void refreshPlayerInfos()
         {
             this.pBarHp.Value = this.currentPlayer.Hp;
+            this.pBarHp.Maximum = this.currentPlayer.MaxHp;
             this.pBarXp.Value = this.currentPlayer.Experience;
+/*            this.pBarXp.Maximum = this.currentPlayer.MaxExperience;
+*/            this.lblLevel.Text = "Lvl : " + this.currentPlayer.Level.ToString();
             this.lblGold.Text = this.currentPlayer.Gold.ToString();
             this.lblXp.Text = this.currentPlayer.Experience.ToString();
             this.lblHp.Text = this.currentPlayer.Hp.ToString();
-            this.lblAtk.Text = this.currentPlayer.Damage.ToString();
+            this.lblAtk.Text = (this.currentPlayer.Damage + Settings.PLAYER_DAMAGE_REDUCE) + " - " + (this.currentPlayer.Damage + Settings.PLAYER_DAMAGE_BOOST);
             this.lblFloor.Text = this.currentPlayer.FightNumber.ToString();
             this.lblNextBossFloor.Text = this.currentPlayer.FightNumber.ToString();
             //! réglage de l'affichage du boss floor pour afficher la prochaine dizaine d'étages

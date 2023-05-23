@@ -233,7 +233,7 @@
             this.lblNextBossFloor.AutoSize = true;
             this.lblNextBossFloor.BackColor = System.Drawing.Color.Transparent;
             this.lblNextBossFloor.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblNextBossFloor.Location = new System.Drawing.Point(135, 414);
+            this.lblNextBossFloor.Location = new System.Drawing.Point(121, 414);
             this.lblNextBossFloor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNextBossFloor.Name = "lblNextBossFloor";
             this.lblNextBossFloor.Size = new System.Drawing.Size(90, 17);
@@ -259,7 +259,7 @@
             this.picBoxNextBossFloor.BackColor = System.Drawing.Color.Transparent;
             this.picBoxNextBossFloor.BackgroundImage = global::Lynaar_GUI.Properties.Resources.Boss_Ico_x32;
             this.picBoxNextBossFloor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxNextBossFloor.Location = new System.Drawing.Point(106, 410);
+            this.picBoxNextBossFloor.Location = new System.Drawing.Point(92, 410);
             this.picBoxNextBossFloor.Margin = new System.Windows.Forms.Padding(2);
             this.picBoxNextBossFloor.Name = "picBoxNextBossFloor";
             this.picBoxNextBossFloor.Size = new System.Drawing.Size(24, 26);
@@ -309,7 +309,7 @@
             this.lblAtk.AutoSize = true;
             this.lblAtk.BackColor = System.Drawing.Color.Transparent;
             this.lblAtk.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblAtk.Location = new System.Drawing.Point(135, 364);
+            this.lblAtk.Location = new System.Drawing.Point(121, 364);
             this.lblAtk.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAtk.Name = "lblAtk";
             this.lblAtk.Size = new System.Drawing.Size(32, 17);
@@ -395,7 +395,7 @@
             this.picBoxAtk.BackColor = System.Drawing.Color.Transparent;
             this.picBoxAtk.BackgroundImage = global::Lynaar_GUI.Properties.Resources.Atk32_Ico;
             this.picBoxAtk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxAtk.Location = new System.Drawing.Point(106, 358);
+            this.picBoxAtk.Location = new System.Drawing.Point(92, 358);
             this.picBoxAtk.Margin = new System.Windows.Forms.Padding(2);
             this.picBoxAtk.Name = "picBoxAtk";
             this.picBoxAtk.Size = new System.Drawing.Size(24, 26);

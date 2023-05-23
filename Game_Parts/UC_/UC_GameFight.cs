@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -117,24 +118,27 @@ namespace Lynaar_GUI.Game_Parts.UC_
             appendToConsole($" damage !", Color.White);
 
 
-            if (this.monstreActuel.Hp > 0)
+            if (!this.monstreActuel.IsDead)
             {
                 this.monsterAttack();
             }
             else
             {
                 this.mainForm.CurrentPlayer.GainExp(this.monstreActuel.Xp);
-/*                int goldAmount = this.mainForm.CurrentPlayer.GainGold(this.monstreActuel);
+/*todo               int goldAmount = this.mainForm.CurrentPlayer.GainGold(this.monstreActuel);
 */                appendToConsole($"{this.mainForm.CurrentPlayer.PlayerName}", this.mainForm.CurrentPlayer.ClasseColor);
                 appendToConsole($" killed ", Color.White);
                 appendToConsole($"{this.monstreActuel.Name}", Color.Red);
                 appendToConsole($" and gained ", Color.White);
                 appendToConsole($"{this.monstreActuel.Xp}", Color.AliceBlue);
                 appendToConsole($" EXP and ", Color.White);
-/*                appendToConsole($"{goldAmount}", Color.Yellow);
+/*todo             appendToConsole($"{goldAmount}", Color.Yellow);
 */                appendToConsole($" Gold !", Color.White);
-                /*this.mainForm.CurrentPlayer.checkLevelUp();
-                this.mainForm.CurrentPlayer.savePlayer();*/
+                /*todo this.mainForm.CurrentPlayer.checkLevelUp();*/
+                /*todo this.mainForm.CurrentPlayer.savePlayer();*/
+
+                Thread.Sleep(100);
+                this.mainForm.loadNewCombat();
             }
             
             this.mainForm.refreshPlayerInfos();
