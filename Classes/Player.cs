@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
 
 namespace Lynaar_GUI.Classes
 {
@@ -26,7 +28,7 @@ namespace Lynaar_GUI.Classes
         private int gold;
         private int fightNumber;
         private DateTime lastSave;
-        private int maxExperience;
+        private long maxExperience;
         private Color classeColor;
         private bool isDead;
 
@@ -87,7 +89,7 @@ namespace Lynaar_GUI.Classes
         public string Classe { get => classe; set => classe = value; }
         public int Level { get => level; set => level = value; }
         public int Experience { get => experience; set => experience = value; }
-        public int MaxExperience { get => maxExperience; set => maxExperience = value; }
+        public long MaxExperience { get => maxExperience; set => maxExperience = value; }
         public int Hp { get => hp; set => hp = value; }
         public int MaxHp { get => maxHp; set => maxHp = value; }
         public int Damage { get => damage; set => damage = value; }
@@ -114,37 +116,15 @@ namespace Lynaar_GUI.Classes
 
             }
             limit = Math.Floor(limit / 4d);
-            this.maxExperience = Convert.ToInt32(limit);
+            this.maxExperience = Convert.ToInt64(limit);
+
+            MessageBox.Show("max xp : " + Math.Floor(15 * Math.Sqrt(this.maxExperience)));
         }
 
 
-        //fonction qui définie les stats du joueur en fonction de sa classe
-        public void setPlayerStats(string classe)
-        {
-            switch (classe)
-            {
-                case "Hunter":
-                    this.hp = 100;
-                    this.endurance = 10;
-                    this.intelligence = 5;
-                    this.damage = this.endurance * 1/2;
-                    break;
-                case "Warrior":
-                    this.hp = 150;
-                    this.endurance = 15;
-                    this.intelligence = 0;
-                    this.damage = this.endurance * 1/2;
-                    break;
-                case "Mage":
-                    this.hp = 75;
-                    this.endurance = 0;
-                    this.intelligence = 15;
-                    this.damage = this.intelligence * 1/2;
-                    break;
-                default:
-                    break;
-            }
-        }
+
+
+
 
 
         //!fonction qui permet de calculer les dégats du joueur
@@ -153,6 +133,7 @@ namespace Lynaar_GUI.Classes
             int damage = this.damage + this.additionalDamage + (this.rnd.Next(Settings.PLAYER_DAMAGE_REDUCE,Settings.PLAYER_DAMAGE_BOOST));
             return damage;
         }
+
 
         //!fonction attack
         public int basicAttack(Monstre monstre)
@@ -180,10 +161,18 @@ namespace Lynaar_GUI.Classes
             this.experience += exp;
             if (this.experience >= this.maxExperience)
             {
-                this.experience -= this.maxExperience;
-                this.level++;
-                this.maxExperience = (int)(this.maxExperience * 1.5);
+                LvlUp();
             }
+        }
+
+
+        private void LvlUp()
+        {
+/*            this.experience -= this.maxExperience;
+*/            this.level++;
+            this.MaxHp = Settings.SUIVI_HPMAX_JOUEUR(this);
+            this.damage += Settings.SUIVI_DAMAGE_JOUEUR(this.damage);
+            setLimiteXP();
         }
         #endregion
 

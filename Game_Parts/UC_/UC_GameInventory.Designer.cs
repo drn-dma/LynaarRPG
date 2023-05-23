@@ -33,9 +33,7 @@
             this.pnl_PlayerEquipement = new System.Windows.Forms.Panel();
             this.pnl_ItemInfo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.picBox_EquiWeapon = new System.Windows.Forms.PictureBox();
-            this.picBox_EquiArmor = new System.Windows.Forms.PictureBox();
             this.table_Inventory = new System.Windows.Forms.TableLayoutPanel();
             this.pnl_Item48 = new System.Windows.Forms.Panel();
             this.pnl_Item3 = new System.Windows.Forms.Panel();
@@ -89,7 +87,6 @@
             this.pnl_InventoryTitle.SuspendLayout();
             this.pnl_ItemInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_EquiWeapon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox_EquiArmor)).BeginInit();
             this.table_Inventory.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -129,9 +126,7 @@
             // 
             this.pnl_ItemInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_ItemInfo.Controls.Add(this.label2);
-            this.pnl_ItemInfo.Controls.Add(this.label1);
             this.pnl_ItemInfo.Controls.Add(this.picBox_EquiWeapon);
-            this.pnl_ItemInfo.Controls.Add(this.picBox_EquiArmor);
             this.pnl_ItemInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_ItemInfo.Location = new System.Drawing.Point(0, 334);
             this.pnl_ItemInfo.Name = "pnl_ItemInfo";
@@ -143,45 +138,23 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(449, 45);
+            this.label2.Location = new System.Drawing.Point(358, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "Arme";
             this.label2.UseCompatibleTextRendering = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(257, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Armure";
-            this.label1.UseCompatibleTextRendering = true;
-            // 
             // picBox_EquiWeapon
             // 
             this.picBox_EquiWeapon.BackgroundImage = global::Lynaar_GUI.Properties.Resources.NormalIconCard;
             this.picBox_EquiWeapon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBox_EquiWeapon.Location = new System.Drawing.Point(449, 73);
+            this.picBox_EquiWeapon.Location = new System.Drawing.Point(358, 73);
             this.picBox_EquiWeapon.Name = "picBox_EquiWeapon";
             this.picBox_EquiWeapon.Size = new System.Drawing.Size(64, 64);
             this.picBox_EquiWeapon.TabIndex = 2;
             this.picBox_EquiWeapon.TabStop = false;
             this.picBox_EquiWeapon.Click += new System.EventHandler(this.picBox_EquiWeapon_Click);
-            // 
-            // picBox_EquiArmor
-            // 
-            this.picBox_EquiArmor.BackgroundImage = global::Lynaar_GUI.Properties.Resources.NormalIconCard;
-            this.picBox_EquiArmor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBox_EquiArmor.Location = new System.Drawing.Point(257, 73);
-            this.picBox_EquiArmor.Name = "picBox_EquiArmor";
-            this.picBox_EquiArmor.Size = new System.Drawing.Size(64, 64);
-            this.picBox_EquiArmor.TabIndex = 0;
-            this.picBox_EquiArmor.TabStop = false;
             // 
             // table_Inventory
             // 
@@ -720,7 +693,6 @@
             this.pnl_ItemInfo.ResumeLayout(false);
             this.pnl_ItemInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_EquiWeapon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox_EquiArmor)).EndInit();
             this.table_Inventory.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -784,8 +756,6 @@
         private System.Windows.Forms.Panel pnl_Item48;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         public System.Windows.Forms.PictureBox picBox_EquiWeapon;
-        public System.Windows.Forms.PictureBox picBox_EquiArmor;
     }
 }
