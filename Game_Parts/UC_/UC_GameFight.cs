@@ -30,7 +30,10 @@ namespace Lynaar_GUI.Game_Parts.UC_
 
         public UC_GameFight(Lynaar_GUI.GameForm parentForm)
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            
+            this.mainForm = parentForm;
+
             this.font10 = new Font(FunctionsLibs.Font_Alkhemikal, 10);
             this.font12 = new Font(FunctionsLibs.Font_Alkhemikal, 12);
             this.font15 = new Font(FunctionsLibs.Font_Alkhemikal, 15);
@@ -40,11 +43,13 @@ namespace Lynaar_GUI.Game_Parts.UC_
             this.lesMonstres = SQLConnect.viewMonsters();
             var rand = new Random();
             int index = rand.Next(0, this.lesMonstres.Count);
-            this.monstreActuel = new Monstre(this.lesMonstres[index]);
+
+            int monstreLevl = rand.Next(1,3);
+
+            this.monstreActuel = new Monstre(this.lesMonstres[index], this.mainForm.CurrentPlayer.Level + monstreLevl);
             #endregion
 
-            this.mainForm = parentForm;
-
+           
             switch (this.mainForm.CurrentPlayer.Classe)
             {
                 case "warrior":
@@ -67,9 +72,20 @@ namespace Lynaar_GUI.Game_Parts.UC_
 
         private void UC_GameFight_Load(object sender, EventArgs e)
         {
-            this.picBox_AvatarEnemy.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject($"_{this.monstreActuel.Id}");
+            if(this.monstreActuel.Id == 25)
+            {
+                this.picBox_AvatarEnemy.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject($"_{this.monstreActuel.Id}_{this.mainForm.CurrentPlayer.Classe}");
+                this.monstreActuel.Hp = this.mainForm.CurrentPlayer.Hp;
+                this.monstreActuel.DmgMin = this.mainForm.CurrentPlayer.Damage;
+                this.monstreActuel.DmgMax = this.mainForm.CurrentPlayer.Damage;
+            }
+            else
+            {
+                this.picBox_AvatarEnemy.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject($"_{this.monstreActuel.Id}");
+            }
             this.lbl_EnemyName.Text = this.monstreActuel.Name;
             this.lbl_EnemyName.ForeColor = Color.Red;
+            this.lblEnemyLevel.Text = this.monstreActuel.Level.ToString();
 
             this.lbl_EnemyHealth.Text = this.monstreActuel.Hp.ToString();
             this.lbl_EnemyHealth.ForeColor = Color.Red;
@@ -124,7 +140,7 @@ namespace Lynaar_GUI.Game_Parts.UC_
             }
             else
             {
-                this.mainForm.CurrentPlayer.GainExp(this.monstreActuel.Xp);
+                this.mainForm.CurrentPlayer.GainExp(this.monstreActuel);
 /*todo               int goldAmount = this.mainForm.CurrentPlayer.GainGold(this.monstreActuel);
 */                appendToConsole($"{this.mainForm.CurrentPlayer.PlayerName}", this.mainForm.CurrentPlayer.ClasseColor);
                 appendToConsole($" killed ", Color.White);
@@ -137,7 +153,6 @@ namespace Lynaar_GUI.Game_Parts.UC_
                 /*todo this.mainForm.CurrentPlayer.checkLevelUp();*/
                 /*todo this.mainForm.CurrentPlayer.savePlayer();*/
 
-                Thread.Sleep(100);
                 this.mainForm.loadNewCombat();
             }
             

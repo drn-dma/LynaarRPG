@@ -14,10 +14,11 @@ namespace Lynaar_GUI
         
         #region Properties
 
-        private readonly static string _dataSource = "lynaarrpg-srv.database.windows.net";
+/*        private readonly static string _dataSource = "lynaarrpg-srv.database.windows.net";*/
+        private readonly static string _dataSource = "localhost";
         private readonly static string _initialCatalog = "Lynaar";
-        private readonly static string _userID = "lynaar";
-        private readonly static string _password = "1596357Dd";
+        /*private readonly static string _userID = "lynaar";
+        private readonly static string _password = "1596357Dd";*/
 
         #endregion
 
@@ -54,8 +55,9 @@ namespace Lynaar_GUI
 
             builder.DataSource = _dataSource;
             builder.InitialCatalog = _initialCatalog;
-            builder.UserID = _userID;
-            builder.Password = _password;
+            builder.IntegratedSecurity = true;
+            /*builder.UserID = _userID;
+            builder.Password = _password;*/
 
             #endregion
 
@@ -189,8 +191,9 @@ namespace Lynaar_GUI
 
             builder.DataSource = _dataSource;
             builder.InitialCatalog = _initialCatalog;
-            builder.UserID = _userID;
-            builder.Password = _password;
+            builder.IntegratedSecurity = true;
+/*            builder.UserID = _userID;
+            builder.Password = _password;*/
 
             #endregion
 
