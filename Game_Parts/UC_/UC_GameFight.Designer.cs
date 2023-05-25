@@ -33,17 +33,18 @@
             this.lbl_EnemyDamage = new System.Windows.Forms.Label();
             this.lbl_EnemyHealth = new System.Windows.Forms.Label();
             this.lbl_EnemyName = new System.Windows.Forms.Label();
+            this.picBox_AvatarEnemy = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlSpell = new System.Windows.Forms.Panel();
             this.picBox_Spell1 = new System.Windows.Forms.PictureBox();
             this.picBox_AttackBtn = new System.Windows.Forms.PictureBox();
-            this.picBox_AvatarEnemy = new System.Windows.Forms.PictureBox();
+            this.lblEnemyLevel = new System.Windows.Forms.Label();
             this.pnlMonster.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_AvatarEnemy)).BeginInit();
             this.panel2.SuspendLayout();
             this.pnlSpell.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_Spell1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_AttackBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox_AvatarEnemy)).BeginInit();
             this.SuspendLayout();
             // 
             // consoleCtrl
@@ -60,6 +61,7 @@
             // 
             // pnlMonster
             // 
+            this.pnlMonster.Controls.Add(this.lblEnemyLevel);
             this.pnlMonster.Controls.Add(this.lbl_EnemyDamage);
             this.pnlMonster.Controls.Add(this.lbl_EnemyHealth);
             this.pnlMonster.Controls.Add(this.lbl_EnemyName);
@@ -100,6 +102,15 @@
             this.lbl_EnemyName.TabIndex = 1;
             this.lbl_EnemyName.Text = "EnemyName";
             // 
+            // picBox_AvatarEnemy
+            // 
+            this.picBox_AvatarEnemy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picBox_AvatarEnemy.Location = new System.Drawing.Point(59, 43);
+            this.picBox_AvatarEnemy.Name = "picBox_AvatarEnemy";
+            this.picBox_AvatarEnemy.Size = new System.Drawing.Size(200, 200);
+            this.picBox_AvatarEnemy.TabIndex = 0;
+            this.picBox_AvatarEnemy.TabStop = false;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.consoleCtrl);
@@ -136,14 +147,15 @@
             this.picBox_AttackBtn.TabStop = false;
             this.picBox_AttackBtn.Click += new System.EventHandler(this.attack);
             // 
-            // picBox_AvatarEnemy
+            // lblEnemyLevel
             // 
-            this.picBox_AvatarEnemy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picBox_AvatarEnemy.Location = new System.Drawing.Point(59, 43);
-            this.picBox_AvatarEnemy.Name = "picBox_AvatarEnemy";
-            this.picBox_AvatarEnemy.Size = new System.Drawing.Size(200, 200);
-            this.picBox_AvatarEnemy.TabIndex = 0;
-            this.picBox_AvatarEnemy.TabStop = false;
+            this.lblEnemyLevel.AutoSize = true;
+            this.lblEnemyLevel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblEnemyLevel.Location = new System.Drawing.Point(120, 259);
+            this.lblEnemyLevel.Name = "lblEnemyLevel";
+            this.lblEnemyLevel.Size = new System.Drawing.Size(53, 13);
+            this.lblEnemyLevel.TabIndex = 4;
+            this.lblEnemyLevel.Text = "EnemyLvl";
             // 
             // UC_GameFight
             // 
@@ -158,11 +170,11 @@
             this.Load += new System.EventHandler(this.UC_GameFight_Load);
             this.pnlMonster.ResumeLayout(false);
             this.pnlMonster.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_AvatarEnemy)).EndInit();
             this.panel2.ResumeLayout(false);
             this.pnlSpell.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBox_Spell1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_AttackBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox_AvatarEnemy)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -179,5 +191,6 @@
         private System.Windows.Forms.Label lbl_EnemyName;
         private System.Windows.Forms.PictureBox picBox_Spell1;
         private System.Windows.Forms.PictureBox picBox_AttackBtn;
+        private System.Windows.Forms.Label lblEnemyLevel;
     }
 }

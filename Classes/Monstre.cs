@@ -10,12 +10,12 @@ namespace Lynaar_GUI.Classes
     {
 
         //constructor
-        public Monstre(int id, string name, int hp, int xp, int dmgMin, int dmgMax, int goldMin, int goldMax) : base(id, name, hp, xp, dmgMin, dmgMax, goldMin, goldMax)
+        public Monstre(int id, string name, int hp, int xp, int dmgMin, int dmgMax, int goldMin, int goldMax, int level) : base(id, name, hp, xp, dmgMin, dmgMax, goldMin, goldMax, level)
         {
         }
 
 
-        public Monstre(Dictionary<string, object> keyValuePairs) : base(keyValuePairs)
+        public Monstre(Dictionary<string, object> keyValuePairs, int level) : base(keyValuePairs, level)
         {
 
         }

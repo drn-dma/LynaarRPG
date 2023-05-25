@@ -233,9 +233,9 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _25_Hunter {
+        internal static System.Drawing.Bitmap _25_hunter {
             get {
-                object obj = ResourceManager.GetObject("_25_Hunter", resourceCulture);
+                object obj = ResourceManager.GetObject("_25_hunter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +243,9 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _25_Mage {
+        internal static System.Drawing.Bitmap _25_mage {
             get {
-                object obj = ResourceManager.GetObject("_25_Mage", resourceCulture);
+                object obj = ResourceManager.GetObject("_25_mage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,9 +253,9 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _25_Rogue {
+        internal static System.Drawing.Bitmap _25_rogue {
             get {
-                object obj = ResourceManager.GetObject("_25_Rogue", resourceCulture);
+                object obj = ResourceManager.GetObject("_25_rogue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,9 +263,9 @@ namespace Lynaar_GUI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _25_Warrior {
+        internal static System.Drawing.Bitmap _25_warrior {
             get {
-                object obj = ResourceManager.GetObject("_25_Warrior", resourceCulture);
+                object obj = ResourceManager.GetObject("_25_warrior", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

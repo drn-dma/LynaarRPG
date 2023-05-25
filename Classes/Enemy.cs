@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lynaar_GUI.Classes.Miscellaneous;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,37 +22,42 @@ namespace Lynaar_GUI.Classes
         private int goldMax;
         private bool isDead;
         private Random rnd;
+        private int lvl;
 
         #endregion
 
         #region Constructeur
 
         //constructor
-        public Enemy(int id, string name, int hp, int xp, int dmgMin, int dmgMax, int goldMin, int goldMax)
+        public Enemy(int id, string name, int hp, int xp, int dmgMin, int dmgMax, int goldMin, int goldMax, int lvl)
         {
             this.id = id;
             this.name = name;
-            this.hp = hp;
+            this.lvl = lvl;
+            this.hp = hp + Settings.SUIVI_VIE_MONSTRE(this.lvl);
             this.xp = xp;
-            this.dmgMin = dmgMin;
-            this.dmgMax = dmgMax;
+            this.dmgMin = dmgMin + Settings.SUIVI_DAMAGE_MONSTRE(this.lvl);
+            this.dmgMax = dmgMax + Settings.SUIVI_DAMAGE_MONSTRE(this.lvl);
             this.goldMin = goldMin;
             this.goldMax = goldMax;
+            
             this.isDead = false;
             rnd = new Random();
         }
 
-        public Enemy(Dictionary<string, object> keyValuePairs)
+        public Enemy(Dictionary<string, object> keyValuePairs, int lvl)
         {
             this.id = int.Parse(keyValuePairs["Id_Entity"].ToString());
             this.name = keyValuePairs["name"].ToString();
-            this.hp = int.Parse(keyValuePairs["hp"].ToString());
+            this.lvl = lvl;
+            this.hp = int.Parse(keyValuePairs["hp"].ToString()) + Settings.SUIVI_VIE_MONSTRE(this.lvl);
             this.xp = int.Parse(keyValuePairs["xp"].ToString());
-            this.dmgMin = int.Parse(keyValuePairs["dmgMin"].ToString());
-            this.dmgMax = int.Parse(keyValuePairs["dmgMax"].ToString());
+            this.dmgMin = int.Parse(keyValuePairs["dmgMin"].ToString()) + Settings.SUIVI_DAMAGE_MONSTRE(this.lvl);
+            this.dmgMax = int.Parse(keyValuePairs["dmgMax"].ToString()) + Settings.SUIVI_DAMAGE_MONSTRE(this.lvl);
             this.goldMin = int.Parse(keyValuePairs["goldMin"].ToString());
             this.goldMax = int.Parse(keyValuePairs["goldMax"].ToString());
             this.isDead = false;
+            
             rnd = new Random();
         }
             
@@ -67,6 +73,7 @@ namespace Lynaar_GUI.Classes
         public int GoldMin { get => goldMin; set => goldMin = value; }
         public int GoldMax { get => goldMax; set => goldMax = value; }
         public bool IsDead { get => isDead; set => isDead = value; }
+        public int Level { get => lvl; set => lvl = value; }
         #endregion
 
 

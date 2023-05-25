@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Data;
+using System.Diagnostics;
 
 namespace Lynaar_GUI.Classes
 {
@@ -28,9 +29,10 @@ namespace Lynaar_GUI.Classes
         private int gold;
         private int fightNumber;
         private DateTime lastSave;
-        private long maxExperience;
+        private int maxExperience;
         private Color classeColor;
         private bool isDead;
+        private int[] xpGap;
 
         Random rnd;
         #endregion
@@ -59,9 +61,10 @@ namespace Lynaar_GUI.Classes
             this.fightNumber = fightNumber;
             this.id = id;
             this.lastSave = lastSave;
-            setLimiteXP();
             this.rnd = new Random();
             this.isDead = false;
+            this.xpGap = totalXpPerLvl();
+            this.maxExperience = xpGap[level];
 
             switch(classe)
             {
@@ -89,7 +92,7 @@ namespace Lynaar_GUI.Classes
         public string Classe { get => classe; set => classe = value; }
         public int Level { get => level; set => level = value; }
         public int Experience { get => experience; set => experience = value; }
-        public long MaxExperience { get => maxExperience; set => maxExperience = value; }
+        public int MaxExperience { get => maxExperience; set => maxExperience = value; }
         public int Hp { get => hp; set => hp = value; }
         public int MaxHp { get => maxHp; set => maxHp = value; }
         public int Damage { get => damage; set => damage = value; }
@@ -106,27 +109,29 @@ namespace Lynaar_GUI.Classes
 
         #region Function
 
-        private void setLimiteXP()
+
+        private int[] totalXpPerLvl()
         {
-            double limit = 0d;
+            int[] maxXp = new int[101];
+            int[] returned = new int[101];
 
-            for (int i = 0; i < this.level; i++)
+            for (int i = 0; i <= 100; i++)
             {
-                limit += Math.Floor(i + 200d * Math.Pow(2d, (i / 2d)));
-
+                maxXp[i] = (int)Math.Floor(100 * Math.Pow(i, 2.7));
             }
-            limit = Math.Floor(limit / 4d);
-            this.maxExperience = Convert.ToInt64(limit);
 
-            MessageBox.Show("max xp : " + Math.Floor(15 * Math.Sqrt(this.maxExperience)));
+            returned[0] = 0;
+
+            for(int i = 1; i < maxXp.Length; i++)
+            {
+                returned[i] = maxXp[i] - maxXp[i-1];
+            }
+            return returned;
         }
 
 
 
-
-
-
-
+        
         //!fonction qui permet de calculer les dégats du joueur
         public int calculateDamage()
         {            
@@ -155,10 +160,10 @@ namespace Lynaar_GUI.Classes
         }
 
 
-        public void GainExp(int exp)
+        public void GainExp(Monstre monstre)
         {
             
-            this.experience += exp;
+            this.experience += Settings.SUIVI_GAIN_XP(monstre);
             if (this.experience >= this.maxExperience)
             {
                 LvlUp();
@@ -168,12 +173,15 @@ namespace Lynaar_GUI.Classes
 
         private void LvlUp()
         {
-/*            this.experience -= this.maxExperience;
-*/            this.level++;
+            int xpRestant = this.experience + this.maxExperience;
+            this.level++;
             this.MaxHp = Settings.SUIVI_HPMAX_JOUEUR(this);
             this.damage += Settings.SUIVI_DAMAGE_JOUEUR(this.damage);
-            setLimiteXP();
+            this.maxExperience = xpGap[this.level];
+            xpRestant -= this.maxExperience;
+            this.experience = xpRestant;
         }
+
         #endregion
 
         #region methods
