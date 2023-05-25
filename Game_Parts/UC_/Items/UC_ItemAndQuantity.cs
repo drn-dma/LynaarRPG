@@ -77,7 +77,18 @@ namespace Lynaar_GUI.Game_Parts.UC_.Items
         private void onItemClick(object sender, EventArgs e)
         {
 
+            //! Affichage de l'image de l'item dans le panel 'pnl_Item'
+            if (quantity > 1)
+            {
+                this.inventoryPanel.picBoxCard.BackgroundImage = null;
+            }
+            else
+            {
+                this.inventoryPanel.picBoxCard.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject($"Card_{idItem}");
+            }
+            
 
+            //! Création du menu contextuel
             PictureBox picBox = (PictureBox)sender;
             MouseEventArgs me = (MouseEventArgs)e;
             picBox.ContextMenu = new ContextMenu();

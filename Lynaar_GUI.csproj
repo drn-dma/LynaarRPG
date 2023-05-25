@@ -258,6 +258,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Game_Parts\GameForm.resx">
       <DependentUpon>GameForm.cs</DependentUpon>
@@ -555,6 +556,69 @@
     <Content Include="Cursors\Medieval Handwriting.cur" />
     <Content Include="Cursors\Medieval Move.cur" />
     <Content Include="Lynaar_Icon-round.ico" />
+    <None Include="Resources\Card_25.png" />
+    <None Include="Resources\Card_24.png" />
+    <None Include="Resources\Card_23.png" />
+    <None Include="Resources\Card_22.png" />
+    <None Include="Resources\Card_21.png" />
+    <None Include="Resources\Card_32.png" />
+    <None Include="Resources\Card_31.png" />
+    <None Include="Resources\Card_30.png" />
+    <None Include="Resources\Card_29.png" />
+    <None Include="Resources\Card_28.png" />
+    <None Include="Resources\Card_27.png" />
+    <None Include="Resources\Card_20.png" />
+    <None Include="Resources\Card_19.png" />
+    <None Include="Resources\Card_18.png" />
+    <None Include="Resources\Card_16.png" />
+    <None Include="Resources\Card_15.png" />
+    <None Include="Resources\Card_14.png" />
+    <None Include="Resources\Card_13.png" />
+    <None Include="Resources\Card_12.png" />
+    <None Include="Resources\Card_11.png" />
+    <None Include="Resources\Card_10.png" />
+    <None Include="Resources\Card_9.png" />
+    <None Include="Resources\Card_8.png" />
+    <None Include="Resources\Card_7.png" />
+    <None Include="Resources\Card_6.png" />
+    <None Include="Resources\Card_5.png" />
+    <None Include="Resources\Card_4.png" />
+    <None Include="Resources\Card_3.png" />
+    <None Include="Resources\Card_2.png" />
+    <None Include="Resources\Card_1.png" />
+    <None Include="Resources\Equip_2.png" />
+    <None Include="Resources\Equip_1.png" />
+    <None Include="Resources\Equip_33.png" />
+    <None Include="Resources\Equip_32.png" />
+    <None Include="Resources\Equip_31.png" />
+    <None Include="Resources\Equip_30.png" />
+    <None Include="Resources\Equip_29.png" />
+    <None Include="Resources\Equip_28.png" />
+    <None Include="Resources\Equip_27.png" />
+    <None Include="Resources\Equip_26.png" />
+    <None Include="Resources\Equip_25.png" />
+    <None Include="Resources\Equip_24.png" />
+    <None Include="Resources\Equip_23.png" />
+    <None Include="Resources\Equip_22.png" />
+    <None Include="Resources\Equip_21.png" />
+    <None Include="Resources\Equip_20.png" />
+    <None Include="Resources\Equip_19.png" />
+    <None Include="Resources\Equip_18.png" />
+    <None Include="Resources\Equip_17.png" />
+    <None Include="Resources\Equip_16.png" />
+    <None Include="Resources\Equip_15.png" />
+    <None Include="Resources\Equip_14.png" />
+    <None Include="Resources\Equip_13.png" />
+    <None Include="Resources\Equip_12.png" />
+    <None Include="Resources\Equip_11.png" />
+    <None Include="Resources\Equip_10.png" />
+    <None Include="Resources\Equip_9.png" />
+    <None Include="Resources\Equip_8.png" />
+    <None Include="Resources\Equip_7.png" />
+    <None Include="Resources\Equip_6.png" />
+    <None Include="Resources\Equip_5.png" />
+    <None Include="Resources\Equip_4.png" />
+    <None Include="Resources\Equip_3.png" />
     <None Include="Resources\SPELL_Auto.png" />
     <None Include="Resources\W_SPELL_Boost-Attack.png" />
     <None Include="Resources\S_SPELL_Ice Tempest.png" />
@@ -568,8 +632,6 @@
     <None Include="Resources\Boss_Ico_x32.png" />
     <None Include="Resources\Gold_Ico_x32.png" />
     <None Include="Resources\Inv_Background.png" />
-    <None Include="Resources\Equip_2.png" />
-    <None Include="Resources\Equip_1.png" />
     <None Include="Resources\legendFrame_Hover.png" />
     <None Include="Resources\SavedGame_Hover_background.png" />
     <None Include="Resources\Menu_Icon_Active_x64.png" />

@@ -23,6 +23,8 @@ namespace Lynaar_GUI
 
         private Font font40;
 
+        private Font font20;
+
         private Player player;
 
         internal Player Player { get => player; set => player = value; }
@@ -34,6 +36,7 @@ namespace Lynaar_GUI
 
             //! Initialisation de la police de caractère
             this.font40 = new Font(FunctionsLibs.Font_Alkhemikal, 40);
+            this.font20 = new Font(FunctionsLibs.Font_Alkhemikal, 20);
             this.table_Inventory.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
             this.table_Inventory.Visible = true;
             this.table_Inventory.Refresh();
@@ -45,7 +48,8 @@ namespace Lynaar_GUI
         {
             //! Modification de la police de caractère du label 'lbl_Inventaire' au chargement de l'UC
             this.lbl_Inventaire.Font = font40;
-           
+            this.lblArme.Font = font20;
+
 
             int i = 1;
 
@@ -71,11 +75,8 @@ namespace Lynaar_GUI
                 i++;
             }
 
+            
         }
 
-        private void picBox_EquiWeapon_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

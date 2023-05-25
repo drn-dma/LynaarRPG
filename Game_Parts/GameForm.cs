@@ -55,6 +55,7 @@ namespace Lynaar_GUI
             this.pBarXp.Maximum = currentPlayer.MaxExperience;
             this.pBarXp.Value = currentPlayer.Experience;
 
+
             FunctionsLibs.add_UControls(this._GameFight = new UC_GameFight(this), this.pnl_Main);
             this._GameInventory = new UC_GameInventory(this);
 
