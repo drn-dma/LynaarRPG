@@ -54,7 +54,6 @@ namespace Lynaar_GUI.Game_Parts.UC_.Items
         {
 
             this.equipedWeapon = this.inventoryPanel.picBox_EquiWeapon;
-            this.equipedArmor = this.inventoryPanel.picBox_EquiArmor;
 
             if (quantity > 1)
             {

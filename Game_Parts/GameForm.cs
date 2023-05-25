@@ -52,7 +52,7 @@ namespace Lynaar_GUI
             this.pBarHp.Maximum = currentPlayer.MaxHp;
             this.pBarHp.Value = currentPlayer.Hp;
 
-/*            this.pBarXp.Maximum = currentPlayer.MaxExperience;*/
+            this.pBarXp.Maximum = currentPlayer.MaxExperience;
             this.pBarXp.Value = currentPlayer.Experience;
 
             FunctionsLibs.add_UControls(this._GameFight = new UC_GameFight(this), this.pnl_Main);
@@ -183,8 +183,8 @@ namespace Lynaar_GUI
             this.pBarHp.Value = this.currentPlayer.Hp;
             this.pBarHp.Maximum = this.currentPlayer.MaxHp;
             this.pBarXp.Value = this.currentPlayer.Experience;
-/*            this.pBarXp.Maximum = this.currentPlayer.MaxExperience;
-*/            this.lblLevel.Text = "Lvl : " + this.currentPlayer.Level.ToString();
+            this.pBarXp.Maximum = this.currentPlayer.MaxExperience;
+            this.lblLevel.Text = "Lvl : " + this.currentPlayer.Level.ToString();
             this.lblGold.Text = this.currentPlayer.Gold.ToString();
             this.lblXp.Text = this.currentPlayer.Experience.ToString();
             this.lblHp.Text = this.currentPlayer.Hp.ToString();

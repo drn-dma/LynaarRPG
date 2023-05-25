@@ -206,9 +206,13 @@ namespace Lynaar_GUI.Login_Parts.UC_
 
         #endregion
 
-
         #endregion
 
         #endregion
+
+        private void pnl_Save1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

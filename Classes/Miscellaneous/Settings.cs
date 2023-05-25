@@ -24,18 +24,17 @@ namespace Lynaar_GUI.Classes.Miscellaneous
             return Convert.ToInt32((actualDamage * 0.1d));
         }
 
-        public static int SUIVI_GAIN_XP(Player player, Monstre monstre)
-        {
-            double gain = Math.Floor(player.Level + 200d * Math.Pow(2d, player.Level / 7d) * (monstre.Xp / 4d));
-            gain = Math.Floor(gain / 10d);
 
-            return Convert.ToInt32(gain);
+        public static int SUIVI_GAIN_XP(Monstre monstre)
+        {
+            return (int)(Math.Ceiling(monstre.Xp * Math.Pow(monstre.Level, 1.4)));
         }
 
         public static int SUIVI_HPMAX_JOUEUR(Player player)
         {
             return Convert.ToInt32(player.MaxHp * 0.1d);
         }
+
 
         /////
         //// Dégats aléatoire entre les deux variables
