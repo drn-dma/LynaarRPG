@@ -107,7 +107,7 @@ namespace Lynaar_GUI.Game_Parts.UC_.Items
             this.inventoryPanel.Player.AdditionalDamage -= SQLConnect.getAdditionnalDamage(this.idItem);
             this.inventoryPanel.Player.MaxHp -= SQLConnect.getAdditionnalHealth(this.idItem);
             equipedWeapon.Image = null;
-            equipedArmor.Image = null;
+
             this.Parent.Refresh();
             this.inventoryPanel.Parent.Refresh();
         }
@@ -117,7 +117,7 @@ namespace Lynaar_GUI.Game_Parts.UC_.Items
             //TODO : Equiper l'item
             SQLConnect.equipWeaponOrArmor(this.player.Id, this.idItem);
             equipedWeapon.Image = this.picBox_Item.BackgroundImage;
-            equipedArmor.Image = this.picBox_Item.BackgroundImage;
+
             this.inventoryPanel.Player.AdditionalDamage += SQLConnect.getAdditionnalDamage(this.idItem);
             this.inventoryPanel.Player.MaxHp += SQLConnect.getAdditionnalHealth(this.idItem);
             this.Parent.Refresh();
